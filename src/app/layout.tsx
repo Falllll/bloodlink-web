@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Sora, Manrope } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sora = Sora({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-sora",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const manrope = Manrope({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-manrope",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -20,10 +24,35 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="id"
+      className={`${sora.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <div aria-hidden className="pointer-events-none fixed inset-0 overflow-hidden">
+          <div
+            className="absolute -left-40 -top-40 h-[36rem] w-[36rem] rounded-full blur-[42px]"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(214,38,58,0.44) 0%, rgba(214,38,58,0) 70%)",
+            }}
+          />
+          <div
+            className="absolute -right-40 top-1/4 h-[34rem] w-[34rem] rounded-full blur-[42px]"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(74,86,226,0.38) 0%, rgba(74,86,226,0) 70%)",
+            }}
+          />
+          <div
+            className="absolute -left-32 bottom-[-10rem] h-[32rem] w-[32rem] rounded-full blur-[42px]"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(22,168,168,0.28) 0%, rgba(22,168,168,0) 70%)",
+            }}
+          />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
