@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sora, Manrope } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -51,7 +52,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             }}
           />
         </div>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

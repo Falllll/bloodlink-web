@@ -10,7 +10,14 @@ export async function apiFetch<T>(path: string, init: RequestInit = {}): Promise
   const res = await fetch(`/bff${path}`, init);
 
   if (!res.ok) {
-    const body = (await res.json()) as ApiError;
+    let body: ApiError;
+    try {
+      body = (await res.json()) as ApiError;
+    } catch {
+      body = {
+        error: { code: 'INTERNAL_ERROR', message: res.statusText, details: {}, trace_id: '' },
+      };
+    }
     throw new ApiFailure(res.status, body);
   }
 

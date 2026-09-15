@@ -1,5 +1,6 @@
 import { GlassPanel } from "@/components/ui/glass-panel";
 import { StatusChip, type BatchStatus } from "@/components/ui/status-chip";
+import { BloodBatchesProbe } from "./blood-batches-probe";
 
 const STATUSES: BatchStatus[] = [
   "QUARANTINED",
@@ -22,6 +23,7 @@ export default function Home() {
             <StatusChip key={status} status={status} />
           ))}
         </div>
+        <BloodBatchesProbe />
       </GlassPanel>
     </div>
   );
