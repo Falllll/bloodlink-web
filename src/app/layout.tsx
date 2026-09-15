@@ -34,21 +34,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             className="absolute -left-40 -top-40 h-[36rem] w-[36rem] rounded-full blur-[42px]"
             style={{
               background:
-                "radial-gradient(circle, rgba(214,38,58,0.44) 0%, rgba(214,38,58,0) 70%)",
+                "radial-gradient(circle, color-mix(in oklch, var(--color-glow-brand) 44%, transparent) 0%, transparent 70%)",
             }}
           />
           <div
             className="absolute -right-40 top-1/4 h-[34rem] w-[34rem] rounded-full blur-[42px]"
             style={{
               background:
-                "radial-gradient(circle, rgba(74,86,226,0.38) 0%, rgba(74,86,226,0) 70%)",
+                "radial-gradient(circle, color-mix(in oklch, var(--color-glow-indigo) 38%, transparent) 0%, transparent 70%)",
             }}
           />
           <div
             className="absolute -left-32 bottom-[-10rem] h-[32rem] w-[32rem] rounded-full blur-[42px]"
             style={{
               background:
-                "radial-gradient(circle, rgba(22,168,168,0.28) 0%, rgba(22,168,168,0) 70%)",
+                "radial-gradient(circle, color-mix(in oklch, var(--color-glow-teal) 28%, transparent) 0%, transparent 70%)",
             }}
           />
         </div>
