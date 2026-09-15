@@ -1,7 +1,5 @@
 import { NextRequest } from 'next/server';
-import { readToken } from '@/lib/auth/session';
-
-const METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'] as const;
+import { readToken, clearToken } from '@/lib/auth/session';
 
 const FORWARD_HEADERS = ['content-type', 'idempotency-key', 'x-request-id', 'accept-language'];
 
@@ -26,7 +24,19 @@ async function forward(req: NextRequest, path: string[]): Promise<Response> {
     duplex: hasBody ? 'half' : undefined,
   });
 
-  const responseHeaders = new Headers(upstream.headers);
+  if (upstream.status === 401) {
+    await clearToken();
+    return Response.json(
+      { error: { code: 'UNAUTHENTICATED', message: 'Sesi berakhir' } },
+      { status: 401 },
+    );
+  }
+
+  const responseHeaders = new Headers();
+  for (const name of ['content-type', 'cache-control', 'etag']) {
+    const value = upstream.headers.get(name);
+    if (value !== null) responseHeaders.set(name, value);
+  }
   const requestId = upstream.headers.get('x-request-id');
   if (requestId !== null) responseHeaders.set('x-request-id', requestId);
 
