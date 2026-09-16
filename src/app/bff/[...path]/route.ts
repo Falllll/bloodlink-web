@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server';
 import { readToken, clearToken } from '@/lib/auth/session';
 
-const FORWARD_HEADERS = ['content-type', 'idempotency-key', 'x-request-id', 'accept-language'];
+const FORWARD_HEADERS = ['content-type', 'idempotency-key', 'x-request-id', 'accept-language', 'accept'];
 
 async function forward(req: NextRequest, path: string[]): Promise<Response> {
   const url = `${process.env.API_BASE_URL}/${path.join('/')}${req.nextUrl.search}`;
@@ -11,6 +11,8 @@ async function forward(req: NextRequest, path: string[]): Promise<Response> {
     const value = req.headers.get(name);
     if (value !== null) headers.set(name, value);
   }
+
+  if (!headers.has('accept')) headers.set('accept', 'application/json');
 
   const token = await readToken();
   if (token !== null) headers.set('Authorization', `Bearer ${token}`);
