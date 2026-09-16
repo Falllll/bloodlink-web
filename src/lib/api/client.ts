@@ -1,8 +1,12 @@
 import type { ApiError } from './types';
 
 export class ApiFailure extends Error {
-  constructor(public readonly status: number, public readonly body: ApiError) {
-    super(body.error.code);
+  constructor(
+    public readonly status: number,
+    public readonly body: ApiError,
+    public readonly raw?: unknown,
+  ) {
+    super((body as Partial<ApiError>)?.error?.code ?? 'INTERNAL_ERROR');
   }
 }
 
@@ -11,14 +15,23 @@ export async function apiFetch<T>(path: string, init: RequestInit = {}): Promise
 
   if (!res.ok) {
     let body: ApiError;
+    let raw: unknown;
     try {
-      body = (await res.json()) as ApiError;
+      const parsed: unknown = await res.json();
+      raw = parsed;
+      if ((parsed as Partial<ApiError>)?.error?.code) {
+        body = parsed as ApiError;
+      } else {
+        body = {
+          error: { code: 'INTERNAL_ERROR', message: res.statusText, details: {}, trace_id: '' },
+        };
+      }
     } catch {
       body = {
         error: { code: 'INTERNAL_ERROR', message: res.statusText, details: {}, trace_id: '' },
       };
     }
-    throw new ApiFailure(res.status, body);
+    throw new ApiFailure(res.status, body, raw);
   }
 
   return (await res.json()) as T;
