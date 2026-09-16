@@ -1,30 +1,38 @@
-import { GlassPanel } from "@/components/ui/glass-panel";
-import { StatusChip, type BatchStatus } from "@/components/ui/status-chip";
-import { BloodBatchesProbe } from "./blood-batches-probe";
+import type { Metadata } from 'next';
+import { SiteHeader } from '@/components/landing/site-header';
+import { Hero } from '@/components/landing/hero';
+import { HowItWorks } from '@/components/landing/how-it-works';
+import { AudienceSection } from '@/components/landing/audience-section';
+import { SiteFooter } from '@/components/landing/site-footer';
+import { LANDING } from '@/content/landing';
 
-const STATUSES: BatchStatus[] = [
-  "QUARANTINED",
-  "TESTING",
-  "RELEASED",
-  "RESERVED",
-  "DISCARDED",
-  "EXPIRED",
-];
+export const metadata: Metadata = {
+  title: 'BloodLink — Stok darah antar fasilitas',
+  description:
+    'BloodLink menyatukan data stok darah antar rumah sakit, bank darah, dan unit donor darah secara real-time.',
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-1 items-center justify-center p-8">
-      <GlassPanel className="flex max-w-lg flex-col gap-6 p-8">
-        <p className="font-display text-2xl font-semibold text-[color:var(--color-ink-strong)]">
-          BloodLink — token & komponen dasar
-        </p>
-        <div className="flex flex-wrap gap-2">
-          {STATUSES.map((status) => (
-            <StatusChip key={status} status={status} />
-          ))}
-        </div>
-        <BloodBatchesProbe />
-      </GlassPanel>
-    </div>
+    <>
+      <SiteHeader />
+      <main className="flex flex-1 flex-col">
+        <Hero />
+        <HowItWorks />
+        <AudienceSection
+          id="untuk-donor"
+          title={LANDING.donor.title}
+          body={LANDING.donor.body}
+          points={LANDING.donor.points}
+        />
+        <AudienceSection
+          id="untuk-fasilitas"
+          title={LANDING.facility.title}
+          body={LANDING.facility.body}
+          points={LANDING.facility.points}
+        />
+      </main>
+      <SiteFooter />
+    </>
   );
 }
