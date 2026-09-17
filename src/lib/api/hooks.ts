@@ -1,6 +1,6 @@
 'use client';
 
-import { useQuery, type UseQueryOptions } from '@tanstack/react-query';
+import { useMutation, useQuery, type UseQueryOptions } from '@tanstack/react-query';
 import { apiFetch, ApiFailure } from './client';
 import { onUnauthenticated } from './on-unauthenticated';
 
@@ -22,5 +22,31 @@ export function useApiQuery<T>(
       }
     },
     ...options,
+  });
+}
+
+export function useApiMutation<TData, TVariables = void>(
+  mutationFn: (variables: TVariables) => Promise<TData>,
+  options?: {
+    redirectOnUnauthenticated?: boolean;
+    onSuccess?: (data: TData, variables: TVariables) => void;
+  },
+) {
+  return useMutation<TData, ApiFailure, TVariables>({
+    mutationFn: async (variables) => {
+      try {
+        return await mutationFn(variables);
+      } catch (error) {
+        if (
+          error instanceof ApiFailure &&
+          error.status === 401 &&
+          (options?.redirectOnUnauthenticated ?? true)
+        ) {
+          await onUnauthenticated();
+        }
+        throw error;
+      }
+    },
+    onSuccess: options?.onSuccess,
   });
 }

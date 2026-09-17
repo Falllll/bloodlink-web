@@ -23,13 +23,8 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-        <Button
-          size="sm"
-          variant="outline"
-          disabled
-          title="Halaman masuk menyusul (Kartu 520)"
-        >
-          Masuk
+        <Button size="sm" variant="outline" asChild>
+          <Link href="/login">Masuk</Link>
         </Button>
       </div>
     </header>

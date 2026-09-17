@@ -14,3 +14,14 @@ export type ApiPaginated<T> = {
   meta: { per_page: number; next_cursor: string | null; prev_cursor: string | null; has_more: boolean };
   links: { next: string | null; prev: string | null };
 };
+
+export type Role = 'donor' | 'hospital_staff' | 'admin';
+
+export type AuthUser = {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+};
+
+export type LoginResult = { user: AuthUser };

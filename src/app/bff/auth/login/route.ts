@@ -2,9 +2,15 @@ import { NextRequest } from 'next/server';
 import { writeToken } from '@/lib/auth/session';
 
 export async function POST(req: NextRequest): Promise<Response> {
+  const headers = new Headers({
+    'Content-Type': req.headers.get('content-type') ?? 'application/json',
+  });
+  const key = req.headers.get('idempotency-key');
+  if (key) headers.set('idempotency-key', key);
+
   const upstream = await fetch(`${process.env.API_BASE_URL}/auth/login`, {
     method: 'POST',
-    headers: { 'Content-Type': req.headers.get('content-type') ?? 'application/json' },
+    headers,
     body: req.body,
     // @ts-expect-error -- required by undici when streaming a body
     duplex: 'half',
