@@ -6,6 +6,18 @@ const HOME: Record<Role, string> = {
   donor: '/',
 };
 
+const AREA: ReadonlyArray<{ prefix: string; role: Role }> = [
+  { prefix: '/admin', role: 'admin' },
+  { prefix: '/dashboard', role: 'hospital_staff' },
+];
+
+export function requiredRoleFor(pathname: string): Role | null {
+  const area = AREA.find(
+    ({ prefix }) => pathname === prefix || pathname.startsWith(`${prefix}/`),
+  );
+  return area ? area.role : null;
+}
+
 export function roleHome(role: string): string {
   return role in HOME ? HOME[role as Role] : '/';
 }
