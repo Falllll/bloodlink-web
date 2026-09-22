@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Sora, Manrope } from "next/font/google";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import "./globals.css";
+import { IntlClientProvider } from "@/i18n/intl-client-provider";
+import type { Locale } from "@/i18n/routing";
 import { Providers } from "./providers";
 
 const sora = Sora({
@@ -17,15 +20,22 @@ const manrope = Manrope({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "BloodLink",
-  description: "Manajemen stok dan permintaan darah antar fasilitas.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("meta");
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const locale = (await getLocale()) as Locale;
+  const messages = await getMessages();
+
   return (
     <html
-      lang="id"
+      lang={locale}
       className={`${sora.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
@@ -52,7 +62,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             }}
           />
         </div>
-        <Providers>{children}</Providers>
+        <IntlClientProvider locale={locale} messages={messages}>
+          <Providers>{children}</Providers>
+        </IntlClientProvider>
       </body>
     </html>
   );

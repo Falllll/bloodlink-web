@@ -3,8 +3,10 @@ export type ErrorCode =
   | 'INTERNAL_ERROR' | 'METHOD_NOT_ALLOWED' | 'TOO_MANY_REQUESTS' | 'HTTP_ERROR'
   | 'IDEMPOTENCY_KEY_REQUIRED' | 'IDEMPOTENCY_KEY_REUSED' | 'REQUEST_IN_PROGRESS';
 
+export type ValidationFailure = { rule: string; params: Record<string, string | string[]> | string[] };
+
 export type ApiError = {
-  error: { code: ErrorCode; message: string; details: Record<string, unknown>; trace_id: string };
+  error: { code: ErrorCode; message: string; details: Record<string, ValidationFailure[]>; trace_id: string };
 };
 
 export type ApiSuccess<T> = { data: T; meta: Record<string, unknown> };

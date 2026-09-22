@@ -1,18 +1,25 @@
 import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 import { SiteHeader } from '@/components/landing/site-header';
 import { Hero } from '@/components/landing/hero';
 import { HowItWorks } from '@/components/landing/how-it-works';
 import { AudienceSection } from '@/components/landing/audience-section';
 import { SiteFooter } from '@/components/landing/site-footer';
-import { LANDING } from '@/content/landing';
 
-export const metadata: Metadata = {
-  title: 'BloodLink — Stok darah antar fasilitas',
-  description:
-    'BloodLink menyatukan data stok darah antar rumah sakit, bank darah, dan unit donor darah secara real-time.',
-};
+const POINT_KEYS = ['p1', 'p2', 'p3'] as const;
 
-export default function Home() {
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('meta');
+
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
+
+export default async function Home() {
+  const t = await getTranslations('landing');
+
   return (
     <>
       <SiteHeader />
@@ -20,16 +27,16 @@ export default function Home() {
         <Hero />
         <HowItWorks />
         <AudienceSection
-          id="untuk-donor"
-          title={LANDING.donor.title}
-          body={LANDING.donor.body}
-          points={LANDING.donor.points}
+          id="for-donors"
+          title={t('donor.title')}
+          body={t('donor.body')}
+          points={POINT_KEYS.map((key) => t(`donor.points.${key}`))}
         />
         <AudienceSection
-          id="untuk-fasilitas"
-          title={LANDING.facility.title}
-          body={LANDING.facility.body}
-          points={LANDING.facility.points}
+          id="for-facilities"
+          title={t('facility.title')}
+          body={t('facility.body')}
+          points={POINT_KEYS.map((key) => t(`facility.points.${key}`))}
         />
       </main>
       <SiteFooter />

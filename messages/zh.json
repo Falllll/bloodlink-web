@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "BloodLink — 跨机构血液库存",
+    "description": "BloodLink 实时整合医院、血库和献血单位之间的血液库存数据。",
+    "loginTitle": "登录 — BloodLink",
+    "adminTitle": "管理面板 — BloodLink",
+    "dashboardTitle": "员工仪表盘 — BloodLink"
+  },
+  "common": {
+    "language": "语言",
+    "signIn": "登录",
+    "signOut": "退出登录"
+  },
+  "landing": {
+    "brand": "BloodLink",
+    "nav": {
+      "howItWorks": "工作原理",
+      "forDonors": "献血者专区",
+      "forFacilities": "医院专区"
+    },
+    "hero": {
+      "title": "跨机构可信赖的血液库存",
+      "subtitle": "医院和血库常常为了确认实际库存而浪费宝贵时间。BloodLink 实时整合跨机构的血液库存数据，让决策基于真实数字，而不是电话和猜测。",
+      "ctaPrimary": "我想成为献血者",
+      "ctaSecondary": "医院与血库专区"
+    },
+    "howItWorks": {
+      "heading": "工作原理",
+      "step1": { "step": "01", "title": "机构记录库存", "body": "每袋血液一经接收即被记录，包括状态和有效期，由保存该血袋的机构直接录入。" },
+      "step2": { "step": "02", "title": "数据跨机构同步", "body": "库存状态对其他有权限的机构可见，无需电话沟通或等待人工报告。" },
+      "step3": { "step": "03", "title": "更快响应需求", "body": "当急需库存时，工作人员可立即知道哪个机构拥有匹配且可用的血袋。" }
+    },
+    "donor": {
+      "title": "献血意向者专区",
+      "body": "当记录清晰时，你的献血意义更大。该系统帮助机构追踪每一袋捐献血液，直至需要它的患者。",
+      "points": {
+        "p1": "你的献血记录在你献血的机构中得到妥善保存",
+        "p2": "你的血型库存随时可供有需要的机构查看",
+        "p3": "本页面无需注册账户 — 请直接前往最近的机构"
+      }
+    },
+    "facility": {
+      "title": "医院与血库专区",
+      "body": "管理你机构的血袋库存，并查看合作机构的可用情况，让紧急需求不再依赖电话和猜测。",
+      "points": {
+        "p1": "每袋血液的状态从入库到使用或过期均被追踪",
+        "p2": "跨机构请求均被记录且可追溯",
+        "p3": "访问权限按机构限定 — 仅显示有权限查看的数据"
+      }
+    },
+    "footer": {
+      "tagline": "BloodLink — 跨机构血液库存，统一数据来源。",
+      "note": "为医院、血库和献血单位而构建。"
+    }
+  },
+  "login": {
+    "title": "登录",
+    "subtitle": "登录以根据你的角色访问 BloodLink。",
+    "email": "电子邮箱",
+    "password": "密码",
+    "submit": "登录",
+    "submitting": "验证中…"
+  },
+  "shell": {
+    "adminHeading": "管理面板",
+    "adminPending": "管理面板内容（机构验证、黑名单、审计查看器）将在卡片 550 中提供。",
+    "dashboardHeading": "员工仪表盘",
+    "dashboardPending": "仪表盘内容（库存、请求、匹配）将在卡片 540 中提供。",
+    "devHeading": "BloodLink — 基础令牌与组件"
+  },
+  "fields": {
+    "email": "电子邮箱",
+    "password": "密码",
+    "name": "姓名"
+  },
+  "errors": {
+    "VALIDATION_FAILED": "部分字段填写有误。",
+    "UNAUTHENTICATED": "你的会话已结束，请重新登录。",
+    "FORBIDDEN": "你没有访问此部分的权限。",
+    "NOT_FOUND": "未找到你查找的数据。",
+    "INTERNAL_ERROR": "服务器发生错误，请稍后重试。",
+    "METHOD_NOT_ALLOWED": "不支持此请求。",
+    "TOO_MANY_REQUESTS": "请求过多，请稍后再试。",
+    "HTTP_ERROR": "连接服务器时发生错误。",
+    "IDEMPOTENCY_KEY_REQUIRED": "此请求不完整，请重试。",
+    "IDEMPOTENCY_KEY_REUSED": "此请求已被处理过。",
+    "REQUEST_IN_PROGRESS": "上一个请求仍在处理中，请稍候。",
+    "unknown": "发生了意外错误。"
+  },
+  "validation": {
+    "required": "{field}为必填项。",
+    "email": "{field}必须是有效的电子邮箱地址。",
+    "string": "{field}必须为文本。",
+    "min": "{field}至少为{min}。",
+    "max": "{field}最多为{max}。",
+    "between": "{field}必须介于{min}和{max}之间。",
+    "confirmed": "{field}确认不匹配。",
+    "unique": "{field}已被使用。",
+    "regex": "{field}格式不正确。",
+    "in": "{field}必须是以下之一：{values}。",
+    "numeric": "{field}必须为数字。",
+    "integer": "{field}必须为整数。",
+    "array": "{field}必须为列表。",
+    "not_allowed": "无法识别{field}字段。",
+    "invalid_sort": "无法按{column}排序。",
+    "unsupported_filter": "不支持的筛选条件：{keys}。",
+    "unknown": "{field}无效。"
+  }
+}

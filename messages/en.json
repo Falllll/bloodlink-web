@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "BloodLink — Cross-facility blood stock",
+    "description": "BloodLink unifies blood stock data across hospitals, blood banks, and donation units in real time.",
+    "loginTitle": "Sign in — BloodLink",
+    "adminTitle": "Admin Panel — BloodLink",
+    "dashboardTitle": "Staff Dashboard — BloodLink"
+  },
+  "common": {
+    "language": "Language",
+    "signIn": "Sign in",
+    "signOut": "Sign out"
+  },
+  "landing": {
+    "brand": "BloodLink",
+    "nav": {
+      "howItWorks": "How it works",
+      "forDonors": "For donors",
+      "forFacilities": "For hospitals"
+    },
+    "hero": {
+      "title": "Blood stock you can trust, across facilities",
+      "subtitle": "Hospitals and blood banks often lose valuable time just confirming what stock actually exists. BloodLink unifies blood stock data across facilities in real time, so decisions are made from real numbers, not phone calls and guesswork.",
+      "ctaPrimary": "I want to become a donor",
+      "ctaSecondary": "For hospitals & blood banks"
+    },
+    "howItWorks": {
+      "heading": "How it works",
+      "step1": { "step": "01", "title": "Facilities record stock", "body": "Every blood bag is recorded as soon as it's received, complete with status and expiry, directly from the facility holding it." },
+      "step2": { "step": "02", "title": "Data syncs across facilities", "body": "Stock status is visible to other authorized facilities, with no phone calls or waiting for manual reports." },
+      "step3": { "step": "03", "title": "Requests are answered faster", "body": "When stock is urgently needed, staff immediately know which facility has a matching, ready-to-use bag." }
+    },
+    "donor": {
+      "title": "For prospective donors",
+      "body": "Your blood donation matters more when its record is clear. This system helps facilities track every donated bag all the way to the patient who needs it.",
+      "points": {
+        "p1": "Your donation history is kept tidy at the facility where you donated",
+        "p2": "Stock of your blood type is visible to facilities that need it at any time",
+        "p3": "There's no account sign-up on this page — visit your nearest facility directly"
+      }
+    },
+    "facility": {
+      "title": "For hospitals & blood banks",
+      "body": "Manage your facility's blood bag stock and see availability at partner facilities, so urgent requests no longer depend on phone calls and guesswork.",
+      "points": {
+        "p1": "Every blood bag's status is tracked from intake to use or expiry",
+        "p2": "Cross-facility requests are recorded and traceable",
+        "p3": "Access is scoped per facility — only authorized data is visible"
+      }
+    },
+    "footer": {
+      "tagline": "BloodLink — cross-facility blood stock, one source of truth.",
+      "note": "Built for hospitals, blood banks, and blood donation units."
+    }
+  },
+  "login": {
+    "title": "Sign in",
+    "subtitle": "Sign in to access BloodLink according to your role.",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "submitting": "Checking…"
+  },
+  "shell": {
+    "adminHeading": "Admin Panel",
+    "adminPending": "Admin panel content (institution verification, blacklist, audit viewer) ships in Card 550.",
+    "dashboardHeading": "Staff Dashboard",
+    "dashboardPending": "Dashboard content (stock, requests, matching) ships in Card 540.",
+    "devHeading": "BloodLink — base tokens & components"
+  },
+  "fields": {
+    "email": "Email",
+    "password": "Password",
+    "name": "Name"
+  },
+  "errors": {
+    "VALIDATION_FAILED": "Some fields aren't right.",
+    "UNAUTHENTICATED": "Your session has ended. Please sign in again.",
+    "FORBIDDEN": "You don't have access to this section.",
+    "NOT_FOUND": "The data you're looking for wasn't found.",
+    "INTERNAL_ERROR": "A server error occurred. Please try again later.",
+    "METHOD_NOT_ALLOWED": "This request isn't supported.",
+    "TOO_MANY_REQUESTS": "Too many requests. Please try again shortly.",
+    "HTTP_ERROR": "An error occurred while reaching the server.",
+    "IDEMPOTENCY_KEY_REQUIRED": "This request is incomplete. Please try again.",
+    "IDEMPOTENCY_KEY_REUSED": "This request has already been processed.",
+    "REQUEST_IN_PROGRESS": "The previous request is still being processed. Please wait.",
+    "unknown": "An unexpected error occurred."
+  },
+  "validation": {
+    "required": "{field} is required.",
+    "email": "{field} must be a valid email address.",
+    "string": "{field} must be text.",
+    "min": "{field} must be at least {min}.",
+    "max": "{field} must be at most {max}.",
+    "between": "{field} must be between {min} and {max}.",
+    "confirmed": "{field} confirmation doesn't match.",
+    "unique": "{field} is already taken.",
+    "regex": "{field} format is invalid.",
+    "in": "{field} must be one of: {values}.",
+    "numeric": "{field} must be a number.",
+    "integer": "{field} must be an integer.",
+    "array": "{field} must be a list.",
+    "not_allowed": "The {field} field isn't recognized.",
+    "invalid_sort": "Can't sort by {column}.",
+    "unsupported_filter": "Unsupported filter: {keys}.",
+    "unknown": "{field} is invalid."
+  },
+  "medical": {
+    "eligibility": {
+      "minIntervalDays": "Wait {days, plural, other {# days}} since the last donation."
+    },
+    "lab": {
+      "notCleared": "The sample hasn't passed lab testing yet."
+    }
+  }
+}

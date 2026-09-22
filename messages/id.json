@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "BloodLink — Stok darah antar fasilitas",
+    "description": "BloodLink menyatukan data stok darah antar rumah sakit, bank darah, dan unit donor darah secara real-time.",
+    "loginTitle": "Masuk — BloodLink",
+    "adminTitle": "Panel Admin — BloodLink",
+    "dashboardTitle": "Dashboard Petugas — BloodLink"
+  },
+  "common": {
+    "language": "Bahasa",
+    "signIn": "Masuk",
+    "signOut": "Keluar"
+  },
+  "landing": {
+    "brand": "BloodLink",
+    "nav": {
+      "howItWorks": "Cara kerja",
+      "forDonors": "Untuk donor",
+      "forFacilities": "Untuk rumah sakit"
+    },
+    "hero": {
+      "title": "Stok darah yang bisa dipercaya, antar fasilitas",
+      "subtitle": "Rumah sakit dan bank darah sering kehilangan waktu berharga hanya untuk memastikan stok yang benar-benar ada. BloodLink menyatukan data stok darah antar fasilitas secara real-time, supaya keputusan diambil dari angka yang benar, bukan telepon dan tebakan.",
+      "ctaPrimary": "Saya ingin jadi donor",
+      "ctaSecondary": "Untuk rumah sakit & bank darah"
+    },
+    "howItWorks": {
+      "heading": "Cara kerja",
+      "step1": { "step": "01", "title": "Fasilitas mencatat stok", "body": "Setiap kantong darah dicatat sejak diterima, lengkap dengan status dan masa berlakunya, langsung dari fasilitas yang menyimpannya." },
+      "step2": { "step": "02", "title": "Data tersinkron antar fasilitas", "body": "Status stok terlihat oleh fasilitas lain yang berwenang, tanpa perlu telepon atau menunggu laporan manual." },
+      "step3": { "step": "03", "title": "Permintaan dijawab lebih cepat", "body": "Saat stok dibutuhkan mendesak, petugas langsung tahu fasilitas mana yang punya kantong yang cocok dan siap dipakai." }
+    },
+    "donor": {
+      "title": "Untuk calon donor",
+      "body": "Donor darahmu berarti lebih besar ketika catatannya jelas. Sistem ini membantu fasilitas melacak setiap kantong donor sampai ke pasien yang membutuhkannya.",
+      "points": {
+        "p1": "Riwayat donor tersimpan rapi di fasilitas tempatmu mendonor",
+        "p2": "Stok darah golonganmu terlihat oleh fasilitas yang butuh sewaktu-waktu",
+        "p3": "Tidak ada pendaftaran akun di halaman ini — datang langsung ke fasilitas terdekat"
+      }
+    },
+    "facility": {
+      "title": "Untuk rumah sakit & bank darah",
+      "body": "Kelola stok kantong darah fasilitasmu dan lihat ketersediaan di fasilitas mitra, supaya permintaan mendesak tidak lagi bergantung pada telepon dan tebakan.",
+      "points": {
+        "p1": "Status tiap kantong darah terlacak dari masuk sampai dipakai atau kedaluwarsa",
+        "p2": "Permintaan antar fasilitas tercatat dan bisa ditelusuri",
+        "p3": "Akses dibatasi per fasilitas — data yang terlihat hanya yang berwenang dilihat"
+      }
+    },
+    "footer": {
+      "tagline": "BloodLink — stok darah antar fasilitas, satu sumber data.",
+      "note": "Dibangun untuk rumah sakit, bank darah, dan unit donor darah."
+    }
+  },
+  "login": {
+    "title": "Masuk",
+    "subtitle": "Masuk untuk mengakses BloodLink sesuai peranmu.",
+    "email": "Email",
+    "password": "Kata sandi",
+    "submit": "Masuk",
+    "submitting": "Memeriksa…"
+  },
+  "shell": {
+    "adminHeading": "Panel Admin",
+    "adminPending": "Isi panel admin (verifikasi institusi, blacklist, audit viewer) hadir di Kartu 550.",
+    "dashboardHeading": "Dashboard Petugas",
+    "dashboardPending": "Isi dashboard (stok, permintaan, matching) hadir di Kartu 540.",
+    "devHeading": "BloodLink — token & komponen dasar"
+  },
+  "fields": {
+    "email": "Email",
+    "password": "Kata sandi",
+    "name": "Nama"
+  },
+  "errors": {
+    "VALIDATION_FAILED": "Ada isian yang belum benar.",
+    "UNAUTHENTICATED": "Sesimu sudah berakhir. Masuk lagi, ya.",
+    "FORBIDDEN": "Kamu tidak punya akses ke bagian ini.",
+    "NOT_FOUND": "Data yang dicari tidak ditemukan.",
+    "INTERNAL_ERROR": "Terjadi kesalahan di server. Coba lagi nanti.",
+    "METHOD_NOT_ALLOWED": "Permintaan ini tidak didukung.",
+    "TOO_MANY_REQUESTS": "Terlalu banyak permintaan. Coba lagi sebentar lagi.",
+    "HTTP_ERROR": "Terjadi kesalahan saat menghubungi server.",
+    "IDEMPOTENCY_KEY_REQUIRED": "Permintaan ini tidak lengkap. Coba lagi.",
+    "IDEMPOTENCY_KEY_REUSED": "Permintaan ini sudah pernah diproses.",
+    "REQUEST_IN_PROGRESS": "Permintaan sebelumnya masih diproses. Tunggu sebentar.",
+    "unknown": "Terjadi kesalahan yang tidak terduga."
+  },
+  "validation": {
+    "required": "{field} wajib diisi.",
+    "email": "{field} harus alamat email yang valid.",
+    "string": "{field} harus berupa teks.",
+    "min": "{field} minimal {min}.",
+    "max": "{field} maksimal {max}.",
+    "between": "{field} harus di antara {min} dan {max}.",
+    "confirmed": "Konfirmasi {field} tidak cocok.",
+    "unique": "{field} sudah dipakai.",
+    "regex": "Format {field} tidak sesuai.",
+    "in": "{field} harus salah satu dari: {values}.",
+    "numeric": "{field} harus berupa angka.",
+    "integer": "{field} harus berupa bilangan bulat.",
+    "array": "{field} harus berupa daftar.",
+    "not_allowed": "Kolom {field} tidak dikenali.",
+    "invalid_sort": "Tidak bisa mengurutkan berdasarkan {column}.",
+    "unsupported_filter": "Filter tidak didukung: {keys}.",
+    "unknown": "{field} tidak valid."
+  },
+  "medical": {
+    "eligibility": {
+      "minIntervalDays": "Tunggu {days, plural, other {# hari}} sejak donor terakhir."
+    },
+    "lab": {
+      "notCleared": "Sampel belum lolos uji laboratorium."
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "BloodLink — Bluteinlagerung standortübergreifend",
+    "description": "BloodLink vereint Blutbestandsdaten von Krankenhäusern, Blutbanken und Spendeeinheiten in Echtzeit.",
+    "loginTitle": "Anmelden — BloodLink",
+    "adminTitle": "Admin-Bereich — BloodLink",
+    "dashboardTitle": "Mitarbeiter-Dashboard — BloodLink"
+  },
+  "common": {
+    "language": "Sprache",
+    "signIn": "Anmelden",
+    "signOut": "Abmelden"
+  },
+  "landing": {
+    "brand": "BloodLink",
+    "nav": {
+      "howItWorks": "So funktioniert's",
+      "forDonors": "Für Spender",
+      "forFacilities": "Für Krankenhäuser"
+    },
+    "hero": {
+      "title": "Verlässliche Blutbestände, standortübergreifend",
+      "subtitle": "Krankenhäuser und Blutbanken verlieren oft wertvolle Zeit, nur um den tatsächlichen Bestand zu prüfen. BloodLink vereint Blutbestandsdaten standortübergreifend in Echtzeit, damit Entscheidungen auf echten Zahlen beruhen, nicht auf Anrufen und Vermutungen.",
+      "ctaPrimary": "Ich möchte Spender werden",
+      "ctaSecondary": "Für Krankenhäuser & Blutbanken"
+    },
+    "howItWorks": {
+      "heading": "So funktioniert's",
+      "step1": { "step": "01", "title": "Einrichtungen erfassen den Bestand", "body": "Jeder Blutbeutel wird bei Eingang erfasst, inklusive Status und Haltbarkeit, direkt von der Einrichtung, die ihn lagert." },
+      "step2": { "step": "02", "title": "Daten werden standortübergreifend synchronisiert", "body": "Der Bestandsstatus ist für andere berechtigte Einrichtungen sichtbar, ohne Anrufe oder das Warten auf manuelle Berichte." },
+      "step3": { "step": "03", "title": "Anfragen werden schneller beantwortet", "body": "Wird Bestand dringend benötigt, wissen Mitarbeitende sofort, welche Einrichtung einen passenden, einsatzbereiten Beutel hat." }
+    },
+    "donor": {
+      "title": "Für zukünftige Spender",
+      "body": "Deine Blutspende zählt mehr, wenn die Aufzeichnung klar ist. Dieses System hilft Einrichtungen, jeden gespendeten Beutel bis zum Patienten zu verfolgen, der ihn braucht.",
+      "points": {
+        "p1": "Deine Spendenhistorie wird bei der Einrichtung, in der du gespendet hast, sauber gespeichert",
+        "p2": "Der Bestand deiner Blutgruppe ist für Einrichtungen jederzeit sichtbar, wenn er benötigt wird",
+        "p3": "Auf dieser Seite gibt es keine Kontoregistrierung — komm direkt zur nächsten Einrichtung"
+      }
+    },
+    "facility": {
+      "title": "Für Krankenhäuser & Blutbanken",
+      "body": "Verwalte den Blutbeutelbestand deiner Einrichtung und sieh die Verfügbarkeit bei Partnereinrichtungen, damit dringende Anfragen nicht mehr von Anrufen und Vermutungen abhängen.",
+      "points": {
+        "p1": "Der Status jedes Blutbeutels wird von der Aufnahme bis zur Verwendung oder zum Verfall verfolgt",
+        "p2": "Standortübergreifende Anfragen werden erfasst und sind nachvollziehbar",
+        "p3": "Der Zugriff ist pro Einrichtung beschränkt — sichtbar sind nur berechtigte Daten"
+      }
+    },
+    "footer": {
+      "tagline": "BloodLink — Blutbestand standortübergreifend, eine Datenquelle.",
+      "note": "Entwickelt für Krankenhäuser, Blutbanken und Blutspendeeinheiten."
+    }
+  },
+  "login": {
+    "title": "Anmelden",
+    "subtitle": "Melde dich an, um entsprechend deiner Rolle auf BloodLink zuzugreifen.",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "submit": "Anmelden",
+    "submitting": "Wird geprüft…"
+  },
+  "shell": {
+    "adminHeading": "Admin-Bereich",
+    "adminPending": "Der Inhalt des Admin-Bereichs (Institutionsverifizierung, Sperrliste, Audit-Viewer) folgt in Karte 550.",
+    "dashboardHeading": "Mitarbeiter-Dashboard",
+    "dashboardPending": "Der Dashboard-Inhalt (Bestand, Anfragen, Matching) folgt in Karte 540.",
+    "devHeading": "BloodLink — Basistoken & Komponenten"
+  },
+  "fields": {
+    "email": "E-Mail",
+    "password": "Passwort",
+    "name": "Name"
+  },
+  "errors": {
+    "VALIDATION_FAILED": "Einige Angaben sind nicht korrekt.",
+    "UNAUTHENTICATED": "Deine Sitzung ist abgelaufen. Bitte erneut anmelden.",
+    "FORBIDDEN": "Du hast keinen Zugriff auf diesen Bereich.",
+    "NOT_FOUND": "Die gesuchten Daten wurden nicht gefunden.",
+    "INTERNAL_ERROR": "Ein Serverfehler ist aufgetreten. Bitte später erneut versuchen.",
+    "METHOD_NOT_ALLOWED": "Diese Anfrage wird nicht unterstützt.",
+    "TOO_MANY_REQUESTS": "Zu viele Anfragen. Bitte in Kürze erneut versuchen.",
+    "HTTP_ERROR": "Beim Erreichen des Servers ist ein Fehler aufgetreten.",
+    "IDEMPOTENCY_KEY_REQUIRED": "Diese Anfrage ist unvollständig. Bitte erneut versuchen.",
+    "IDEMPOTENCY_KEY_REUSED": "Diese Anfrage wurde bereits verarbeitet.",
+    "REQUEST_IN_PROGRESS": "Die vorherige Anfrage wird noch verarbeitet. Bitte warten.",
+    "unknown": "Ein unerwarteter Fehler ist aufgetreten."
+  },
+  "validation": {
+    "required": "{field} ist erforderlich.",
+    "email": "{field} muss eine gültige E-Mail-Adresse sein.",
+    "string": "{field} muss Text sein.",
+    "min": "{field} muss mindestens {min} sein.",
+    "max": "{field} darf höchstens {max} sein.",
+    "between": "{field} muss zwischen {min} und {max} liegen.",
+    "confirmed": "Die Bestätigung von {field} stimmt nicht überein.",
+    "unique": "{field} wird bereits verwendet.",
+    "regex": "Das Format von {field} ist ungültig.",
+    "in": "{field} muss eines von: {values} sein.",
+    "numeric": "{field} muss eine Zahl sein.",
+    "integer": "{field} muss eine ganze Zahl sein.",
+    "array": "{field} muss eine Liste sein.",
+    "not_allowed": "Das Feld {field} wird nicht erkannt.",
+    "invalid_sort": "Sortierung nach {column} nicht möglich.",
+    "unsupported_filter": "Nicht unterstützter Filter: {keys}.",
+    "unknown": "{field} ist ungültig."
+  }
+}

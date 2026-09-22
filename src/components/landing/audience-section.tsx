@@ -17,8 +17,8 @@ export function AudienceSection({ id, title, body, points }: AudienceSectionProp
         </h2>
         <p className="text-[color:var(--color-ink-soft)]">{body}</p>
         <ul className="flex flex-col gap-2">
-          {points.map((point) => (
-            <li key={point} className="flex items-start gap-2 text-sm text-[color:var(--color-ink-soft)]">
+          {points.map((point, index) => (
+            <li key={index} className="flex items-start gap-2 text-sm text-[color:var(--color-ink-soft)]">
               <Check className="size-4 shrink-0 text-[color:var(--color-ink-dim)]" aria-hidden />
               <span>{point}</span>
             </li>

@@ -1,24 +1,18 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ApiFailure, apiFetch, newIdempotencyKey } from '@/lib/api/client';
-import { messageFor } from '@/lib/api/error-message';
 import { useApiMutation } from '@/lib/api/hooks';
 import type { LoginResult } from '@/lib/api/types';
 import { roleHome } from '@/lib/auth/roles';
-
-const T = {
-  title: 'Masuk',
-  email: 'Email',
-  password: 'Kata sandi',
-  submit: 'Masuk',
-  submitting: 'Memeriksa…',
-} as const;
+import { translateApiError } from '@/lib/errors/translate-api-error';
 
 export function LoginForm() {
+  const t = useTranslations();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
@@ -44,11 +38,13 @@ export function LoginForm() {
     m.mutate({ email, password });
   }
 
+  const err = m.error instanceof ApiFailure ? translateApiError(m.error.body, t) : null;
+
   return (
-    <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+    <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-4">
       <div className="space-y-1.5">
         <label htmlFor="email" className="text-sm text-[color:var(--color-ink-soft)]">
-          {T.email}
+          {t('login.email')}
         </label>
         <Input
           id="email"
@@ -57,10 +53,15 @@ export function LoginForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+        {err?.fields.email?.map((message) => (
+          <p key={message} className="text-sm text-destructive">
+            {message}
+          </p>
+        ))}
       </div>
       <div className="space-y-1.5">
         <label htmlFor="password" className="text-sm text-[color:var(--color-ink-soft)]">
-          {T.password}
+          {t('login.password')}
         </label>
         <Input
           id="password"
@@ -69,13 +70,18 @@ export function LoginForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        {err?.fields.password?.map((message) => (
+          <p key={message} className="text-sm text-destructive">
+            {message}
+          </p>
+        ))}
       </div>
       <Button type="submit" className="w-full" disabled={m.isPending}>
-        {m.isPending ? T.submitting : T.submit}
+        {m.isPending ? t('login.submitting') : t('login.submit')}
       </Button>
-      {m.error instanceof ApiFailure && (
+      {err && (
         <p role="alert" className="text-sm text-destructive">
-          {messageFor(m.error.body.error.code)}
+          {err.summary}
         </p>
       )}
     </form>
