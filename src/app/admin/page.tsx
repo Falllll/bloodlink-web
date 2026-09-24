@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { GlassPanel } from '@/components/ui/glass-panel';
 
@@ -18,6 +19,12 @@ export default async function AdminPage() {
           {t('adminHeading')}
         </h1>
         <p className="mt-1 text-sm text-[color:var(--color-ink-muted)]">{t('adminPending')}</p>
+        <Link
+          href="/admin/audit-logs"
+          className="mt-4 inline-block text-sm font-medium text-[color:var(--color-ink-strong)] underline underline-offset-4 hover:text-[color:var(--color-ink-soft)]"
+        >
+          {t('adminAuditLink')}
+        </Link>
       </GlassPanel>
     </main>
   );

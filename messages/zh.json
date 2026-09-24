@@ -4,7 +4,8 @@
     "description": "BloodLink 实时整合医院、血库和献血单位之间的血液库存数据。",
     "loginTitle": "登录 — BloodLink",
     "adminTitle": "管理面板 — BloodLink",
-    "dashboardTitle": "员工仪表盘 — BloodLink"
+    "dashboardTitle": "员工仪表盘 — BloodLink",
+    "auditTitle": "审计日志 — BloodLink"
   },
   "common": {
     "language": "语言",
@@ -63,10 +64,51 @@
   },
   "shell": {
     "adminHeading": "管理面板",
-    "adminPending": "管理面板内容（机构验证、黑名单、审计查看器）将在卡片 550 中提供。",
+    "adminPending": "管理面板内容（机构验证、黑名单）将在卡片 550 中提供。",
+    "adminAuditLink": "打开审计日志",
     "dashboardHeading": "员工仪表盘",
     "dashboardPending": "仪表盘内容（库存、请求、匹配）将在卡片 540 中提供。",
     "devHeading": "BloodLink — 基础令牌与组件"
+  },
+  "audit": {
+    "heading": "审计日志",
+    "description": "只读记录：谁在何时更改了什么。显示的行仅限您的账户有权查看的范围。",
+    "filters": {
+      "action": "操作",
+      "allActions": "全部操作",
+      "auditableType": "对象类型",
+      "actorId": "操作者 ID",
+      "traceId": "追踪 ID",
+      "from": "开始日期",
+      "to": "结束日期",
+      "reset": "重置筛选"
+    },
+    "action": {
+      "created": "创建",
+      "updated": "更新",
+      "deleted": "删除"
+    },
+    "column": {
+      "occurredAt": "时间",
+      "action": "操作",
+      "subject": "对象",
+      "actor": "操作者",
+      "trace": "追踪",
+      "changes": "变更"
+    },
+    "empty": "没有符合这些筛选条件的审计记录。",
+    "loading": "正在加载审计日志…",
+    "unknownActor": "系统 / 未知操作者",
+    "actorValue": "用户 #{id}",
+    "facilityValue": "机构 #{id}",
+    "noFacility": "无机构",
+    "subjectId": "#{id}",
+    "ipValue": "IP {ip}",
+    "none": "—",
+    "showChanges": "显示变更",
+    "hideChanges": "隐藏变更",
+    "prev": "上一页",
+    "next": "下一页"
   },
   "fields": {
     "email": "电子邮箱",

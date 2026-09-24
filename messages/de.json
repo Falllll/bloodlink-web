@@ -4,7 +4,8 @@
     "description": "BloodLink vereint Blutbestandsdaten von Krankenhäusern, Blutbanken und Spendeeinheiten in Echtzeit.",
     "loginTitle": "Anmelden — BloodLink",
     "adminTitle": "Admin-Bereich — BloodLink",
-    "dashboardTitle": "Mitarbeiter-Dashboard — BloodLink"
+    "dashboardTitle": "Mitarbeiter-Dashboard — BloodLink",
+    "auditTitle": "Audit-Protokoll — BloodLink"
   },
   "common": {
     "language": "Sprache",
@@ -63,10 +64,51 @@
   },
   "shell": {
     "adminHeading": "Admin-Bereich",
-    "adminPending": "Der Inhalt des Admin-Bereichs (Institutionsverifizierung, Sperrliste, Audit-Viewer) folgt in Karte 550.",
+    "adminPending": "Der Inhalt des Admin-Bereichs (Institutionsverifizierung, Sperrliste) folgt in Karte 550.",
+    "adminAuditLink": "Audit-Protokoll öffnen",
     "dashboardHeading": "Mitarbeiter-Dashboard",
     "dashboardPending": "Der Dashboard-Inhalt (Bestand, Anfragen, Matching) folgt in Karte 540.",
     "devHeading": "BloodLink — Basistoken & Komponenten"
+  },
+  "audit": {
+    "heading": "Audit-Protokoll",
+    "description": "Schreibgeschützte Aufzeichnung, wer was wann geändert hat. Zeilen sind auf das beschränkt, was Ihr Konto sehen darf.",
+    "filters": {
+      "action": "Aktion",
+      "allActions": "Alle Aktionen",
+      "auditableType": "Objekttyp",
+      "actorId": "Akteur-ID",
+      "traceId": "Trace-ID",
+      "from": "Von",
+      "to": "Bis",
+      "reset": "Filter zurücksetzen"
+    },
+    "action": {
+      "created": "Erstellt",
+      "updated": "Geändert",
+      "deleted": "Gelöscht"
+    },
+    "column": {
+      "occurredAt": "Zeit",
+      "action": "Aktion",
+      "subject": "Objekt",
+      "actor": "Akteur",
+      "trace": "Trace",
+      "changes": "Änderungen"
+    },
+    "empty": "Keine Audit-Einträge entsprechen diesen Filtern.",
+    "loading": "Audit-Protokoll wird geladen…",
+    "unknownActor": "System / unbekannter Akteur",
+    "actorValue": "Benutzer #{id}",
+    "facilityValue": "Einrichtung #{id}",
+    "noFacility": "Keine Einrichtung",
+    "subjectId": "#{id}",
+    "ipValue": "IP {ip}",
+    "none": "—",
+    "showChanges": "Änderungen anzeigen",
+    "hideChanges": "Änderungen ausblenden",
+    "prev": "Zurück",
+    "next": "Weiter"
   },
   "fields": {
     "email": "E-Mail",

@@ -4,7 +4,8 @@
     "description": "BloodLink unifies blood stock data across hospitals, blood banks, and donation units in real time.",
     "loginTitle": "Sign in — BloodLink",
     "adminTitle": "Admin Panel — BloodLink",
-    "dashboardTitle": "Staff Dashboard — BloodLink"
+    "dashboardTitle": "Staff Dashboard — BloodLink",
+    "auditTitle": "Audit Trail — BloodLink"
   },
   "common": {
     "language": "Language",
@@ -63,10 +64,51 @@
   },
   "shell": {
     "adminHeading": "Admin Panel",
-    "adminPending": "Admin panel content (institution verification, blacklist, audit viewer) ships in Card 550.",
+    "adminPending": "Admin panel content (institution verification, blacklist) ships in Card 550.",
+    "adminAuditLink": "Open the audit trail",
     "dashboardHeading": "Staff Dashboard",
     "dashboardPending": "Dashboard content (stock, requests, matching) ships in Card 540.",
     "devHeading": "BloodLink — base tokens & components"
+  },
+  "audit": {
+    "heading": "Audit Trail",
+    "description": "Read-only record of who changed what, and when. Rows are limited to what your account is allowed to see.",
+    "filters": {
+      "action": "Action",
+      "allActions": "All actions",
+      "auditableType": "Object type",
+      "actorId": "Actor ID",
+      "traceId": "Trace ID",
+      "from": "From",
+      "to": "To",
+      "reset": "Reset filters"
+    },
+    "action": {
+      "created": "Created",
+      "updated": "Updated",
+      "deleted": "Deleted"
+    },
+    "column": {
+      "occurredAt": "Time",
+      "action": "Action",
+      "subject": "Object",
+      "actor": "Actor",
+      "trace": "Trace",
+      "changes": "Changes"
+    },
+    "empty": "No audit entries match these filters.",
+    "loading": "Loading audit trail…",
+    "unknownActor": "System / unknown actor",
+    "actorValue": "User #{id}",
+    "facilityValue": "Facility #{id}",
+    "noFacility": "No facility",
+    "subjectId": "#{id}",
+    "ipValue": "IP {ip}",
+    "none": "—",
+    "showChanges": "Show changes",
+    "hideChanges": "Hide changes",
+    "prev": "Previous",
+    "next": "Next"
   },
   "fields": {
     "email": "Email",

@@ -4,7 +4,8 @@
     "description": "BloodLink menyatukan data stok darah antar rumah sakit, bank darah, dan unit donor darah secara real-time.",
     "loginTitle": "Masuk — BloodLink",
     "adminTitle": "Panel Admin — BloodLink",
-    "dashboardTitle": "Dashboard Petugas — BloodLink"
+    "dashboardTitle": "Dashboard Petugas — BloodLink",
+    "auditTitle": "Jejak Audit — BloodLink"
   },
   "common": {
     "language": "Bahasa",
@@ -63,10 +64,51 @@
   },
   "shell": {
     "adminHeading": "Panel Admin",
-    "adminPending": "Isi panel admin (verifikasi institusi, blacklist, audit viewer) hadir di Kartu 550.",
+    "adminPending": "Isi panel admin (verifikasi institusi, blacklist) hadir di Kartu 550.",
+    "adminAuditLink": "Buka jejak audit",
     "dashboardHeading": "Dashboard Petugas",
     "dashboardPending": "Isi dashboard (stok, permintaan, matching) hadir di Kartu 540.",
     "devHeading": "BloodLink — token & komponen dasar"
+  },
+  "audit": {
+    "heading": "Jejak Audit",
+    "description": "Catatan baca-saja tentang siapa mengubah apa, dan kapan. Baris dibatasi sesuai hak akses akun Anda.",
+    "filters": {
+      "action": "Aksi",
+      "allActions": "Semua aksi",
+      "auditableType": "Tipe objek",
+      "actorId": "ID aktor",
+      "traceId": "Trace ID",
+      "from": "Dari",
+      "to": "Sampai",
+      "reset": "Atur ulang filter"
+    },
+    "action": {
+      "created": "Dibuat",
+      "updated": "Diubah",
+      "deleted": "Dihapus"
+    },
+    "column": {
+      "occurredAt": "Waktu",
+      "action": "Aksi",
+      "subject": "Objek",
+      "actor": "Aktor",
+      "trace": "Trace",
+      "changes": "Perubahan"
+    },
+    "empty": "Tidak ada entri audit yang cocok dengan filter ini.",
+    "loading": "Memuat jejak audit…",
+    "unknownActor": "Sistem / aktor tidak diketahui",
+    "actorValue": "Pengguna #{id}",
+    "facilityValue": "Fasilitas #{id}",
+    "noFacility": "Tanpa fasilitas",
+    "subjectId": "#{id}",
+    "ipValue": "IP {ip}",
+    "none": "—",
+    "showChanges": "Lihat perubahan",
+    "hideChanges": "Sembunyikan perubahan",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya"
   },
   "fields": {
     "email": "Email",

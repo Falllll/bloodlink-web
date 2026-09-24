@@ -4,7 +4,8 @@
     "description": "BloodLinkは病院、血液バンク、献血ユニット間の血液在庫データをリアルタイムで統合します。",
     "loginTitle": "ログイン — BloodLink",
     "adminTitle": "管理パネル — BloodLink",
-    "dashboardTitle": "スタッフダッシュボード — BloodLink"
+    "dashboardTitle": "スタッフダッシュボード — BloodLink",
+    "auditTitle": "監査ログ — BloodLink"
   },
   "common": {
     "language": "言語",
@@ -63,10 +64,51 @@
   },
   "shell": {
     "adminHeading": "管理パネル",
-    "adminPending": "管理パネルの内容(施設認証、ブラックリスト、監査ビューア)はカード550で提供されます。",
+    "adminPending": "管理パネルの内容(施設認証、ブラックリスト)はカード550で提供されます。",
+    "adminAuditLink": "監査ログを開く",
     "dashboardHeading": "スタッフダッシュボード",
     "dashboardPending": "ダッシュボードの内容(在庫、リクエスト、マッチング)はカード540で提供されます。",
     "devHeading": "BloodLink — 基本トークンとコンポーネント"
+  },
+  "audit": {
+    "heading": "監査ログ",
+    "description": "誰が何をいつ変更したかの読み取り専用記録です。表示される行はアカウントの権限範囲に限られます。",
+    "filters": {
+      "action": "操作",
+      "allActions": "すべての操作",
+      "auditableType": "オブジェクト種別",
+      "actorId": "実行者ID",
+      "traceId": "トレースID",
+      "from": "開始日",
+      "to": "終了日",
+      "reset": "フィルターをリセット"
+    },
+    "action": {
+      "created": "作成",
+      "updated": "更新",
+      "deleted": "削除"
+    },
+    "column": {
+      "occurredAt": "日時",
+      "action": "操作",
+      "subject": "オブジェクト",
+      "actor": "実行者",
+      "trace": "トレース",
+      "changes": "変更内容"
+    },
+    "empty": "この条件に一致する監査エントリはありません。",
+    "loading": "監査ログを読み込み中…",
+    "unknownActor": "システム / 不明な実行者",
+    "actorValue": "ユーザー #{id}",
+    "facilityValue": "施設 #{id}",
+    "noFacility": "施設なし",
+    "subjectId": "#{id}",
+    "ipValue": "IP {ip}",
+    "none": "—",
+    "showChanges": "変更を表示",
+    "hideChanges": "変更を隠す",
+    "prev": "前へ",
+    "next": "次へ"
   },
   "fields": {
     "email": "メールアドレス",
