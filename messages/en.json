@@ -113,7 +113,61 @@
   "fields": {
     "email": "Email",
     "password": "Password",
-    "name": "Name"
+    "name": "Name",
+    "date_of_birth": "Date of birth",
+    "sex": "Sex",
+    "weight_kg": "Body weight (kg)",
+    "last_donation_date": "Last donation date",
+    "planned_volume_ml": "Donation volume"
+  },
+  "selfCheck": {
+    "heading": "Check whether you can donate",
+    "subtitle": "Answer a few quick questions. No sign-up, no visit to a facility.",
+    "stepOf": "Step {current} of {total}",
+    "basics": {
+      "dateOfBirth": "Date of birth",
+      "sex": "Sex",
+      "sexMale": "Male",
+      "sexFemale": "Female",
+      "weightKg": "Body weight (kg)",
+      "weightHint": "Optional. If left empty, the result can't be confirmed."
+    },
+    "lastDonation": {
+      "legend": "Previous donation",
+      "never": "I've never donated",
+      "date": "Last donation date",
+      "volume": "Planned volume",
+      "volumeAny": "Not sure yet",
+      "volume350": "350 ml",
+      "volume450": "450 ml"
+    },
+    "awareness": {
+      "legend": "What the staff will ask you",
+      "note": "These questions are for preparation only. Your answers aren't sent and don't affect the result.",
+      "i1": "Are you currently ill, feverish, or taking medication?",
+      "i2": "Have you recently had a tattoo, piercing, or surgery?",
+      "i3": "Are you pregnant or breastfeeding?"
+    },
+    "nav": {
+      "back": "Back",
+      "next": "Next",
+      "submit": "Check eligibility",
+      "submitting": "Checking…",
+      "restart": "Start over"
+    },
+    "result": {
+      "eligibleTitle": "You can most likely donate",
+      "eligibleBody": "Based on what you entered, nothing prevents you from donating.",
+      "notEligibleTitle": "You can't donate right now",
+      "notEligibleBody": "A requirement isn't met yet. See the reasons below.",
+      "undeterminedTitle": "The result can't be confirmed yet",
+      "undeterminedBody": "There isn't enough data to answer. Fill in more details or ask the staff directly.",
+      "provisional": "This is an early indication. The final decision is made by staff at screening.",
+      "retryAfter": "You can donate again from {date}.",
+      "reasons": "Reasons",
+      "ctaFind": "Find a place to donate",
+      "failed": "The check couldn't be run. Please try again shortly."
+    }
   },
   "errors": {
     "VALIDATION_FAILED": "Some fields aren't right.",
@@ -150,7 +204,13 @@
   },
   "medical": {
     "eligibility": {
-      "minIntervalDays": "Wait {days, plural, other {# days}} since the last donation."
+      "minIntervalDays": "Wait {days, plural, other {# days}} since the last donation.",
+      "AGE_BELOW_MINIMUM": "Age doesn't meet the minimum donor requirement yet.",
+      "AGE_ABOVE_MAXIMUM": "Age is above the maximum donor limit.",
+      "DONATION_INTERVAL_NOT_MET": "Not enough time has passed since the last donation.",
+      "BODY_WEIGHT_BELOW_MINIMUM": "Body weight doesn't meet the minimum requirement yet.",
+      "ACTIVE_DEFERRAL": "There is a donation deferral still in effect.",
+      "DATA_MISSING": "Some data is incomplete, so this can't be confirmed yet."
     },
     "lab": {
       "notCleared": "The sample hasn't passed lab testing yet."

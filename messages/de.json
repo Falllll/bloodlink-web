@@ -113,7 +113,61 @@
   "fields": {
     "email": "E-Mail",
     "password": "Passwort",
-    "name": "Name"
+    "name": "Name",
+    "date_of_birth": "Geburtsdatum",
+    "sex": "Geschlecht",
+    "weight_kg": "Körpergewicht (kg)",
+    "last_donation_date": "Datum der letzten Spende",
+    "planned_volume_ml": "Spendevolumen"
+  },
+  "selfCheck": {
+    "heading": "Prüfen Sie, ob Sie spenden können",
+    "subtitle": "Beantworten Sie ein paar kurze Fragen. Ohne Anmeldung, ohne Besuch in einer Einrichtung.",
+    "stepOf": "Schritt {current} von {total}",
+    "basics": {
+      "dateOfBirth": "Geburtsdatum",
+      "sex": "Geschlecht",
+      "sexMale": "Männlich",
+      "sexFemale": "Weiblich",
+      "weightKg": "Körpergewicht (kg)",
+      "weightHint": "Optional. Bleibt es leer, kann das Ergebnis nicht bestätigt werden."
+    },
+    "lastDonation": {
+      "legend": "Frühere Spende",
+      "never": "Ich habe noch nie gespendet",
+      "date": "Datum der letzten Spende",
+      "volume": "Geplantes Volumen",
+      "volumeAny": "Noch unklar",
+      "volume350": "350 ml",
+      "volume450": "450 ml"
+    },
+    "awareness": {
+      "legend": "Was das Personal Sie fragen wird",
+      "note": "Diese Fragen dienen nur der Vorbereitung. Ihre Antworten werden nicht gesendet und beeinflussen das Ergebnis nicht.",
+      "i1": "Sind Sie derzeit krank, haben Fieber oder nehmen Medikamente?",
+      "i2": "Hatten Sie kürzlich ein Tattoo, Piercing oder eine Operation?",
+      "i3": "Sind Sie schwanger oder stillen Sie?"
+    },
+    "nav": {
+      "back": "Zurück",
+      "next": "Weiter",
+      "submit": "Eignung prüfen",
+      "submitting": "Wird geprüft…",
+      "restart": "Neu beginnen"
+    },
+    "result": {
+      "eligibleTitle": "Sie können wahrscheinlich spenden",
+      "eligibleBody": "Nach Ihren Angaben spricht nichts gegen eine Spende.",
+      "notEligibleTitle": "Sie können derzeit nicht spenden",
+      "notEligibleBody": "Eine Voraussetzung ist noch nicht erfüllt. Die Gründe finden Sie unten.",
+      "undeterminedTitle": "Das Ergebnis lässt sich noch nicht bestätigen",
+      "undeterminedBody": "Die Angaben reichen für eine Antwort nicht aus. Ergänzen Sie sie oder fragen Sie direkt das Personal.",
+      "provisional": "Dies ist eine erste Einschätzung. Die endgültige Entscheidung trifft das Personal bei der Untersuchung.",
+      "retryAfter": "Sie können ab dem {date} wieder spenden.",
+      "reasons": "Gründe",
+      "ctaFind": "Spendeort finden",
+      "failed": "Die Prüfung konnte nicht durchgeführt werden. Bitte versuchen Sie es gleich noch einmal."
+    }
   },
   "errors": {
     "VALIDATION_FAILED": "Einige Angaben sind nicht korrekt.",

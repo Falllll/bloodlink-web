@@ -113,7 +113,61 @@
   "fields": {
     "email": "Email",
     "password": "Kata sandi",
-    "name": "Nama"
+    "name": "Nama",
+    "date_of_birth": "Tanggal lahir",
+    "sex": "Jenis kelamin",
+    "weight_kg": "Berat badan (kg)",
+    "last_donation_date": "Tanggal donor terakhir",
+    "planned_volume_ml": "Volume donor"
+  },
+  "selfCheck": {
+    "heading": "Cek apakah kamu bisa donor",
+    "subtitle": "Jawab beberapa pertanyaan singkat. Tanpa daftar, tanpa datang ke fasilitas.",
+    "stepOf": "Langkah {current} dari {total}",
+    "basics": {
+      "dateOfBirth": "Tanggal lahir",
+      "sex": "Jenis kelamin",
+      "sexMale": "Laki-laki",
+      "sexFemale": "Perempuan",
+      "weightKg": "Berat badan (kg)",
+      "weightHint": "Opsional. Kalau dikosongkan, hasilnya belum bisa dipastikan."
+    },
+    "lastDonation": {
+      "legend": "Donor sebelumnya",
+      "never": "Saya belum pernah donor",
+      "date": "Tanggal donor terakhir",
+      "volume": "Volume yang direncanakan",
+      "volumeAny": "Belum tahu",
+      "volume350": "350 ml",
+      "volume450": "450 ml"
+    },
+    "awareness": {
+      "legend": "Hal yang akan ditanyakan petugas",
+      "note": "Pertanyaan ini hanya untuk persiapan. Jawabannya tidak dikirim dan tidak memengaruhi hasil.",
+      "i1": "Apakah kamu sedang sakit, demam, atau minum obat?",
+      "i2": "Apakah kamu baru saja ditato, ditindik, atau menjalani operasi?",
+      "i3": "Apakah kamu sedang hamil atau menyusui?"
+    },
+    "nav": {
+      "back": "Kembali",
+      "next": "Lanjut",
+      "submit": "Cek kelayakan",
+      "submitting": "Memeriksa…",
+      "restart": "Ulangi"
+    },
+    "result": {
+      "eligibleTitle": "Kamu kemungkinan bisa donor",
+      "eligibleBody": "Dari data yang kamu isi, tidak ada hal yang menghalangi donor.",
+      "notEligibleTitle": "Kamu belum bisa donor saat ini",
+      "notEligibleBody": "Ada syarat yang belum terpenuhi. Lihat alasannya di bawah.",
+      "undeterminedTitle": "Hasilnya belum bisa dipastikan",
+      "undeterminedBody": "Datanya belum cukup untuk menjawab. Lengkapi data atau tanyakan langsung ke petugas.",
+      "provisional": "Ini indikasi awal. Keputusan final tetap oleh petugas saat pemeriksaan.",
+      "retryAfter": "Kamu bisa donor lagi mulai {date}.",
+      "reasons": "Alasan",
+      "ctaFind": "Cari tempat donor",
+      "failed": "Pemeriksaan gagal dijalankan. Coba lagi sebentar lagi."
+    }
   },
   "errors": {
     "VALIDATION_FAILED": "Ada isian yang belum benar.",
@@ -150,7 +204,13 @@
   },
   "medical": {
     "eligibility": {
-      "minIntervalDays": "Tunggu {days, plural, other {# hari}} sejak donor terakhir."
+      "minIntervalDays": "Tunggu {days, plural, other {# hari}} sejak donor terakhir.",
+      "AGE_BELOW_MINIMUM": "Usia belum memenuhi syarat minimum donor.",
+      "AGE_ABOVE_MAXIMUM": "Usia melewati batas maksimum donor.",
+      "DONATION_INTERVAL_NOT_MET": "Jarak dari donor terakhir belum cukup.",
+      "BODY_WEIGHT_BELOW_MINIMUM": "Berat badan belum memenuhi syarat minimum.",
+      "ACTIVE_DEFERRAL": "Ada penundaan donor yang masih berlaku.",
+      "DATA_MISSING": "Ada data yang belum lengkap, jadi belum bisa dipastikan."
     },
     "lab": {
       "notCleared": "Sampel belum lolos uji laboratorium."

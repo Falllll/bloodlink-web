@@ -113,7 +113,61 @@
   "fields": {
     "email": "电子邮箱",
     "password": "密码",
-    "name": "姓名"
+    "name": "姓名",
+    "date_of_birth": "出生日期",
+    "sex": "性别",
+    "weight_kg": "体重（公斤）",
+    "last_donation_date": "上次献血日期",
+    "planned_volume_ml": "献血量"
+  },
+  "selfCheck": {
+    "heading": "看看你能否献血",
+    "subtitle": "回答几个简单的问题。无需注册，无需前往机构。",
+    "stepOf": "第 {current} 步，共 {total} 步",
+    "basics": {
+      "dateOfBirth": "出生日期",
+      "sex": "性别",
+      "sexMale": "男",
+      "sexFemale": "女",
+      "weightKg": "体重（公斤）",
+      "weightHint": "选填。留空时无法确定结果。"
+    },
+    "lastDonation": {
+      "legend": "以往献血",
+      "never": "我从未献过血",
+      "date": "上次献血日期",
+      "volume": "计划献血量",
+      "volumeAny": "还不确定",
+      "volume350": "350 毫升",
+      "volume450": "450 毫升"
+    },
+    "awareness": {
+      "legend": "工作人员会问的问题",
+      "note": "这些问题仅供准备之用。你的回答不会被发送，也不影响结果。",
+      "i1": "你目前是否生病、发烧或正在服药？",
+      "i2": "你最近是否纹身、穿孔或做过手术？",
+      "i3": "你是否正在怀孕或哺乳？"
+    },
+    "nav": {
+      "back": "返回",
+      "next": "下一步",
+      "submit": "检查资格",
+      "submitting": "检查中…",
+      "restart": "重新开始"
+    },
+    "result": {
+      "eligibleTitle": "你很可能可以献血",
+      "eligibleBody": "根据你填写的信息，没有妨碍献血的情况。",
+      "notEligibleTitle": "你目前还不能献血",
+      "notEligibleBody": "有条件尚未满足。原因见下方。",
+      "undeterminedTitle": "暂时无法确定结果",
+      "undeterminedBody": "数据不足以给出答案。请补充信息或直接咨询工作人员。",
+      "provisional": "这只是初步参考。最终决定由工作人员在体检时作出。",
+      "retryAfter": "你可以从 {date} 起再次献血。",
+      "reasons": "原因",
+      "ctaFind": "查找献血地点",
+      "failed": "检查未能完成。请稍后再试。"
+    }
   },
   "errors": {
     "VALIDATION_FAILED": "部分字段填写有误。",

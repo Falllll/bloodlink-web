@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { SiteHeader } from '@/components/landing/site-header';
 import { Hero } from '@/components/landing/hero';
 import { HowItWorks } from '@/components/landing/how-it-works';
+import { SelfCheckSection } from '@/components/landing/self-check-section';
 import { AudienceSection } from '@/components/landing/audience-section';
 import { SiteFooter } from '@/components/landing/site-footer';
 
@@ -26,6 +27,7 @@ export default async function Home() {
       <main className="flex flex-1 flex-col">
         <Hero />
         <HowItWorks />
+        <SelfCheckSection />
         <AudienceSection
           id="for-donors"
           title={t('donor.title')}

@@ -113,7 +113,61 @@
   "fields": {
     "email": "メールアドレス",
     "password": "パスワード",
-    "name": "名前"
+    "name": "名前",
+    "date_of_birth": "生年月日",
+    "sex": "性別",
+    "weight_kg": "体重（kg）",
+    "last_donation_date": "前回の献血日",
+    "planned_volume_ml": "献血量"
+  },
+  "selfCheck": {
+    "heading": "献血できるか確認する",
+    "subtitle": "いくつかの簡単な質問に答えてください。登録も来所も不要です。",
+    "stepOf": "ステップ {current} / {total}",
+    "basics": {
+      "dateOfBirth": "生年月日",
+      "sex": "性別",
+      "sexMale": "男性",
+      "sexFemale": "女性",
+      "weightKg": "体重（kg）",
+      "weightHint": "任意。空欄の場合、結果を確定できません。"
+    },
+    "lastDonation": {
+      "legend": "前回の献血",
+      "never": "献血したことがない",
+      "date": "前回の献血日",
+      "volume": "予定の献血量",
+      "volumeAny": "まだ分からない",
+      "volume350": "350 ml",
+      "volume450": "450 ml"
+    },
+    "awareness": {
+      "legend": "スタッフから聞かれること",
+      "note": "これらの質問は準備のためだけのものです。回答は送信されず、結果にも影響しません。",
+      "i1": "現在、体調不良・発熱がある、または薬を服用していますか？",
+      "i2": "最近、タトゥー・ピアス・手術をしましたか？",
+      "i3": "妊娠中または授乳中ですか？"
+    },
+    "nav": {
+      "back": "戻る",
+      "next": "次へ",
+      "submit": "適格性を確認",
+      "submitting": "確認中…",
+      "restart": "やり直す"
+    },
+    "result": {
+      "eligibleTitle": "おそらく献血できます",
+      "eligibleBody": "入力された内容では、献血を妨げる事項はありません。",
+      "notEligibleTitle": "現在は献血できません",
+      "notEligibleBody": "満たしていない条件があります。理由は下記をご覧ください。",
+      "undeterminedTitle": "まだ結果を確定できません",
+      "undeterminedBody": "回答するにはデータが不足しています。情報を追加するか、スタッフに直接お尋ねください。",
+      "provisional": "これは初期の目安です。最終判断は検診時にスタッフが行います。",
+      "retryAfter": "{date} から再び献血できます。",
+      "reasons": "理由",
+      "ctaFind": "献血場所を探す",
+      "failed": "確認を実行できませんでした。しばらくしてからもう一度お試しください。"
+    }
   },
   "errors": {
     "VALIDATION_FAILED": "入力内容に誤りがあります。",
