@@ -67,7 +67,6 @@
     "adminPending": "Der Inhalt des Admin-Bereichs (Institutionsverifizierung, Sperrliste) folgt in Karte 550.",
     "adminAuditLink": "Audit-Protokoll öffnen",
     "dashboardHeading": "Mitarbeiter-Dashboard",
-    "dashboardPending": "Der Dashboard-Inhalt (Bestand, Anfragen, Matching) folgt in Karte 540.",
     "devHeading": "BloodLink — Basistoken & Komponenten"
   },
   "audit": {
@@ -118,7 +117,15 @@
     "sex": "Geschlecht",
     "weight_kg": "Körpergewicht (kg)",
     "last_donation_date": "Datum der letzten Spende",
-    "planned_volume_ml": "Spendevolumen"
+    "planned_volume_ml": "Spendevolumen",
+    "patient_reference": "Patientenreferenz",
+    "component": "Komponente",
+    "blood_group": "Blutgruppe",
+    "rh_factor": "Rhesusfaktor",
+    "quantity": "Menge (Einheiten)",
+    "urgency": "Dringlichkeit",
+    "needed_by": "Benötigt bis",
+    "note": "Notiz"
   },
   "selfCheck": {
     "heading": "Prüfen Sie, ob Sie spenden können",
@@ -200,6 +207,78 @@
     "not_allowed": "Das Feld {field} wird nicht erkannt.",
     "invalid_sort": "Sortierung nach {column} nicht möglich.",
     "unsupported_filter": "Nicht unterstützter Filter: {keys}.",
-    "unknown": "{field} ist ungültig."
+    "unknown": "{field} ist ungültig.",
+    "date": "{field} muss ein gültiges Datum sein.",
+    "after": "{field} muss ein späterer Zeitpunkt sein.",
+    "enum": "{field} hat einen ungültigen Wert."
+  },
+  "dashboard": {
+    "status": {
+      "quarantined": "Quarantäne",
+      "testing": "In Prüfung",
+      "released": "Freigegeben",
+      "reserved": "Reserviert",
+      "issued": "Ausgegeben",
+      "discarded": "Verworfen",
+      "expired": "Abgelaufen",
+      "separated": "Aufgetrennt"
+    },
+    "component": {
+      "whole_blood": "Vollblut",
+      "packed_red_cells": "Erythrozytenkonzentrat",
+      "fresh_frozen_plasma": "Gefrorenes Frischplasma",
+      "platelet_concentrate": "Thrombozytenkonzentrat",
+      "cryoprecipitate": "Kryopräzipitat"
+    },
+    "rh": {
+      "positive": "Rh-positiv",
+      "negative": "Rh-negativ"
+    },
+    "urgency": {
+      "urgent": "Dringend",
+      "emergency": "Notfall"
+    },
+    "inventory": {
+      "heading": "Blutbestand",
+      "filters": {
+        "status": "Status",
+        "component": "Komponente",
+        "bloodGroup": "Blutgruppe",
+        "rhFactor": "Rhesusfaktor",
+        "all": "Alle",
+        "reset": "Filter zurücksetzen"
+      },
+      "column": {
+        "batchNumber": "Einheitennummer",
+        "component": "Komponente",
+        "group": "Gruppe",
+        "volume": "Volumen",
+        "status": "Status",
+        "collectedAt": "Entnommen",
+        "expiresAt": "Läuft ab"
+      },
+      "groupValue": "{group} · {rh}",
+      "untyped": "Noch nicht bestimmt",
+      "none": "—",
+      "loading": "Bestand wird geladen…",
+      "empty": "Keine Bluteinheiten entsprechen diesen Filtern.",
+      "prev": "Zurück",
+      "next": "Weiter"
+    },
+    "urgent": {
+      "heading": "Dringende Anforderung erstellen",
+      "description": "Der Bestand in der Nähe wird im selben Schritt geprüft, bevor Spender gerufen werden.",
+      "choose": "Auswählen…",
+      "submit": "Dringende Anforderung erstellen",
+      "submitting": "Wird gesendet…"
+    },
+    "nearby": {
+      "heading": "Bestand in der Nähe",
+      "noRequesterLocation": "Die Suche wurde nicht ausgeführt: Ihre Einrichtung hat noch keine Koordinaten. Bitten Sie einen Administrator, den Standort einzutragen. Das bedeutet nicht, dass es in der Nähe keinen Bestand gibt.",
+      "noSourcedRule": "Die Suche wurde nicht ausgeführt: Für diese Komponente gibt es noch keine belegte Verträglichkeitsregel. Das bedeutet nicht, dass es in der Nähe keinen Bestand gibt.",
+      "noneInRadius": "Suche abgeschlossen: kein verträglicher Bestand im Einsatzradius.",
+      "self": "Ihre Einrichtung",
+      "units": "{count, plural, one {# verträgliche Einheit} other {# verträgliche Einheiten}}"
+    }
   }
 }

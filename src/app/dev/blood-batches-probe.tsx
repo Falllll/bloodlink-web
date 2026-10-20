@@ -2,14 +2,12 @@
 
 import { useTranslations } from 'next-intl';
 import { useApiQuery } from '@/lib/api/hooks';
-import type { ApiPaginated } from '@/lib/api/types';
+import type { BloodBatchPage } from '@/lib/api/blood-batches';
 import { translateApiError } from '@/lib/errors/translate-api-error';
-
-type BloodBatch = { id: string };
 
 export function BloodBatchesProbe() {
   const t = useTranslations();
-  const { data, isPending, isError, error } = useApiQuery<ApiPaginated<BloodBatch>>(
+  const { data, isPending, isError, error } = useApiQuery<BloodBatchPage>(
     ['blood-batches'],
     '/blood-batches',
   );

@@ -67,7 +67,6 @@
     "adminPending": "Isi panel admin (verifikasi institusi, blacklist) hadir di Kartu 550.",
     "adminAuditLink": "Buka jejak audit",
     "dashboardHeading": "Dashboard Petugas",
-    "dashboardPending": "Isi dashboard (stok, permintaan, matching) hadir di Kartu 540.",
     "devHeading": "BloodLink — token & komponen dasar"
   },
   "audit": {
@@ -118,7 +117,15 @@
     "sex": "Jenis kelamin",
     "weight_kg": "Berat badan (kg)",
     "last_donation_date": "Tanggal donor terakhir",
-    "planned_volume_ml": "Volume donor"
+    "planned_volume_ml": "Volume donor",
+    "patient_reference": "Rujukan pasien",
+    "component": "Komponen",
+    "blood_group": "Golongan darah",
+    "rh_factor": "Rhesus",
+    "quantity": "Jumlah (kantong)",
+    "urgency": "Tingkat urgensi",
+    "needed_by": "Dibutuhkan paling lambat",
+    "note": "Catatan"
   },
   "selfCheck": {
     "heading": "Cek apakah kamu bisa donor",
@@ -200,7 +207,10 @@
     "not_allowed": "Kolom {field} tidak dikenali.",
     "invalid_sort": "Tidak bisa mengurutkan berdasarkan {column}.",
     "unsupported_filter": "Filter tidak didukung: {keys}.",
-    "unknown": "{field} tidak valid."
+    "unknown": "{field} tidak valid.",
+    "date": "{field} harus berupa tanggal yang valid.",
+    "after": "{field} harus berupa tanggal dan waktu yang lebih lambat.",
+    "enum": "Nilai {field} tidak valid."
   },
   "medical": {
     "eligibility": {
@@ -214,6 +224,75 @@
     },
     "lab": {
       "notCleared": "Sampel belum lolos uji laboratorium."
+    }
+  },
+  "dashboard": {
+    "status": {
+      "quarantined": "Karantina",
+      "testing": "Pengujian",
+      "released": "Dilepas",
+      "reserved": "Dipesan",
+      "issued": "Diterbitkan",
+      "discarded": "Dibuang",
+      "expired": "Kedaluwarsa",
+      "separated": "Dipisah"
+    },
+    "component": {
+      "whole_blood": "Darah lengkap",
+      "packed_red_cells": "Sel darah merah pekat",
+      "fresh_frozen_plasma": "Plasma segar beku",
+      "platelet_concentrate": "Konsentrat trombosit",
+      "cryoprecipitate": "Kriopresipitat"
+    },
+    "rh": {
+      "positive": "Rhesus positif",
+      "negative": "Rhesus negatif"
+    },
+    "urgency": {
+      "urgent": "Mendesak",
+      "emergency": "Darurat"
+    },
+    "inventory": {
+      "heading": "Inventaris darah",
+      "filters": {
+        "status": "Status",
+        "component": "Komponen",
+        "bloodGroup": "Golongan darah",
+        "rhFactor": "Rhesus",
+        "all": "Semua",
+        "reset": "Atur ulang filter"
+      },
+      "column": {
+        "batchNumber": "Nomor unit",
+        "component": "Komponen",
+        "group": "Golongan",
+        "volume": "Volume",
+        "status": "Status",
+        "collectedAt": "Diambil",
+        "expiresAt": "Kedaluwarsa"
+      },
+      "groupValue": "{group} · {rh}",
+      "untyped": "Belum digolongkan",
+      "none": "—",
+      "loading": "Memuat inventaris…",
+      "empty": "Tidak ada unit darah yang cocok dengan filter ini.",
+      "prev": "Sebelumnya",
+      "next": "Berikutnya"
+    },
+    "urgent": {
+      "heading": "Buat permintaan darurat",
+      "description": "Stok terdekat dipindai di langkah yang sama, sebelum donor dipanggil.",
+      "choose": "Pilih…",
+      "submit": "Buat permintaan darurat",
+      "submitting": "Mengirim…"
+    },
+    "nearby": {
+      "heading": "Stok terdekat",
+      "noRequesterLocation": "Pindaian tidak berjalan: fasilitasmu belum punya koordinat. Minta admin mengisi lokasinya. Ini bukan berarti tidak ada stok di sekitar.",
+      "noSourcedRule": "Pindaian tidak berjalan: komponen ini belum punya aturan kompatibilitas bersumber. Ini bukan berarti tidak ada stok di sekitar.",
+      "noneInRadius": "Pindaian selesai: tidak ada stok cocok dalam radius operasional.",
+      "self": "Fasilitasmu sendiri",
+      "units": "{count} unit cocok"
     }
   }
 }

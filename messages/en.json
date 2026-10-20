@@ -67,7 +67,6 @@
     "adminPending": "Admin panel content (institution verification, blacklist) ships in Card 550.",
     "adminAuditLink": "Open the audit trail",
     "dashboardHeading": "Staff Dashboard",
-    "dashboardPending": "Dashboard content (stock, requests, matching) ships in Card 540.",
     "devHeading": "BloodLink — base tokens & components"
   },
   "audit": {
@@ -118,7 +117,15 @@
     "sex": "Sex",
     "weight_kg": "Body weight (kg)",
     "last_donation_date": "Last donation date",
-    "planned_volume_ml": "Donation volume"
+    "planned_volume_ml": "Donation volume",
+    "patient_reference": "Patient reference",
+    "component": "Component",
+    "blood_group": "Blood group",
+    "rh_factor": "Rh factor",
+    "quantity": "Quantity (units)",
+    "urgency": "Urgency",
+    "needed_by": "Needed by",
+    "note": "Note"
   },
   "selfCheck": {
     "heading": "Check whether you can donate",
@@ -200,7 +207,10 @@
     "not_allowed": "The {field} field isn't recognized.",
     "invalid_sort": "Can't sort by {column}.",
     "unsupported_filter": "Unsupported filter: {keys}.",
-    "unknown": "{field} is invalid."
+    "unknown": "{field} is invalid.",
+    "date": "{field} must be a valid date.",
+    "after": "{field} must be a later date and time.",
+    "enum": "{field} has an invalid value."
   },
   "medical": {
     "eligibility": {
@@ -214,6 +224,75 @@
     },
     "lab": {
       "notCleared": "The sample hasn't passed lab testing yet."
+    }
+  },
+  "dashboard": {
+    "status": {
+      "quarantined": "Quarantined",
+      "testing": "Testing",
+      "released": "Released",
+      "reserved": "Reserved",
+      "issued": "Issued",
+      "discarded": "Discarded",
+      "expired": "Expired",
+      "separated": "Separated"
+    },
+    "component": {
+      "whole_blood": "Whole blood",
+      "packed_red_cells": "Packed red cells",
+      "fresh_frozen_plasma": "Fresh frozen plasma",
+      "platelet_concentrate": "Platelet concentrate",
+      "cryoprecipitate": "Cryoprecipitate"
+    },
+    "rh": {
+      "positive": "Rh positive",
+      "negative": "Rh negative"
+    },
+    "urgency": {
+      "urgent": "Urgent",
+      "emergency": "Emergency"
+    },
+    "inventory": {
+      "heading": "Blood inventory",
+      "filters": {
+        "status": "Status",
+        "component": "Component",
+        "bloodGroup": "Blood group",
+        "rhFactor": "Rh factor",
+        "all": "All",
+        "reset": "Reset filters"
+      },
+      "column": {
+        "batchNumber": "Unit number",
+        "component": "Component",
+        "group": "Group",
+        "volume": "Volume",
+        "status": "Status",
+        "collectedAt": "Collected",
+        "expiresAt": "Expires"
+      },
+      "groupValue": "{group} · {rh}",
+      "untyped": "Not yet typed",
+      "none": "—",
+      "loading": "Loading inventory…",
+      "empty": "No blood units match these filters.",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "urgent": {
+      "heading": "Create urgent request",
+      "description": "Nearby stock is scanned in the same step, before any donor is called.",
+      "choose": "Choose…",
+      "submit": "Create urgent request",
+      "submitting": "Sending…"
+    },
+    "nearby": {
+      "heading": "Nearby stock",
+      "noRequesterLocation": "The scan did not run: your facility has no coordinates yet. Ask an administrator to set its location. This does not mean there is no stock nearby.",
+      "noSourcedRule": "The scan did not run: this component has no sourced compatibility rule yet. This does not mean there is no stock nearby.",
+      "noneInRadius": "Scan complete: no compatible stock within the operational radius.",
+      "self": "Your facility",
+      "units": "{count, plural, one {# compatible unit} other {# compatible units}}"
     }
   }
 }

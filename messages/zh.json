@@ -67,7 +67,6 @@
     "adminPending": "管理面板内容（机构验证、黑名单）将在卡片 550 中提供。",
     "adminAuditLink": "打开审计日志",
     "dashboardHeading": "员工仪表盘",
-    "dashboardPending": "仪表盘内容（库存、请求、匹配）将在卡片 540 中提供。",
     "devHeading": "BloodLink — 基础令牌与组件"
   },
   "audit": {
@@ -118,7 +117,15 @@
     "sex": "性别",
     "weight_kg": "体重（公斤）",
     "last_donation_date": "上次献血日期",
-    "planned_volume_ml": "献血量"
+    "planned_volume_ml": "献血量",
+    "patient_reference": "患者参考号",
+    "component": "成分",
+    "blood_group": "血型",
+    "rh_factor": "Rh 因子",
+    "quantity": "数量（单位）",
+    "urgency": "紧急程度",
+    "needed_by": "需要时间",
+    "note": "备注"
   },
   "selfCheck": {
     "heading": "看看你能否献血",
@@ -200,6 +207,78 @@
     "not_allowed": "无法识别{field}字段。",
     "invalid_sort": "无法按{column}排序。",
     "unsupported_filter": "不支持的筛选条件：{keys}。",
-    "unknown": "{field}无效。"
+    "unknown": "{field}无效。",
+    "date": "{field}必须是有效的日期。",
+    "after": "{field}必须是更晚的日期和时间。",
+    "enum": "{field}的值无效。"
+  },
+  "dashboard": {
+    "status": {
+      "quarantined": "隔离中",
+      "testing": "检测中",
+      "released": "已放行",
+      "reserved": "已预留",
+      "issued": "已发放",
+      "discarded": "已报废",
+      "expired": "已过期",
+      "separated": "已分离"
+    },
+    "component": {
+      "whole_blood": "全血",
+      "packed_red_cells": "浓缩红细胞",
+      "fresh_frozen_plasma": "新鲜冰冻血浆",
+      "platelet_concentrate": "浓缩血小板",
+      "cryoprecipitate": "冷沉淀"
+    },
+    "rh": {
+      "positive": "Rh 阳性",
+      "negative": "Rh 阴性"
+    },
+    "urgency": {
+      "urgent": "紧急",
+      "emergency": "危急"
+    },
+    "inventory": {
+      "heading": "血液库存",
+      "filters": {
+        "status": "状态",
+        "component": "成分",
+        "bloodGroup": "血型",
+        "rhFactor": "Rh 因子",
+        "all": "全部",
+        "reset": "重置筛选"
+      },
+      "column": {
+        "batchNumber": "单位编号",
+        "component": "成分",
+        "group": "血型",
+        "volume": "容量",
+        "status": "状态",
+        "collectedAt": "采集时间",
+        "expiresAt": "有效期至"
+      },
+      "groupValue": "{group} · {rh}",
+      "untyped": "尚未定型",
+      "none": "—",
+      "loading": "正在加载库存…",
+      "empty": "没有符合筛选条件的血液单位。",
+      "prev": "上一页",
+      "next": "下一页"
+    },
+    "urgent": {
+      "heading": "创建紧急请求",
+      "description": "在呼叫献血者之前，同一步骤内先扫描附近库存。",
+      "choose": "请选择…",
+      "submit": "创建紧急请求",
+      "submitting": "发送中…"
+    },
+    "nearby": {
+      "heading": "附近库存",
+      "noRequesterLocation": "扫描未运行：你的机构尚未设置坐标。请联系管理员设置位置。这并不表示附近没有库存。",
+      "noSourcedRule": "扫描未运行：该成分尚无有来源的相容性规则。这并不表示附近没有库存。",
+      "noneInRadius": "扫描完成：运营半径内没有相容的库存。",
+      "self": "你的机构",
+      "units": "{count} 个相容单位"
+    }
   }
 }

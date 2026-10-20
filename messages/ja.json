@@ -67,7 +67,6 @@
     "adminPending": "管理パネルの内容(施設認証、ブラックリスト)はカード550で提供されます。",
     "adminAuditLink": "監査ログを開く",
     "dashboardHeading": "スタッフダッシュボード",
-    "dashboardPending": "ダッシュボードの内容(在庫、リクエスト、マッチング)はカード540で提供されます。",
     "devHeading": "BloodLink — 基本トークンとコンポーネント"
   },
   "audit": {
@@ -118,7 +117,15 @@
     "sex": "性別",
     "weight_kg": "体重（kg）",
     "last_donation_date": "前回の献血日",
-    "planned_volume_ml": "献血量"
+    "planned_volume_ml": "献血量",
+    "patient_reference": "患者参照番号",
+    "component": "製剤",
+    "blood_group": "血液型",
+    "rh_factor": "Rh因子",
+    "quantity": "数量（単位）",
+    "urgency": "緊急度",
+    "needed_by": "必要期限",
+    "note": "メモ"
   },
   "selfCheck": {
     "heading": "献血できるか確認する",
@@ -200,6 +207,78 @@
     "not_allowed": "{field}フィールドは認識されません。",
     "invalid_sort": "{column}で並べ替えできません。",
     "unsupported_filter": "サポートされていないフィルター: {keys}。",
-    "unknown": "{field}は無効です。"
+    "unknown": "{field}は無効です。",
+    "date": "{field}は有効な日付である必要があります。",
+    "after": "{field}はより後の日時である必要があります。",
+    "enum": "{field}の値が無効です。"
+  },
+  "dashboard": {
+    "status": {
+      "quarantined": "隔離中",
+      "testing": "検査中",
+      "released": "出庫可",
+      "reserved": "予約済み",
+      "issued": "払出済み",
+      "discarded": "廃棄",
+      "expired": "期限切れ",
+      "separated": "分離済み"
+    },
+    "component": {
+      "whole_blood": "全血",
+      "packed_red_cells": "赤血球濃厚液",
+      "fresh_frozen_plasma": "新鮮凍結血漿",
+      "platelet_concentrate": "濃厚血小板",
+      "cryoprecipitate": "クリオプレシピテート"
+    },
+    "rh": {
+      "positive": "Rh陽性",
+      "negative": "Rh陰性"
+    },
+    "urgency": {
+      "urgent": "至急",
+      "emergency": "緊急"
+    },
+    "inventory": {
+      "heading": "血液在庫",
+      "filters": {
+        "status": "ステータス",
+        "component": "製剤",
+        "bloodGroup": "血液型",
+        "rhFactor": "Rh因子",
+        "all": "すべて",
+        "reset": "フィルターをリセット"
+      },
+      "column": {
+        "batchNumber": "ユニット番号",
+        "component": "製剤",
+        "group": "血液型",
+        "volume": "容量",
+        "status": "ステータス",
+        "collectedAt": "採血日時",
+        "expiresAt": "有効期限"
+      },
+      "groupValue": "{group} · {rh}",
+      "untyped": "未判定",
+      "none": "—",
+      "loading": "在庫を読み込み中…",
+      "empty": "条件に一致する血液ユニットはありません。",
+      "prev": "前へ",
+      "next": "次へ"
+    },
+    "urgent": {
+      "heading": "緊急依頼を作成",
+      "description": "ドナーを呼ぶ前に、同じ手順で近隣の在庫を確認します。",
+      "choose": "選択…",
+      "submit": "緊急依頼を作成",
+      "submitting": "送信中…"
+    },
+    "nearby": {
+      "heading": "近隣の在庫",
+      "noRequesterLocation": "在庫確認は実行されませんでした：施設の座標が未登録です。管理者に位置の登録を依頼してください。近隣に在庫がないという意味ではありません。",
+      "noSourcedRule": "在庫確認は実行されませんでした：この製剤には根拠のある適合ルールがまだありません。近隣に在庫がないという意味ではありません。",
+      "noneInRadius": "確認完了：運用半径内に適合する在庫はありません。",
+      "self": "自施設",
+      "units": "適合ユニット {count} 件"
+    }
   }
 }
