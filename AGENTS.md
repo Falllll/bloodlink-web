@@ -15,7 +15,7 @@ repo terpisah (`bloodlink`) dan tidak boleh dipanggil langsung dari browser.
 
 ## Stack
 
-- Next.js 16.3.5 (App Router), React 19.x, TypeScript
+- Next.js 16.4.2 (App Router), React 19.x, TypeScript
 - Tailwind CSS + shadcn/ui (token & komponen dasar ditetapkan Kartu 515)
 - TanStack Query untuk data fetching (Kartu 517)
 - Node.js minimal 20.9.0 — syarat `engines` Next 16, dikunci lewat `.nvmrc` (22)
