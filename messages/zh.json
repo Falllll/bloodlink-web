@@ -5,7 +5,9 @@
     "loginTitle": "登录 — BloodLink",
     "adminTitle": "管理面板 — BloodLink",
     "dashboardTitle": "员工仪表盘 — BloodLink",
-    "auditTitle": "审计日志 — BloodLink"
+    "auditTitle": "审计日志 — BloodLink",
+    "facilitiesTitle": "机构 — BloodLink",
+    "donorsTitle": "献血者 — BloodLink"
   },
   "common": {
     "language": "语言",
@@ -64,8 +66,11 @@
   },
   "shell": {
     "adminHeading": "管理面板",
-    "adminPending": "管理面板内容（机构验证、黑名单）将在卡片 550 中提供。",
-    "adminAuditLink": "打开审计日志",
+    "adminSummary": "验证机构、管理献血者的管理标记,并查看审计记录。",
+    "navLabel": "管理面板",
+    "navFacilities": "机构",
+    "navDonors": "献血者",
+    "navAuditLogs": "审计记录",
     "dashboardHeading": "员工仪表盘",
     "devHeading": "BloodLink — 基础令牌与组件"
   },
@@ -125,7 +130,9 @@
     "quantity": "数量（单位）",
     "urgency": "紧急程度",
     "needed_by": "需要时间",
-    "note": "备注"
+    "note": "备注",
+    "reason": "原因",
+    "ends_at": "结束日期"
   },
   "selfCheck": {
     "heading": "看看你能否献血",
@@ -188,6 +195,7 @@
     "IDEMPOTENCY_KEY_REQUIRED": "此请求不完整，请重试。",
     "IDEMPOTENCY_KEY_REUSED": "此请求已被处理过。",
     "REQUEST_IN_PROGRESS": "上一个请求仍在处理中，请稍候。",
+    "DONOR_FLAG_REJECTED": "由于献血者当前的标记状态,此次管理标记变更被拒绝。",
     "unknown": "发生了意外错误。"
   },
   "validation": {
@@ -280,5 +288,139 @@
       "self": "你的机构",
       "units": "{count} 个相容单位"
     }
+  },
+  "facilities": {
+    "heading": "机构",
+    "description": "BloodLink 中登记的所有机构。已验证表示该机构可以参与系统,与其当前是否运营无关。",
+    "filters": {
+      "type": "类型",
+      "allTypes": "全部类型",
+      "city": "城市",
+      "province": "省份",
+      "isActive": "运营状态",
+      "allStatuses": "全部状态",
+      "active": "运营中",
+      "inactive": "已停用",
+      "reset": "重置筛选",
+      "unverifiedOnPage": "仅未验证(仅限本页)",
+      "unverifiedHint": "只筛选当前显示的行。服务器没有验证筛选条件,其他页面可能仍有未验证的机构。"
+    },
+    "type": {
+      "hospital": "医院",
+      "blood_bank": "血库",
+      "donation_unit": "献血点",
+      "mobile_unit": "流动献血车"
+    },
+    "column": {
+      "name": "机构",
+      "type": "类型",
+      "location": "地点",
+      "active": "运营",
+      "verified": "验证",
+      "actions": "操作"
+    },
+    "status": {
+      "active": "运营中",
+      "inactive": "已停用",
+      "verified": "已验证",
+      "unverified": "未验证"
+    },
+    "location": "{city},{province}",
+    "verifiedAt": "自 {date}",
+    "verify": "验证",
+    "cancel": "取消",
+    "verifyNote": "备注(可选)",
+    "verifyConfirm": "确认验证",
+    "verifying": "验证中…",
+    "verifyHint": "验证是单向的:无法在此面板中撤销。",
+    "alreadyVerified": "该机构已经验证。",
+    "emptyOnPage": "本页所有机构均已验证。",
+    "loading": "正在加载机构…",
+    "empty": "没有符合筛选条件的机构。",
+    "prev": "上一页",
+    "next": "下一页",
+    "none": "—"
+  },
+  "donors": {
+    "heading": "献血者",
+    "description": "已登记的献血者及其管理标记。管理标记有时限、随时可解除,且与医学暂缓献血无关。",
+    "filters": {
+      "search": "姓名",
+      "searchHint": "匹配相似姓名,而非前缀。请输入完整姓名后再搜索。",
+      "searchSubmit": "搜索",
+      "bloodGroup": "血型",
+      "rhFactor": "Rh 因子",
+      "sex": "性别",
+      "city": "城市",
+      "deferralStatus": "暂缓状态",
+      "all": "全部",
+      "reset": "重置筛选"
+    },
+    "column": {
+      "donor": "献血者",
+      "bloodType": "血型",
+      "sex": "性别",
+      "city": "城市",
+      "lastDonation": "上次献血",
+      "donationCount": "献血次数",
+      "deferralStatus": "暂缓",
+      "details": "详情"
+    },
+    "sex": {
+      "male": "男",
+      "female": "女"
+    },
+    "rhFactor": {
+      "positive": "Rh+",
+      "negative": "Rh−"
+    },
+    "deferralStatus": {
+      "none": "无",
+      "temporary": "暂时",
+      "permanent": "永久"
+    },
+    "flagReason": {
+      "identity_fraud": "身份造假",
+      "repeated_no_show": "多次爽约",
+      "staff_safety": "工作人员安全",
+      "other": "其他"
+    },
+    "showDetails": "显示标记",
+    "hideDetails": "隐藏标记",
+    "flags": {
+      "heading": "管理标记",
+      "loading": "正在加载标记…",
+      "empty": "该献血者没有管理标记。",
+      "active": "生效中",
+      "inactive": "未生效",
+      "startsAt": "自 {date}",
+      "endsAt": "至 {date}",
+      "noEnd": "无结束日期",
+      "liftedAt": "已于 {date} 解除",
+      "liftNote": "解除原因:{note}"
+    },
+    "place": {
+      "heading": "设置管理标记",
+      "reason": "原因",
+      "note": "备注",
+      "endsAt": "结束日期(可选)",
+      "endsAtHint": "留空表示无结束日期。标记仍可随时解除。",
+      "submit": "设置标记",
+      "submitting": "设置中…",
+      "rejected": "该献血者已有生效中的管理标记。请先解除后再设置新的标记。"
+    },
+    "lift": {
+      "open": "解除标记",
+      "cancel": "取消",
+      "reason": "解除原因",
+      "submit": "确认解除",
+      "submitting": "解除中…",
+      "rejected": "该管理标记已被解除。"
+    },
+    "loading": "正在加载献血者…",
+    "empty": "没有符合筛选条件的献血者。",
+    "prev": "上一页",
+    "next": "下一页",
+    "none": "—"
   }
 }

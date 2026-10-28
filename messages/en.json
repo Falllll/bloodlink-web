@@ -5,7 +5,9 @@
     "loginTitle": "Sign in — BloodLink",
     "adminTitle": "Admin Panel — BloodLink",
     "dashboardTitle": "Staff Dashboard — BloodLink",
-    "auditTitle": "Audit Trail — BloodLink"
+    "auditTitle": "Audit Trail — BloodLink",
+    "facilitiesTitle": "Facilities — BloodLink",
+    "donorsTitle": "Donors — BloodLink"
   },
   "common": {
     "language": "Language",
@@ -64,8 +66,11 @@
   },
   "shell": {
     "adminHeading": "Admin Panel",
-    "adminPending": "Admin panel content (institution verification, blacklist) ships in Card 550.",
-    "adminAuditLink": "Open the audit trail",
+    "adminSummary": "Verify facilities, manage donor administrative flags, and review the audit trail.",
+    "navLabel": "Admin panel",
+    "navFacilities": "Facilities",
+    "navDonors": "Donors",
+    "navAuditLogs": "Audit trail",
     "dashboardHeading": "Staff Dashboard",
     "devHeading": "BloodLink — base tokens & components"
   },
@@ -125,7 +130,9 @@
     "quantity": "Quantity (units)",
     "urgency": "Urgency",
     "needed_by": "Needed by",
-    "note": "Note"
+    "note": "Note",
+    "reason": "Reason",
+    "ends_at": "End date"
   },
   "selfCheck": {
     "heading": "Check whether you can donate",
@@ -188,6 +195,7 @@
     "IDEMPOTENCY_KEY_REQUIRED": "This request is incomplete. Please try again.",
     "IDEMPOTENCY_KEY_REUSED": "This request has already been processed.",
     "REQUEST_IN_PROGRESS": "The previous request is still being processed. Please wait.",
+    "DONOR_FLAG_REJECTED": "This administrative flag change was rejected because of the donor's current flag state.",
     "unknown": "An unexpected error occurred."
   },
   "validation": {
@@ -294,5 +302,139 @@
       "self": "Your facility",
       "units": "{count, plural, one {# compatible unit} other {# compatible units}}"
     }
+  },
+  "facilities": {
+    "heading": "Facilities",
+    "description": "Every facility registered in BloodLink. Verification means a facility may take part in the system; it is separate from whether the facility is currently operating.",
+    "filters": {
+      "type": "Type",
+      "allTypes": "All types",
+      "city": "City",
+      "province": "Province",
+      "isActive": "Operating status",
+      "allStatuses": "All statuses",
+      "active": "Active",
+      "inactive": "Inactive",
+      "reset": "Reset filters",
+      "unverifiedOnPage": "Only unverified, on this page",
+      "unverifiedHint": "This only filters the rows already shown. The server has no verification filter, so other pages may still hold unverified facilities."
+    },
+    "type": {
+      "hospital": "Hospital",
+      "blood_bank": "Blood bank",
+      "donation_unit": "Donation unit",
+      "mobile_unit": "Mobile unit"
+    },
+    "column": {
+      "name": "Facility",
+      "type": "Type",
+      "location": "Location",
+      "active": "Operating",
+      "verified": "Verification",
+      "actions": "Actions"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "verified": "Verified",
+      "unverified": "Unverified"
+    },
+    "location": "{city}, {province}",
+    "verifiedAt": "Since {date}",
+    "verify": "Verify",
+    "cancel": "Cancel",
+    "verifyNote": "Note (optional)",
+    "verifyConfirm": "Confirm verification",
+    "verifying": "Verifying…",
+    "verifyHint": "Verification is one-way: it cannot be undone from this panel.",
+    "alreadyVerified": "This facility is already verified.",
+    "emptyOnPage": "Every facility on this page is already verified.",
+    "loading": "Loading facilities…",
+    "empty": "No facilities match these filters.",
+    "prev": "Previous",
+    "next": "Next",
+    "none": "—"
+  },
+  "donors": {
+    "heading": "Donors",
+    "description": "Registered donors and their administrative flags. Administrative flags are time-limited, can always be lifted, and are separate from medical deferrals.",
+    "filters": {
+      "search": "Name",
+      "searchHint": "Matches similar names, not prefixes. Type the full name, then search.",
+      "searchSubmit": "Search",
+      "bloodGroup": "Blood group",
+      "rhFactor": "Rh factor",
+      "sex": "Sex",
+      "city": "City",
+      "deferralStatus": "Deferral status",
+      "all": "All",
+      "reset": "Reset filters"
+    },
+    "column": {
+      "donor": "Donor",
+      "bloodType": "Blood type",
+      "sex": "Sex",
+      "city": "City",
+      "lastDonation": "Last donation",
+      "donationCount": "Donations",
+      "deferralStatus": "Deferral",
+      "details": "Details"
+    },
+    "sex": {
+      "male": "Male",
+      "female": "Female"
+    },
+    "rhFactor": {
+      "positive": "Rh+",
+      "negative": "Rh−"
+    },
+    "deferralStatus": {
+      "none": "None",
+      "temporary": "Temporary",
+      "permanent": "Permanent"
+    },
+    "flagReason": {
+      "identity_fraud": "Identity fraud",
+      "repeated_no_show": "Repeated no-show",
+      "staff_safety": "Staff safety",
+      "other": "Other"
+    },
+    "showDetails": "Show flags",
+    "hideDetails": "Hide flags",
+    "flags": {
+      "heading": "Administrative flags",
+      "loading": "Loading flags…",
+      "empty": "This donor has no administrative flags.",
+      "active": "Active",
+      "inactive": "Not active",
+      "startsAt": "From {date}",
+      "endsAt": "Until {date}",
+      "noEnd": "No end date",
+      "liftedAt": "Lifted {date}",
+      "liftNote": "Lift reason: {note}"
+    },
+    "place": {
+      "heading": "Place an administrative flag",
+      "reason": "Reason",
+      "note": "Note",
+      "endsAt": "End date (optional)",
+      "endsAtHint": "Leave empty for no end date. The flag can still be lifted at any time.",
+      "submit": "Place flag",
+      "submitting": "Placing…",
+      "rejected": "This donor already has an active administrative flag. Lift it before placing another."
+    },
+    "lift": {
+      "open": "Lift flag",
+      "cancel": "Cancel",
+      "reason": "Reason for lifting",
+      "submit": "Confirm lift",
+      "submitting": "Lifting…",
+      "rejected": "This administrative flag has already been lifted."
+    },
+    "loading": "Loading donors…",
+    "empty": "No donors match these filters.",
+    "prev": "Previous",
+    "next": "Next",
+    "none": "—"
   }
 }

@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { writeRole, writeToken } from '@/lib/auth/session';
+import { writeFacilityId, writeRole, writeToken } from '@/lib/auth/session';
 
 export async function POST(req: NextRequest): Promise<Response> {
   const headers = new Headers({
@@ -27,6 +27,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   const body = await upstream.json();
   await writeToken(body.data.token);
   await writeRole(body.data.user.role);
+  await writeFacilityId(body.data.user.facility_id);
 
   return Response.json({ data: { user: body.data.user } });
 }

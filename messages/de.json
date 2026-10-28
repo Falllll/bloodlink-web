@@ -5,7 +5,9 @@
     "loginTitle": "Anmelden — BloodLink",
     "adminTitle": "Admin-Bereich — BloodLink",
     "dashboardTitle": "Mitarbeiter-Dashboard — BloodLink",
-    "auditTitle": "Audit-Protokoll — BloodLink"
+    "auditTitle": "Audit-Protokoll — BloodLink",
+    "facilitiesTitle": "Einrichtungen — BloodLink",
+    "donorsTitle": "Spender — BloodLink"
   },
   "common": {
     "language": "Sprache",
@@ -64,8 +66,11 @@
   },
   "shell": {
     "adminHeading": "Admin-Bereich",
-    "adminPending": "Der Inhalt des Admin-Bereichs (Institutionsverifizierung, Sperrliste) folgt in Karte 550.",
-    "adminAuditLink": "Audit-Protokoll öffnen",
+    "adminSummary": "Einrichtungen verifizieren, administrative Spendervermerke verwalten und das Audit-Protokoll prüfen.",
+    "navLabel": "Admin-Bereich",
+    "navFacilities": "Einrichtungen",
+    "navDonors": "Spender",
+    "navAuditLogs": "Audit-Protokoll",
     "dashboardHeading": "Mitarbeiter-Dashboard",
     "devHeading": "BloodLink — Basistoken & Komponenten"
   },
@@ -125,7 +130,9 @@
     "quantity": "Menge (Einheiten)",
     "urgency": "Dringlichkeit",
     "needed_by": "Benötigt bis",
-    "note": "Notiz"
+    "note": "Notiz",
+    "reason": "Grund",
+    "ends_at": "Enddatum"
   },
   "selfCheck": {
     "heading": "Prüfen Sie, ob Sie spenden können",
@@ -188,6 +195,7 @@
     "IDEMPOTENCY_KEY_REQUIRED": "Diese Anfrage ist unvollständig. Bitte erneut versuchen.",
     "IDEMPOTENCY_KEY_REUSED": "Diese Anfrage wurde bereits verarbeitet.",
     "REQUEST_IN_PROGRESS": "Die vorherige Anfrage wird noch verarbeitet. Bitte warten.",
+    "DONOR_FLAG_REJECTED": "Diese Änderung des administrativen Vermerks wurde aufgrund des aktuellen Vermerkstatus des Spenders abgelehnt.",
     "unknown": "Ein unerwarteter Fehler ist aufgetreten."
   },
   "validation": {
@@ -280,5 +288,139 @@
       "self": "Ihre Einrichtung",
       "units": "{count, plural, one {# verträgliche Einheit} other {# verträgliche Einheiten}}"
     }
+  },
+  "facilities": {
+    "heading": "Einrichtungen",
+    "description": "Alle in BloodLink registrierten Einrichtungen. Verifiziert heißt, die Einrichtung darf am System teilnehmen – unabhängig davon, ob sie gerade in Betrieb ist.",
+    "filters": {
+      "type": "Typ",
+      "allTypes": "Alle Typen",
+      "city": "Stadt",
+      "province": "Provinz",
+      "isActive": "Betriebsstatus",
+      "allStatuses": "Alle Status",
+      "active": "Aktiv",
+      "inactive": "Inaktiv",
+      "reset": "Filter zurücksetzen",
+      "unverifiedOnPage": "Nur nicht verifizierte, auf dieser Seite",
+      "unverifiedHint": "Filtert nur die bereits angezeigten Zeilen. Der Server hat keinen Verifizierungsfilter, daher können andere Seiten noch nicht verifizierte Einrichtungen enthalten."
+    },
+    "type": {
+      "hospital": "Krankenhaus",
+      "blood_bank": "Blutbank",
+      "donation_unit": "Spendeeinheit",
+      "mobile_unit": "Mobile Einheit"
+    },
+    "column": {
+      "name": "Einrichtung",
+      "type": "Typ",
+      "location": "Ort",
+      "active": "Betrieb",
+      "verified": "Verifizierung",
+      "actions": "Aktionen"
+    },
+    "status": {
+      "active": "Aktiv",
+      "inactive": "Inaktiv",
+      "verified": "Verifiziert",
+      "unverified": "Nicht verifiziert"
+    },
+    "location": "{city}, {province}",
+    "verifiedAt": "Seit {date}",
+    "verify": "Verifizieren",
+    "cancel": "Abbrechen",
+    "verifyNote": "Notiz (optional)",
+    "verifyConfirm": "Verifizierung bestätigen",
+    "verifying": "Wird verifiziert…",
+    "verifyHint": "Die Verifizierung ist einseitig: Sie kann hier nicht rückgängig gemacht werden.",
+    "alreadyVerified": "Diese Einrichtung ist bereits verifiziert.",
+    "emptyOnPage": "Alle Einrichtungen auf dieser Seite sind bereits verifiziert.",
+    "loading": "Einrichtungen werden geladen…",
+    "empty": "Keine Einrichtungen entsprechen diesen Filtern.",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "none": "—"
+  },
+  "donors": {
+    "heading": "Spender",
+    "description": "Registrierte Spender und ihre administrativen Vermerke. Administrative Vermerke sind befristet, jederzeit aufhebbar und von medizinischen Rückstellungen getrennt.",
+    "filters": {
+      "search": "Name",
+      "searchHint": "Findet ähnliche Namen, keine Präfixe. Vollständigen Namen eingeben, dann suchen.",
+      "searchSubmit": "Suchen",
+      "bloodGroup": "Blutgruppe",
+      "rhFactor": "Rhesusfaktor",
+      "sex": "Geschlecht",
+      "city": "Stadt",
+      "deferralStatus": "Rückstellungsstatus",
+      "all": "Alle",
+      "reset": "Filter zurücksetzen"
+    },
+    "column": {
+      "donor": "Spender",
+      "bloodType": "Blutgruppe",
+      "sex": "Geschlecht",
+      "city": "Stadt",
+      "lastDonation": "Letzte Spende",
+      "donationCount": "Spenden",
+      "deferralStatus": "Rückstellung",
+      "details": "Details"
+    },
+    "sex": {
+      "male": "Männlich",
+      "female": "Weiblich"
+    },
+    "rhFactor": {
+      "positive": "Rh+",
+      "negative": "Rh−"
+    },
+    "deferralStatus": {
+      "none": "Keine",
+      "temporary": "Befristet",
+      "permanent": "Dauerhaft"
+    },
+    "flagReason": {
+      "identity_fraud": "Identitätsbetrug",
+      "repeated_no_show": "Wiederholtes Nichterscheinen",
+      "staff_safety": "Sicherheit des Personals",
+      "other": "Sonstiges"
+    },
+    "showDetails": "Vermerke anzeigen",
+    "hideDetails": "Vermerke ausblenden",
+    "flags": {
+      "heading": "Administrative Vermerke",
+      "loading": "Vermerke werden geladen…",
+      "empty": "Dieser Spender hat keine administrativen Vermerke.",
+      "active": "Aktiv",
+      "inactive": "Nicht aktiv",
+      "startsAt": "Ab {date}",
+      "endsAt": "Bis {date}",
+      "noEnd": "Ohne Enddatum",
+      "liftedAt": "Aufgehoben {date}",
+      "liftNote": "Grund der Aufhebung: {note}"
+    },
+    "place": {
+      "heading": "Administrativen Vermerk setzen",
+      "reason": "Grund",
+      "note": "Notiz",
+      "endsAt": "Enddatum (optional)",
+      "endsAtHint": "Leer lassen für kein Enddatum. Der Vermerk kann trotzdem jederzeit aufgehoben werden.",
+      "submit": "Vermerk setzen",
+      "submitting": "Wird gesetzt…",
+      "rejected": "Dieser Spender hat bereits einen aktiven administrativen Vermerk. Heben Sie ihn auf, bevor Sie einen neuen setzen."
+    },
+    "lift": {
+      "open": "Vermerk aufheben",
+      "cancel": "Abbrechen",
+      "reason": "Grund der Aufhebung",
+      "submit": "Aufhebung bestätigen",
+      "submitting": "Wird aufgehoben…",
+      "rejected": "Dieser administrative Vermerk wurde bereits aufgehoben."
+    },
+    "loading": "Spender werden geladen…",
+    "empty": "Keine Spender entsprechen diesen Filtern.",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "none": "—"
   }
 }

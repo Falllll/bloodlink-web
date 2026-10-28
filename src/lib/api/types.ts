@@ -1,7 +1,8 @@
 export type ErrorCode =
   | 'VALIDATION_FAILED' | 'UNAUTHENTICATED' | 'FORBIDDEN' | 'NOT_FOUND'
   | 'INTERNAL_ERROR' | 'METHOD_NOT_ALLOWED' | 'TOO_MANY_REQUESTS' | 'HTTP_ERROR'
-  | 'IDEMPOTENCY_KEY_REQUIRED' | 'IDEMPOTENCY_KEY_REUSED' | 'REQUEST_IN_PROGRESS';
+  | 'IDEMPOTENCY_KEY_REQUIRED' | 'IDEMPOTENCY_KEY_REUSED' | 'REQUEST_IN_PROGRESS'
+  | 'DONOR_FLAG_REJECTED';
 
 export type ValidationFailure = { rule: string; params: Record<string, string | string[]> | string[] };
 
@@ -24,6 +25,9 @@ export type AuthUser = {
   name: string;
   email: string;
   role: string;
+  // public_id fasilitas, atau null untuk operator global (Kartu 535).
+  // Penentu satu-satunya apakah aksi verifikasi/flag boleh ditampilkan.
+  facility_id: string | null;
 };
 
 export type LoginResult = { user: AuthUser };
