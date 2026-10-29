@@ -22,6 +22,18 @@ export type FacilityRow = {
 
 export type FacilityPage = ApiPaginated<FacilityRow>;
 
+// Peta (kartu 560). isSelf hanya petunjuk presentasi -- warna marker dan
+// pemusatan -- tidak pernah dipakai menyaring data atau memutuskan izin.
+export type FacilityPin = Pick<FacilityRow, 'id' | 'name' | 'latitude' | 'longitude'> & {
+  isSelf: boolean;
+};
+
+// Batas keras penelusuran halaman /facilities untuk peta: lewat dari ini,
+// daftarnya ditandai terpotong alih-alih terus mengambil.
+export const FACILITY_MAP_MAX_PAGES = 10;
+// Batas atas per_page di backend (AppliesListQuery): 10 x 100 = 1000 fasilitas.
+export const FACILITY_MAP_PER_PAGE = 100;
+
 export type FacilityFilters = {
   type?: FacilityType | '';
   city?: string;
@@ -34,7 +46,11 @@ export const FACILITY_PER_PAGE = 25;
 
 // filter[...] yang DIIZINKAN backend hanya: type, city, province, is_active.
 // TIDAK ADA filter verifikasi -- key asing dibalas 422 rule unsupported_filter.
-export function buildFacilityPath(filters: FacilityFilters, cursor: string | null): string {
+export function buildFacilityPath(
+  filters: FacilityFilters,
+  cursor: string | null,
+  perPage: number = FACILITY_PER_PAGE,
+): string {
   const params = new URLSearchParams();
 
   const entries: ReadonlyArray<[string, string | undefined]> = [
@@ -49,7 +65,7 @@ export function buildFacilityPath(filters: FacilityFilters, cursor: string | nul
     if (trimmed) params.set(name, trimmed);
   }
 
-  params.set('per_page', String(FACILITY_PER_PAGE));
+  params.set('per_page', String(perPage));
   params.set('sort', 'name');
   if (cursor !== null) params.set('cursor', cursor);
 

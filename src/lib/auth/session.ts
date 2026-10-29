@@ -63,8 +63,12 @@ export async function readFacilityId(): Promise<string | null | undefined> {
 
 // Petunjuk UI saja: menampilkan aksi verifikasi/flag. Izin tetap diputuskan
 // backend dari token. Cocok ke nilai eksplisit 'global' -- cookie hilang,
-// kosong, atau tak dikenal = false. Hanya boolean ini yang boleh dioper ke
-// komponen klien; role dan facility_id mentah ikut terserialisasi ke RSC.
+// kosong, atau tak dikenal = false. Role mentah tidak pernah dioper ke komponen
+// klien. Satu pengecualian untuk facility_id: public_id fasilitas sendiri boleh
+// sampai ke klien sebagai petunjuk PRESENTASI (warna marker dan pemusatan peta,
+// kartu 560) -- tidak pernah untuk menyaring data atau memutuskan izin, dan
+// tidak pernah sentinel 'global'. Ingat bahwa apa pun yang dioper ke klien ikut
+// terserialisasi ke payload RSC.
 export async function readCanManage(): Promise<boolean> {
   const store = await cookies();
   return (

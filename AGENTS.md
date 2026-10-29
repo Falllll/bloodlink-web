@@ -20,6 +20,9 @@ repo terpisah (`bloodlink`) dan tidak boleh dipanggil langsung dari browser.
 - TanStack Query untuk data fetching (Kartu 517)
 - Node.js minimal 20.9.0 — syarat `engines` Next 16, dikunci lewat `.nvmrc` (22)
 - npm, bukan pnpm/yarn
+- Peta: Leaflet + tile server publik OpenStreetMap (Kartu 560) — atribusi OSM
+  wajib terlihat; tile publik hanya layak untuk lalu lintas portofolio, jadi
+  ganti penyedia tile (dan catat di README) sebelum dipakai sungguhan.
 
 ## Keputusan arsitektur yang sudah dikunci
 

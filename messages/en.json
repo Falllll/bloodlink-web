@@ -8,7 +8,8 @@
     "auditTitle": "Audit Trail — BloodLink",
     "facilitiesTitle": "Facilities — BloodLink",
     "donorsTitle": "Donors — BloodLink",
-    "reportsTitle": "Reports — BloodLink"
+    "reportsTitle": "Reports — BloodLink",
+    "mapTitle": "Facility map — BloodLink"
   },
   "common": {
     "language": "Language",
@@ -74,7 +75,10 @@
     "navAuditLogs": "Audit trail",
     "dashboardHeading": "Staff Dashboard",
     "devHeading": "BloodLink — base tokens & components",
-    "navReports": "Reports"
+    "navReports": "Reports",
+    "dashboardNavLabel": "Staff dashboard",
+    "navDashboard": "Dashboard",
+    "navMap": "Facility map"
   },
   "audit": {
     "heading": "Audit Trail",
@@ -356,6 +360,43 @@
       "noneInRadius": "Scan complete: no compatible stock within the operational radius.",
       "self": "Your facility",
       "units": "{count, plural, one {# compatible unit} other {# compatible units}}"
+    }
+  },
+  "map": {
+    "heading": "Facility map",
+    "description": "Where facilities are, your facility’s units with status released, and open transfers to and from it.",
+    "regionLabel": "Map of facilities and open transfers",
+    "loading": "Loading…",
+    "noCoordinates": "No facility has coordinates yet, so the map can’t be shown.",
+    "selfLabel": "Your facility",
+    "truncatedFacilities": "Only the first {count} facilities were loaded; the list is cut off.",
+    "stock": {
+      "heading": "Your units with status released",
+      "empty": "Your facility has no units with status released.",
+      "units": "{count, plural, one {# unit} other {# units}}",
+      "partial": "Counted from the {count} most recent units with status released, not a total.",
+      "note": "This count includes units close to expiry and units currently in a transfer."
+    },
+    "transfers": {
+      "heading": "Open transfers",
+      "empty": "No open transfers.",
+      "incoming": "Incoming from {facility}",
+      "outgoing": "Outgoing to {facility}",
+      "between": "{from} → {to}",
+      "unknownFacility": "Unknown facility",
+      "truncated": "Some open transfers were not loaded (more than {count} in one status).",
+      "status": {
+        "requested": "Requested",
+        "approved": "Approved",
+        "shipped": "Shipped"
+      }
+    },
+    "popup": {
+      "noTransfers": "No open transfers with this facility."
+    },
+    "missing": {
+      "heading": "Facilities without coordinates",
+      "count": "{count, plural, =0 {Every facility has coordinates.} one {# facility has no coordinates yet and is not shown on the map.} other {# facilities have no coordinates yet and are not shown on the map.}}"
     }
   },
   "facilities": {

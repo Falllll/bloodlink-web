@@ -8,7 +8,8 @@
     "auditTitle": "审计日志 — BloodLink",
     "facilitiesTitle": "机构 — BloodLink",
     "donorsTitle": "献血者 — BloodLink",
-    "reportsTitle": "报表 — BloodLink"
+    "reportsTitle": "报表 — BloodLink",
+    "mapTitle": "机构地图 — BloodLink"
   },
   "common": {
     "language": "语言",
@@ -74,7 +75,10 @@
     "navAuditLogs": "审计记录",
     "dashboardHeading": "员工仪表盘",
     "devHeading": "BloodLink — 基础令牌与组件",
-    "navReports": "报表"
+    "navReports": "报表",
+    "dashboardNavLabel": "工作人员仪表板",
+    "navDashboard": "仪表板",
+    "navMap": "机构地图"
   },
   "audit": {
     "heading": "审计日志",
@@ -342,6 +346,43 @@
       "noneInRadius": "扫描完成：运营半径内没有相容的库存。",
       "self": "你的机构",
       "units": "{count} 个相容单位"
+    }
+  },
+  "map": {
+    "heading": "机构地图",
+    "description": "显示各机构位置、本机构状态为 released 的单位，以及与本机构相关的进行中调拨。",
+    "regionLabel": "机构及进行中调拨地图",
+    "loading": "正在加载…",
+    "noCoordinates": "尚无机构登记坐标，因此无法显示地图。",
+    "selfLabel": "本机构",
+    "truncatedFacilities": "仅加载了前 {count} 个机构；列表已被截断。",
+    "stock": {
+      "heading": "本机构状态为 released 的单位",
+      "empty": "本机构没有状态为 released 的单位。",
+      "units": "{count, plural, other {# 个单位}}",
+      "partial": "根据最近 {count} 个状态为 released 的单位统计，并非总数。",
+      "note": "此数字包含即将过期的单位和正在调拨中的单位。"
+    },
+    "transfers": {
+      "heading": "进行中的调拨",
+      "empty": "没有进行中的调拨。",
+      "incoming": "来自 {facility} 的调入",
+      "outgoing": "调出至 {facility}",
+      "between": "{from} → {to}",
+      "unknownFacility": "未知机构",
+      "truncated": "部分进行中的调拨未加载（单一状态超过 {count} 条）。",
+      "status": {
+        "requested": "已申请",
+        "approved": "已批准",
+        "shipped": "已发运"
+      }
+    },
+    "popup": {
+      "noTransfers": "与该机构没有进行中的调拨。"
+    },
+    "missing": {
+      "heading": "无坐标的机构",
+      "count": "{count, plural, =0 {所有机构都已有坐标。} other {# 个机构尚无坐标，未显示在地图上。}}"
     }
   },
   "facilities": {

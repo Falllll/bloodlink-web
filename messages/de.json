@@ -8,7 +8,8 @@
     "auditTitle": "Audit-Protokoll — BloodLink",
     "facilitiesTitle": "Einrichtungen — BloodLink",
     "donorsTitle": "Spender — BloodLink",
-    "reportsTitle": "Berichte — BloodLink"
+    "reportsTitle": "Berichte — BloodLink",
+    "mapTitle": "Einrichtungskarte — BloodLink"
   },
   "common": {
     "language": "Sprache",
@@ -74,7 +75,10 @@
     "navAuditLogs": "Audit-Protokoll",
     "dashboardHeading": "Mitarbeiter-Dashboard",
     "devHeading": "BloodLink — Basistoken & Komponenten",
-    "navReports": "Berichte"
+    "navReports": "Berichte",
+    "dashboardNavLabel": "Personal-Dashboard",
+    "navDashboard": "Dashboard",
+    "navMap": "Einrichtungskarte"
   },
   "audit": {
     "heading": "Audit-Protokoll",
@@ -342,6 +346,43 @@
       "noneInRadius": "Suche abgeschlossen: kein verträglicher Bestand im Einsatzradius.",
       "self": "Ihre Einrichtung",
       "units": "{count, plural, one {# verträgliche Einheit} other {# verträgliche Einheiten}}"
+    }
+  },
+  "map": {
+    "heading": "Einrichtungskarte",
+    "description": "Wo sich Einrichtungen befinden, die Einheiten Ihrer Einrichtung mit dem Status „released“ und offene Transfers von und zu ihr.",
+    "regionLabel": "Karte der Einrichtungen und offenen Transfers",
+    "loading": "Wird geladen…",
+    "noCoordinates": "Noch keine Einrichtung hat Koordinaten, daher kann die Karte nicht angezeigt werden.",
+    "selfLabel": "Ihre Einrichtung",
+    "truncatedFacilities": "Nur die ersten {count} Einrichtungen wurden geladen; die Liste ist abgeschnitten.",
+    "stock": {
+      "heading": "Ihre Einheiten mit Status „released“",
+      "empty": "Ihre Einrichtung hat keine Einheiten mit Status „released“.",
+      "units": "{count, plural, one {# Einheit} other {# Einheiten}}",
+      "partial": "Gezählt aus den {count} neuesten Einheiten mit Status „released“, keine Gesamtzahl.",
+      "note": "Diese Zahl umfasst Einheiten kurz vor dem Ablauf und Einheiten, die sich gerade in einem Transfer befinden."
+    },
+    "transfers": {
+      "heading": "Offene Transfers",
+      "empty": "Keine offenen Transfers.",
+      "incoming": "Eingehend von {facility}",
+      "outgoing": "Ausgehend an {facility}",
+      "between": "{from} → {to}",
+      "unknownFacility": "Unbekannte Einrichtung",
+      "truncated": "Einige offene Transfers wurden nicht geladen (mehr als {count} in einem Status).",
+      "status": {
+        "requested": "Angefordert",
+        "approved": "Genehmigt",
+        "shipped": "Versandt"
+      }
+    },
+    "popup": {
+      "noTransfers": "Keine offenen Transfers mit dieser Einrichtung."
+    },
+    "missing": {
+      "heading": "Einrichtungen ohne Koordinaten",
+      "count": "{count, plural, =0 {Alle Einrichtungen haben Koordinaten.} one {# Einrichtung hat noch keine Koordinaten und wird nicht auf der Karte angezeigt.} other {# Einrichtungen haben noch keine Koordinaten und werden nicht auf der Karte angezeigt.}}"
     }
   },
   "facilities": {
