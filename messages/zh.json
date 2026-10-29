@@ -7,7 +7,8 @@
     "dashboardTitle": "员工仪表盘 — BloodLink",
     "auditTitle": "审计日志 — BloodLink",
     "facilitiesTitle": "机构 — BloodLink",
-    "donorsTitle": "献血者 — BloodLink"
+    "donorsTitle": "献血者 — BloodLink",
+    "reportsTitle": "报表 — BloodLink"
   },
   "common": {
     "language": "语言",
@@ -72,7 +73,8 @@
     "navDonors": "献血者",
     "navAuditLogs": "审计记录",
     "dashboardHeading": "员工仪表盘",
-    "devHeading": "BloodLink — 基础令牌与组件"
+    "devHeading": "BloodLink — 基础令牌与组件",
+    "navReports": "报表"
   },
   "audit": {
     "heading": "审计日志",
@@ -114,6 +116,55 @@
     "prev": "上一页",
     "next": "下一页"
   },
+  "reports": {
+    "heading": "报表",
+    "description": "在同一时间段内查看报废率、交叉配血与输血比率以及血液单位状态流转。数字按原样显示，不作任何评价。",
+    "loading": "正在加载报表…",
+    "empty": "该时间段没有数据。",
+    "none": "—",
+    "windowLabel": "时间段 {from} 至 {toExclusive}（不含）（UTC）",
+    "latest": "比率，最近一个周期（{period}）",
+    "definition": "比率 = {numerator} ÷ {denominator}",
+    "showTable": "显示数据表",
+    "hideTable": "隐藏数据表",
+    "filters": {
+      "from": "开始日期",
+      "to": "结束日期",
+      "granularity": "统计粒度"
+    },
+    "granularity": {
+      "day": "日",
+      "week": "周",
+      "month": "月"
+    },
+    "status": {
+      "quarantined": "隔离中",
+      "testing": "检测中",
+      "released": "已放行",
+      "reserved": "已预留",
+      "issued": "已发放",
+      "discarded": "已报废",
+      "expired": "已过期",
+      "separated": "已分离"
+    },
+    "column": {
+      "period": "周期",
+      "ratio": "比率"
+    },
+    "wastage": {
+      "title": "报废率",
+      "chartLabel": "每个周期的已报废和已过期单位（柱）及已放行单位（线）"
+    },
+    "crossmatch": {
+      "title": "交叉配血与输血比率",
+      "chartLabel": "每个周期的交叉配血与输血比率"
+    },
+    "stockTrend": {
+      "title": "血液单位状态流转（非库存量）",
+      "note": "此图显示每个周期内转入各状态的单位数量，并非当前库存数量。最新库存量记录在医院工作人员的库存仪表板中。",
+      "chartLabel": "每个周期转入已放行、已发放、已报废和已过期的数量，非库存量"
+    }
+  },
   "fields": {
     "email": "电子邮箱",
     "password": "密码",
@@ -132,7 +183,10 @@
     "needed_by": "需要时间",
     "note": "备注",
     "reason": "原因",
-    "ends_at": "结束日期"
+    "ends_at": "结束日期",
+    "from": "开始日期",
+    "to": "结束日期",
+    "granularity": "统计粒度"
   },
   "selfCheck": {
     "heading": "看看你能否献血",
@@ -218,7 +272,8 @@
     "unknown": "{field}无效。",
     "date": "{field}必须是有效的日期。",
     "after": "{field}必须是更晚的日期和时间。",
-    "enum": "{field}的值无效。"
+    "enum": "{field}的值无效。",
+    "too_many_buckets": "{field}使范围过长：最多允许 {max} 个周期。"
   },
   "dashboard": {
     "status": {

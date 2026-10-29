@@ -7,7 +7,8 @@
     "dashboardTitle": "スタッフダッシュボード — BloodLink",
     "auditTitle": "監査ログ — BloodLink",
     "facilitiesTitle": "施設 — BloodLink",
-    "donorsTitle": "献血者 — BloodLink"
+    "donorsTitle": "献血者 — BloodLink",
+    "reportsTitle": "レポート — BloodLink"
   },
   "common": {
     "language": "言語",
@@ -72,7 +73,8 @@
     "navDonors": "献血者",
     "navAuditLogs": "監査ログ",
     "dashboardHeading": "スタッフダッシュボード",
-    "devHeading": "BloodLink — 基本トークンとコンポーネント"
+    "devHeading": "BloodLink — 基本トークンとコンポーネント",
+    "navReports": "レポート"
   },
   "audit": {
     "heading": "監査ログ",
@@ -114,6 +116,55 @@
     "prev": "前へ",
     "next": "次へ"
   },
+  "reports": {
+    "heading": "レポート",
+    "description": "廃棄率、交差適合試験と輸血の比率、ユニットのステータス推移を同じ期間で表示します。数値は評価を加えずそのまま表示します。",
+    "loading": "レポートを読み込み中…",
+    "empty": "この期間のデータはありません。",
+    "none": "—",
+    "windowLabel": "期間 {from} から {toExclusive} の前日まで（UTC）",
+    "latest": "比率（直近の期間: {period}）",
+    "definition": "比率 = {numerator} ÷ {denominator}",
+    "showTable": "データ表を表示",
+    "hideTable": "データ表を隠す",
+    "filters": {
+      "from": "開始日",
+      "to": "終了日",
+      "granularity": "集計単位"
+    },
+    "granularity": {
+      "day": "日",
+      "week": "週",
+      "month": "月"
+    },
+    "status": {
+      "quarantined": "隔離中",
+      "testing": "検査中",
+      "released": "出庫可能",
+      "reserved": "予約済み",
+      "issued": "払い出し済み",
+      "discarded": "廃棄",
+      "expired": "期限切れ",
+      "separated": "分離済み"
+    },
+    "column": {
+      "period": "期間",
+      "ratio": "比率"
+    },
+    "wastage": {
+      "title": "廃棄率",
+      "chartLabel": "期間ごとの廃棄・期限切れユニット（棒）と出庫可能ユニット（線）"
+    },
+    "crossmatch": {
+      "title": "交差適合試験と輸血の比率",
+      "chartLabel": "期間ごとの交差適合試験と輸血の比率"
+    },
+    "stockTrend": {
+      "title": "ユニットのステータス推移（在庫数ではありません）",
+      "note": "このグラフは、期間ごとに各ステータスへ移行したユニット数を示します。現在の在庫数ではありません。最新の在庫数は病院スタッフの在庫ダッシュボードで管理されています。",
+      "chartLabel": "期間ごとの出庫可能・払い出し済み・廃棄・期限切れへの移行数（在庫数ではありません）"
+    }
+  },
   "fields": {
     "email": "メールアドレス",
     "password": "パスワード",
@@ -132,7 +183,10 @@
     "needed_by": "必要期限",
     "note": "メモ",
     "reason": "理由",
-    "ends_at": "終了日"
+    "ends_at": "終了日",
+    "from": "開始日",
+    "to": "終了日",
+    "granularity": "集計単位"
   },
   "selfCheck": {
     "heading": "献血できるか確認する",
@@ -218,7 +272,8 @@
     "unknown": "{field}は無効です。",
     "date": "{field}は有効な日付である必要があります。",
     "after": "{field}はより後の日時である必要があります。",
-    "enum": "{field}の値が無効です。"
+    "enum": "{field}の値が無効です。",
+    "too_many_buckets": "{field}の範囲が長すぎます。期間は最大{max}個までです。"
   },
   "dashboard": {
     "status": {

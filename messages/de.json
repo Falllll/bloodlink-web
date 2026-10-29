@@ -7,7 +7,8 @@
     "dashboardTitle": "Mitarbeiter-Dashboard — BloodLink",
     "auditTitle": "Audit-Protokoll — BloodLink",
     "facilitiesTitle": "Einrichtungen — BloodLink",
-    "donorsTitle": "Spender — BloodLink"
+    "donorsTitle": "Spender — BloodLink",
+    "reportsTitle": "Berichte — BloodLink"
   },
   "common": {
     "language": "Sprache",
@@ -72,7 +73,8 @@
     "navDonors": "Spender",
     "navAuditLogs": "Audit-Protokoll",
     "dashboardHeading": "Mitarbeiter-Dashboard",
-    "devHeading": "BloodLink — Basistoken & Komponenten"
+    "devHeading": "BloodLink — Basistoken & Komponenten",
+    "navReports": "Berichte"
   },
   "audit": {
     "heading": "Audit-Protokoll",
@@ -114,6 +116,55 @@
     "prev": "Zurück",
     "next": "Weiter"
   },
+  "reports": {
+    "heading": "Berichte",
+    "description": "Verwurfsquote, Kreuzprobe-zu-Transfusion-Verhältnis und Statusfluss der Einheiten über einen gemeinsamen Zeitraum. Die Zahlen werden unverändert und ohne Bewertung angezeigt.",
+    "loading": "Bericht wird geladen…",
+    "empty": "Keine Daten für diesen Zeitraum.",
+    "none": "—",
+    "windowLabel": "Zeitraum {from} bis ausschließlich {toExclusive} (UTC)",
+    "latest": "Verhältnis, letzte Periode ({period})",
+    "definition": "Verhältnis = {numerator} ÷ {denominator}",
+    "showTable": "Datentabelle anzeigen",
+    "hideTable": "Datentabelle ausblenden",
+    "filters": {
+      "from": "Von",
+      "to": "Bis",
+      "granularity": "Granularität"
+    },
+    "granularity": {
+      "day": "Tag",
+      "week": "Woche",
+      "month": "Monat"
+    },
+    "status": {
+      "quarantined": "Quarantäne",
+      "testing": "In Prüfung",
+      "released": "Freigegeben",
+      "reserved": "Reserviert",
+      "issued": "Ausgegeben",
+      "discarded": "Verworfen",
+      "expired": "Abgelaufen",
+      "separated": "Aufgetrennt"
+    },
+    "column": {
+      "period": "Periode",
+      "ratio": "Verhältnis"
+    },
+    "wastage": {
+      "title": "Verwurfsquote",
+      "chartLabel": "Verworfene und abgelaufene Einheiten (Balken) und freigegebene Einheiten (Linie) pro Periode"
+    },
+    "crossmatch": {
+      "title": "Kreuzprobe-zu-Transfusion-Verhältnis",
+      "chartLabel": "Kreuzprobe-zu-Transfusion-Verhältnis pro Periode"
+    },
+    "stockTrend": {
+      "title": "Statusfluss der Einheiten (kein Bestand)",
+      "note": "Dieses Diagramm zeigt, wie viele Einheiten pro Periode in jeden Status gewechselt sind. Es ist nicht der aktuelle Bestand. Der aktuelle Bestand wird im Inventar-Dashboard des Krankenhauspersonals geführt.",
+      "chartLabel": "Übergänge zu freigegeben, ausgegeben, verworfen und abgelaufen pro Periode, kein Bestand"
+    }
+  },
   "fields": {
     "email": "E-Mail",
     "password": "Passwort",
@@ -132,7 +183,10 @@
     "needed_by": "Benötigt bis",
     "note": "Notiz",
     "reason": "Grund",
-    "ends_at": "Enddatum"
+    "ends_at": "Enddatum",
+    "from": "Startdatum",
+    "to": "Enddatum",
+    "granularity": "Granularität"
   },
   "selfCheck": {
     "heading": "Prüfen Sie, ob Sie spenden können",
@@ -218,7 +272,8 @@
     "unknown": "{field} ist ungültig.",
     "date": "{field} muss ein gültiges Datum sein.",
     "after": "{field} muss ein späterer Zeitpunkt sein.",
-    "enum": "{field} hat einen ungültigen Wert."
+    "enum": "{field} hat einen ungültigen Wert.",
+    "too_many_buckets": "{field} macht den Zeitraum zu lang: höchstens {max} Perioden sind erlaubt."
   },
   "dashboard": {
     "status": {

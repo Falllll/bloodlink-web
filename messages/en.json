@@ -7,7 +7,8 @@
     "dashboardTitle": "Staff Dashboard — BloodLink",
     "auditTitle": "Audit Trail — BloodLink",
     "facilitiesTitle": "Facilities — BloodLink",
-    "donorsTitle": "Donors — BloodLink"
+    "donorsTitle": "Donors — BloodLink",
+    "reportsTitle": "Reports — BloodLink"
   },
   "common": {
     "language": "Language",
@@ -72,7 +73,8 @@
     "navDonors": "Donors",
     "navAuditLogs": "Audit trail",
     "dashboardHeading": "Staff Dashboard",
-    "devHeading": "BloodLink — base tokens & components"
+    "devHeading": "BloodLink — base tokens & components",
+    "navReports": "Reports"
   },
   "audit": {
     "heading": "Audit Trail",
@@ -114,6 +116,55 @@
     "prev": "Previous",
     "next": "Next"
   },
+  "reports": {
+    "heading": "Reports",
+    "description": "Wastage, crossmatch-to-transfusion ratio, and unit status flow over one shared period. Figures are shown as they are, without any assessment.",
+    "loading": "Loading report…",
+    "empty": "No data for this period.",
+    "none": "—",
+    "windowLabel": "Period {from} up to, but not including, {toExclusive} (UTC)",
+    "latest": "Ratio, latest period ({period})",
+    "definition": "Ratio = {numerator} ÷ {denominator}",
+    "showTable": "Show data table",
+    "hideTable": "Hide data table",
+    "filters": {
+      "from": "From",
+      "to": "To",
+      "granularity": "Granularity"
+    },
+    "granularity": {
+      "day": "Day",
+      "week": "Week",
+      "month": "Month"
+    },
+    "status": {
+      "quarantined": "Quarantined",
+      "testing": "Testing",
+      "released": "Released",
+      "reserved": "Reserved",
+      "issued": "Issued",
+      "discarded": "Discarded",
+      "expired": "Expired",
+      "separated": "Separated"
+    },
+    "column": {
+      "period": "Period",
+      "ratio": "Ratio"
+    },
+    "wastage": {
+      "title": "Wastage rate",
+      "chartLabel": "Discarded and expired units (bars) and released units (line) per period"
+    },
+    "crossmatch": {
+      "title": "Crossmatch-to-transfusion ratio",
+      "chartLabel": "Crossmatch-to-transfusion ratio per period"
+    },
+    "stockTrend": {
+      "title": "Unit status flow (not stock level)",
+      "note": "This chart shows how many units moved into each status per period. It is not the number of units in stock right now. Current stock levels are kept in the hospital staff inventory dashboard.",
+      "chartLabel": "Transitions into released, issued, discarded and expired per period, not stock level"
+    }
+  },
   "fields": {
     "email": "Email",
     "password": "Password",
@@ -132,7 +183,10 @@
     "needed_by": "Needed by",
     "note": "Note",
     "reason": "Reason",
-    "ends_at": "End date"
+    "ends_at": "End date",
+    "from": "Start date",
+    "to": "End date",
+    "granularity": "Granularity"
   },
   "selfCheck": {
     "heading": "Check whether you can donate",
@@ -218,7 +272,8 @@
     "unknown": "{field} is invalid.",
     "date": "{field} must be a valid date.",
     "after": "{field} must be a later date and time.",
-    "enum": "{field} has an invalid value."
+    "enum": "{field} has an invalid value.",
+    "too_many_buckets": "{field} makes the range too long: at most {max} periods are allowed."
   },
   "medical": {
     "eligibility": {
