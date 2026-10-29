@@ -9,6 +9,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return { title: t('adminTitle') };
 }
 
+const LINK =
+  'text-sm font-medium text-[color:var(--color-ink-strong)] underline underline-offset-4 hover:text-[color:var(--color-ink-soft)]';
+
 export default async function AdminPage() {
   const t = await getTranslations('shell');
 
@@ -18,13 +21,24 @@ export default async function AdminPage() {
         <h1 className="font-display text-2xl font-semibold text-[color:var(--color-ink-strong)]">
           {t('adminHeading')}
         </h1>
-        <p className="mt-1 text-sm text-[color:var(--color-ink-muted)]">{t('adminPending')}</p>
-        <Link
-          href="/admin/audit-logs"
-          className="mt-4 inline-block text-sm font-medium text-[color:var(--color-ink-strong)] underline underline-offset-4 hover:text-[color:var(--color-ink-soft)]"
-        >
-          {t('adminAuditLink')}
-        </Link>
+        <p className="mt-1 text-sm text-[color:var(--color-ink-muted)]">{t('adminSummary')}</p>
+        <ul className="mt-4 flex flex-col gap-2">
+          <li>
+            <Link href="/admin/facilities" className={LINK}>
+              {t('navFacilities')}
+            </Link>
+          </li>
+          <li>
+            <Link href="/admin/donors" className={LINK}>
+              {t('navDonors')}
+            </Link>
+          </li>
+          <li>
+            <Link href="/admin/audit-logs" className={LINK}>
+              {t('navAuditLogs')}
+            </Link>
+          </li>
+        </ul>
       </GlassPanel>
     </main>
   );

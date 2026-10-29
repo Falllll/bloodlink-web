@@ -1,6 +1,6 @@
 <!-- BEGIN:nextjs-agent-rules -->
 
-# This is NOT the Next.js you know
+## This is NOT the Next.js you know
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
 
@@ -57,6 +57,10 @@ Jangan usulkan alternatifnya kecuali diminta eksplisit.
 - **Nol string yang di-hardcode.** Semua teks lewat i18n sejak Kartu 519.
 - **Setiap daftar tersaring ke fasilitas pemegang token** (Kartu 80) di sisi
   backend. FE tidak menyaring sendiri.
+- **Verifikasi fasilitas dan flag administratif donor hanya untuk admin global**
+  (Kartu 550). Kemampuan itu dibaca dari `facility_id === null` (cookie
+  `bl_facility` bernilai `global`, lewat `readCanManage()`) dan hanya boolean-nya
+  yang dioper ke klien — izin sesungguhnya tetap diputuskan backend dari token.
 
 ## Alur Git
 

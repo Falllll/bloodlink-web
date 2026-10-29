@@ -5,7 +5,10 @@
     "loginTitle": "Masuk — BloodLink",
     "adminTitle": "Panel Admin — BloodLink",
     "dashboardTitle": "Dashboard Petugas — BloodLink",
-    "auditTitle": "Jejak Audit — BloodLink"
+    "auditTitle": "Jejak Audit — BloodLink",
+    "facilitiesTitle": "Fasilitas — BloodLink",
+    "donorsTitle": "Donor — BloodLink",
+    "reportsTitle": "Laporan — BloodLink"
   },
   "common": {
     "language": "Bahasa",
@@ -64,10 +67,14 @@
   },
   "shell": {
     "adminHeading": "Panel Admin",
-    "adminPending": "Isi panel admin (verifikasi institusi, blacklist) hadir di Kartu 550.",
-    "adminAuditLink": "Buka jejak audit",
+    "adminSummary": "Verifikasi fasilitas, kelola flag administratif donor, dan tinjau jejak audit.",
+    "navLabel": "Panel admin",
+    "navFacilities": "Fasilitas",
+    "navDonors": "Donor",
+    "navAuditLogs": "Jejak audit",
     "dashboardHeading": "Dashboard Petugas",
-    "devHeading": "BloodLink — token & komponen dasar"
+    "devHeading": "BloodLink — token & komponen dasar",
+    "navReports": "Laporan"
   },
   "audit": {
     "heading": "Jejak Audit",
@@ -109,6 +116,55 @@
     "prev": "Sebelumnya",
     "next": "Berikutnya"
   },
+  "reports": {
+    "heading": "Laporan",
+    "description": "Tingkat pemborosan, rasio crossmatch terhadap transfusi, dan arus status unit dalam satu periode yang sama. Angka ditampilkan apa adanya, tanpa penilaian.",
+    "loading": "Memuat laporan…",
+    "empty": "Tidak ada data untuk periode ini.",
+    "none": "—",
+    "windowLabel": "Periode {from} sampai sebelum {toExclusive} (UTC)",
+    "latest": "Rasio, periode terakhir ({period})",
+    "definition": "Rasio = {numerator} ÷ {denominator}",
+    "showTable": "Tampilkan tabel data",
+    "hideTable": "Sembunyikan tabel data",
+    "filters": {
+      "from": "Dari",
+      "to": "Sampai",
+      "granularity": "Granularitas"
+    },
+    "granularity": {
+      "day": "Hari",
+      "week": "Minggu",
+      "month": "Bulan"
+    },
+    "status": {
+      "quarantined": "Karantina",
+      "testing": "Pengujian",
+      "released": "Dirilis",
+      "reserved": "Dipesan",
+      "issued": "Dikeluarkan",
+      "discarded": "Dibuang",
+      "expired": "Kedaluwarsa",
+      "separated": "Dipisah"
+    },
+    "column": {
+      "period": "Periode",
+      "ratio": "Rasio"
+    },
+    "wastage": {
+      "title": "Tingkat pemborosan",
+      "chartLabel": "Unit dibuang dan kedaluwarsa (batang) serta unit dirilis (garis) per periode"
+    },
+    "crossmatch": {
+      "title": "Rasio crossmatch terhadap transfusi",
+      "chartLabel": "Rasio crossmatch terhadap transfusi per periode"
+    },
+    "stockTrend": {
+      "title": "Arus status unit (bukan level stok)",
+      "note": "Grafik ini menunjukkan berapa unit yang berpindah ke tiap status per periode. Ini bukan jumlah unit yang tersedia saat ini. Level stok terkini ada di dashboard inventaris petugas rumah sakit.",
+      "chartLabel": "Transisi ke dirilis, dikeluarkan, dibuang, dan kedaluwarsa per periode, bukan level stok"
+    }
+  },
   "fields": {
     "email": "Email",
     "password": "Kata sandi",
@@ -125,7 +181,12 @@
     "quantity": "Jumlah (kantong)",
     "urgency": "Tingkat urgensi",
     "needed_by": "Dibutuhkan paling lambat",
-    "note": "Catatan"
+    "note": "Catatan",
+    "reason": "Alasan",
+    "ends_at": "Tanggal berakhir",
+    "from": "Tanggal mulai",
+    "to": "Tanggal akhir",
+    "granularity": "Granularitas"
   },
   "selfCheck": {
     "heading": "Cek apakah kamu bisa donor",
@@ -188,6 +249,7 @@
     "IDEMPOTENCY_KEY_REQUIRED": "Permintaan ini tidak lengkap. Coba lagi.",
     "IDEMPOTENCY_KEY_REUSED": "Permintaan ini sudah pernah diproses.",
     "REQUEST_IN_PROGRESS": "Permintaan sebelumnya masih diproses. Tunggu sebentar.",
+    "DONOR_FLAG_REJECTED": "Perubahan flag administratif ini ditolak karena keadaan flag donor saat ini.",
     "unknown": "Terjadi kesalahan yang tidak terduga."
   },
   "validation": {
@@ -210,7 +272,8 @@
     "unknown": "{field} tidak valid.",
     "date": "{field} harus berupa tanggal yang valid.",
     "after": "{field} harus berupa tanggal dan waktu yang lebih lambat.",
-    "enum": "Nilai {field} tidak valid."
+    "enum": "Nilai {field} tidak valid.",
+    "too_many_buckets": "{field} membuat rentang terlalu panjang: paling banyak {max} periode."
   },
   "medical": {
     "eligibility": {
@@ -294,5 +357,139 @@
       "self": "Fasilitasmu sendiri",
       "units": "{count} unit cocok"
     }
+  },
+  "facilities": {
+    "heading": "Fasilitas",
+    "description": "Semua fasilitas yang terdaftar di BloodLink. Verifikasi berarti fasilitas boleh ikut sistem; terpisah dari apakah fasilitas sedang beroperasi.",
+    "filters": {
+      "type": "Jenis",
+      "allTypes": "Semua jenis",
+      "city": "Kota",
+      "province": "Provinsi",
+      "isActive": "Status operasi",
+      "allStatuses": "Semua status",
+      "active": "Aktif",
+      "inactive": "Nonaktif",
+      "reset": "Atur ulang filter",
+      "unverifiedOnPage": "Hanya yang belum terverifikasi, di halaman ini",
+      "unverifiedHint": "Ini hanya menyaring baris yang sedang tampil. Server tidak punya filter verifikasi, jadi halaman lain mungkin masih memuat fasilitas yang belum terverifikasi."
+    },
+    "type": {
+      "hospital": "Rumah sakit",
+      "blood_bank": "Bank darah",
+      "donation_unit": "Unit donor",
+      "mobile_unit": "Unit keliling"
+    },
+    "column": {
+      "name": "Fasilitas",
+      "type": "Jenis",
+      "location": "Lokasi",
+      "active": "Operasi",
+      "verified": "Verifikasi",
+      "actions": "Aksi"
+    },
+    "status": {
+      "active": "Aktif",
+      "inactive": "Nonaktif",
+      "verified": "Terverifikasi",
+      "unverified": "Belum terverifikasi"
+    },
+    "location": "{city}, {province}",
+    "verifiedAt": "Sejak {date}",
+    "verify": "Verifikasi",
+    "cancel": "Batal",
+    "verifyNote": "Catatan (opsional)",
+    "verifyConfirm": "Konfirmasi verifikasi",
+    "verifying": "Memverifikasi…",
+    "verifyHint": "Verifikasi bersifat satu arah: tidak bisa dibatalkan dari panel ini.",
+    "alreadyVerified": "Fasilitas ini sudah terverifikasi.",
+    "emptyOnPage": "Semua fasilitas di halaman ini sudah terverifikasi.",
+    "loading": "Memuat fasilitas…",
+    "empty": "Tidak ada fasilitas yang cocok dengan filter ini.",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya",
+    "none": "—"
+  },
+  "donors": {
+    "heading": "Donor",
+    "description": "Donor terdaftar beserta flag administratifnya. Flag administratif berbatas waktu, selalu bisa dicabut, dan terpisah dari deferral medis.",
+    "filters": {
+      "search": "Nama",
+      "searchHint": "Mencocokkan nama yang mirip, bukan awalan. Ketik nama lengkap, lalu cari.",
+      "searchSubmit": "Cari",
+      "bloodGroup": "Golongan darah",
+      "rhFactor": "Rhesus",
+      "sex": "Jenis kelamin",
+      "city": "Kota",
+      "deferralStatus": "Status deferral",
+      "all": "Semua",
+      "reset": "Atur ulang filter"
+    },
+    "column": {
+      "donor": "Donor",
+      "bloodType": "Golongan",
+      "sex": "Jenis kelamin",
+      "city": "Kota",
+      "lastDonation": "Donor terakhir",
+      "donationCount": "Jumlah donor",
+      "deferralStatus": "Deferral",
+      "details": "Detail"
+    },
+    "sex": {
+      "male": "Laki-laki",
+      "female": "Perempuan"
+    },
+    "rhFactor": {
+      "positive": "Rh+",
+      "negative": "Rh−"
+    },
+    "deferralStatus": {
+      "none": "Tidak ada",
+      "temporary": "Sementara",
+      "permanent": "Permanen"
+    },
+    "flagReason": {
+      "identity_fraud": "Pemalsuan identitas",
+      "repeated_no_show": "Berulang kali tidak hadir",
+      "staff_safety": "Keselamatan petugas",
+      "other": "Lainnya"
+    },
+    "showDetails": "Lihat flag",
+    "hideDetails": "Sembunyikan flag",
+    "flags": {
+      "heading": "Flag administratif",
+      "loading": "Memuat flag…",
+      "empty": "Donor ini tidak punya flag administratif.",
+      "active": "Aktif",
+      "inactive": "Tidak aktif",
+      "startsAt": "Mulai {date}",
+      "endsAt": "Sampai {date}",
+      "noEnd": "Tanpa tanggal berakhir",
+      "liftedAt": "Dicabut {date}",
+      "liftNote": "Alasan pencabutan: {note}"
+    },
+    "place": {
+      "heading": "Tempatkan flag administratif",
+      "reason": "Alasan",
+      "note": "Catatan",
+      "endsAt": "Tanggal berakhir (opsional)",
+      "endsAtHint": "Kosongkan untuk tanpa tanggal berakhir. Flag tetap bisa dicabut kapan saja.",
+      "submit": "Tempatkan flag",
+      "submitting": "Menempatkan…",
+      "rejected": "Donor ini sudah punya flag administratif aktif. Cabut dulu sebelum menempatkan yang baru."
+    },
+    "lift": {
+      "open": "Cabut flag",
+      "cancel": "Batal",
+      "reason": "Alasan pencabutan",
+      "submit": "Konfirmasi pencabutan",
+      "submitting": "Mencabut…",
+      "rejected": "Flag administratif ini sudah dicabut."
+    },
+    "loading": "Memuat donor…",
+    "empty": "Tidak ada donor yang cocok dengan filter ini.",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya",
+    "none": "—"
   }
 }

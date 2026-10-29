@@ -20,8 +20,23 @@ export function toChipStatus(status: BatchStatusValue): BatchStatus {
   return status.toUpperCase() as BatchStatus;
 }
 
-export function StatusChip({ status }: { status: BatchStatus }) {
-  const tone = TONE[status];
+// Pintu keluar generik untuk domain selain blood-batch: warna dari tone, teks
+// dari label terlokalisasi. Enum batch di atas tidak dimasuki domain lain.
+export type ChipTone = 'positive' | 'warning' | 'neutral' | 'danger';
+
+const GENERIC_TONE: Record<ChipTone, { fg: string }> = {
+  positive: { fg: 'var(--color-status-released)' },
+  warning: { fg: 'var(--color-status-testing)' },
+  neutral: { fg: 'var(--color-ink-muted)' },
+  danger: { fg: 'var(--color-destructive)' },
+};
+
+type StatusChipProps =
+  | { status: BatchStatus; tone?: undefined; label?: undefined }
+  | { status?: undefined; tone: ChipTone; label: string };
+
+export function StatusChip({ status, tone: chipTone, label }: StatusChipProps) {
+  const tone = chipTone === undefined ? TONE[status] : GENERIC_TONE[chipTone];
   return (
     <span
       className="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium uppercase tracking-wide"
@@ -30,7 +45,7 @@ export function StatusChip({ status }: { status: BatchStatus }) {
         color: tone.fg,
       }}
     >
-      {status}
+      {chipTone === undefined ? status : label}
     </span>
   );
 }
