@@ -8,7 +8,8 @@
     "auditTitle": "Jejak Audit — BloodLink",
     "facilitiesTitle": "Fasilitas — BloodLink",
     "donorsTitle": "Donor — BloodLink",
-    "reportsTitle": "Laporan — BloodLink"
+    "reportsTitle": "Laporan — BloodLink",
+    "mapTitle": "Peta fasilitas — BloodLink"
   },
   "common": {
     "language": "Bahasa",
@@ -74,7 +75,10 @@
     "navAuditLogs": "Jejak audit",
     "dashboardHeading": "Dashboard Petugas",
     "devHeading": "BloodLink — token & komponen dasar",
-    "navReports": "Laporan"
+    "navReports": "Laporan",
+    "dashboardNavLabel": "Dashboard petugas",
+    "navDashboard": "Dashboard",
+    "navMap": "Peta fasilitas"
   },
   "audit": {
     "heading": "Jejak Audit",
@@ -356,6 +360,43 @@
       "noneInRadius": "Pindaian selesai: tidak ada stok cocok dalam radius operasional.",
       "self": "Fasilitasmu sendiri",
       "units": "{count} unit cocok"
+    }
+  },
+  "map": {
+    "heading": "Peta fasilitas",
+    "description": "Lokasi fasilitas, unit berstatus released milik fasilitas Anda, dan transfer yang masih berjalan ke dan dari fasilitas Anda.",
+    "regionLabel": "Peta fasilitas dan transfer yang masih berjalan",
+    "loading": "Memuat…",
+    "noCoordinates": "Belum ada fasilitas yang punya koordinat, jadi peta tidak bisa ditampilkan.",
+    "selfLabel": "Fasilitas Anda",
+    "truncatedFacilities": "Hanya {count} fasilitas pertama yang dimuat; daftarnya terpotong.",
+    "stock": {
+      "heading": "Unit berstatus released milik Anda",
+      "empty": "Fasilitas Anda tidak punya unit berstatus released.",
+      "units": "{count, plural, other {# unit}}",
+      "partial": "Dihitung dari {count} unit berstatus released terbaru, bukan total.",
+      "note": "Angka ini termasuk unit yang mendekati kedaluwarsa dan unit yang sedang dalam transfer."
+    },
+    "transfers": {
+      "heading": "Transfer yang masih berjalan",
+      "empty": "Tidak ada transfer yang masih berjalan.",
+      "incoming": "Masuk dari {facility}",
+      "outgoing": "Keluar ke {facility}",
+      "between": "{from} → {to}",
+      "unknownFacility": "Fasilitas tidak dikenal",
+      "truncated": "Sebagian transfer tidak dimuat (lebih dari {count} dalam satu status).",
+      "status": {
+        "requested": "Diminta",
+        "approved": "Disetujui",
+        "shipped": "Dikirim"
+      }
+    },
+    "popup": {
+      "noTransfers": "Tidak ada transfer yang masih berjalan dengan fasilitas ini."
+    },
+    "missing": {
+      "heading": "Fasilitas tanpa koordinat",
+      "count": "{count, plural, =0 {Semua fasilitas sudah punya koordinat.} other {# fasilitas belum punya koordinat dan tidak tampil di peta.}}"
     }
   },
   "facilities": {
