@@ -346,6 +346,31 @@
       "noneInRadius": "確認完了：運用半径内に適合する在庫はありません。",
       "self": "自施設",
       "units": "適合ユニット {count} 件"
+    },
+    "matching": {
+      "heading": "ドナーマッチング状況",
+      "description": "貴施設で実行中のドナー呼びかけキャンペーンです。ドナーが回答すると数値は自動で更新されます。",
+      "loading": "キャンペーンを読み込み中…",
+      "empty": "実行中のドナー呼びかけキャンペーンはありません。",
+      "currentRadius": "現在の段階：{radius}",
+      "startedAt": "開始：{time}",
+      "requestStatus": "依頼の状態：{status}",
+      "noStages": "まだ連絡したドナーはいません。",
+      "currentStage": "現在",
+      "total": "合計",
+      "column": {
+        "stage": "段階",
+        "contacted": "連絡済み",
+        "accepted": "承諾",
+        "declined": "辞退"
+      },
+      "status": {
+        "open": "受付中",
+        "partially_fulfilled": "一部充足",
+        "fulfilled": "充足",
+        "cancelled": "キャンセル",
+        "expired": "期限切れ"
+      }
     }
   },
   "map": {

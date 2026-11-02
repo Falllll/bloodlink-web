@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { GlassPanel } from '@/components/ui/glass-panel';
+import { readFacilityId } from '@/lib/auth/session';
 import { InventoryTable } from './inventory-table';
+import { MatchingStatus } from './matching-status';
 import { UrgentRequestForm } from './urgent-request-form';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -14,6 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
 // requiredRoleFor (UX navigasi), otorisasi sebenarnya di backend.
 export default async function DashboardPage() {
   const t = await getTranslations('shell');
+  const facilityId = await readFacilityId();
+  const channelFacilityId = typeof facilityId === 'string' ? facilityId : null;
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-8">
@@ -26,6 +30,9 @@ export default async function DashboardPage() {
       </GlassPanel>
       <GlassPanel className="mt-6 p-6">
         <InventoryTable />
+      </GlassPanel>
+      <GlassPanel className="mt-6 p-6">
+        <MatchingStatus facilityId={channelFacilityId} />
       </GlassPanel>
     </main>
   );

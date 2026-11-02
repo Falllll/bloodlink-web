@@ -66,8 +66,9 @@ export async function readFacilityId(): Promise<string | null | undefined> {
 // kosong, atau tak dikenal = false. Role mentah tidak pernah dioper ke komponen
 // klien. Satu pengecualian untuk facility_id: public_id fasilitas sendiri boleh
 // sampai ke klien sebagai petunjuk PRESENTASI (warna marker dan pemusatan peta,
-// kartu 560) -- tidak pernah untuk menyaring data atau memutuskan izin, dan
-// tidak pernah sentinel 'global'. Ingat bahwa apa pun yang dioper ke klien ikut
+// kartu 560) dan sebagai nama channel realtime yang diotorisasi backend (kartu
+// 542) -- tidak pernah untuk menyaring data atau memutuskan izin, dan tidak
+// pernah sentinel 'global'. Ingat bahwa apa pun yang dioper ke klien ikut
 // terserialisasi ke payload RSC.
 export async function readCanManage(): Promise<boolean> {
   const store = await cookies();

@@ -360,6 +360,31 @@
       "noneInRadius": "Scan complete: no compatible stock within the operational radius.",
       "self": "Your facility",
       "units": "{count, plural, one {# compatible unit} other {# compatible units}}"
+    },
+    "matching": {
+      "heading": "Donor matching status",
+      "description": "Donor call campaigns running at your facility. Counts update on their own as donors respond.",
+      "loading": "Loading campaigns…",
+      "empty": "No donor call campaigns are running.",
+      "currentRadius": "Current stage: {radius}",
+      "startedAt": "Started {time}",
+      "requestStatus": "Request status: {status}",
+      "noStages": "No donors contacted yet.",
+      "currentStage": "Current",
+      "total": "Total",
+      "column": {
+        "stage": "Stage",
+        "contacted": "Contacted",
+        "accepted": "Accepted",
+        "declined": "Declined"
+      },
+      "status": {
+        "open": "Open",
+        "partially_fulfilled": "Partially fulfilled",
+        "fulfilled": "Fulfilled",
+        "cancelled": "Cancelled",
+        "expired": "Expired"
+      }
     }
   },
   "map": {

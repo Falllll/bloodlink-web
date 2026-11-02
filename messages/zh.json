@@ -346,6 +346,31 @@
       "noneInRadius": "扫描完成：运营半径内没有相容的库存。",
       "self": "你的机构",
       "units": "{count} 个相容单位"
+    },
+    "matching": {
+      "heading": "献血者匹配状态",
+      "description": "贵机构正在进行的献血者召集活动。献血者回复后，数字会自动更新。",
+      "loading": "正在加载活动…",
+      "empty": "当前没有正在进行的献血者召集活动。",
+      "currentRadius": "当前阶段：{radius}",
+      "startedAt": "开始于 {time}",
+      "requestStatus": "申请状态：{status}",
+      "noStages": "尚未联系任何献血者。",
+      "currentStage": "当前",
+      "total": "合计",
+      "column": {
+        "stage": "阶段",
+        "contacted": "已联系",
+        "accepted": "已接受",
+        "declined": "已拒绝"
+      },
+      "status": {
+        "open": "开放",
+        "partially_fulfilled": "部分满足",
+        "fulfilled": "已满足",
+        "cancelled": "已取消",
+        "expired": "已过期"
+      }
     }
   },
   "map": {

@@ -360,6 +360,31 @@
       "noneInRadius": "Pindaian selesai: tidak ada stok cocok dalam radius operasional.",
       "self": "Fasilitasmu sendiri",
       "units": "{count} unit cocok"
+    },
+    "matching": {
+      "heading": "Status pencocokan donor",
+      "description": "Kampanye panggilan donor yang berjalan di fasilitas Anda. Angkanya diperbarui sendiri saat donor menjawab.",
+      "loading": "Memuat kampanye…",
+      "empty": "Tidak ada kampanye panggilan donor yang berjalan.",
+      "currentRadius": "Jenjang berjalan: {radius}",
+      "startedAt": "Dimulai {time}",
+      "requestStatus": "Status permintaan: {status}",
+      "noStages": "Belum ada donor yang dihubungi.",
+      "currentStage": "Berjalan",
+      "total": "Total",
+      "column": {
+        "stage": "Jenjang",
+        "contacted": "Dihubungi",
+        "accepted": "Bersedia",
+        "declined": "Menolak"
+      },
+      "status": {
+        "open": "Terbuka",
+        "partially_fulfilled": "Terpenuhi sebagian",
+        "fulfilled": "Terpenuhi",
+        "cancelled": "Dibatalkan",
+        "expired": "Kedaluwarsa"
+      }
     }
   },
   "map": {
