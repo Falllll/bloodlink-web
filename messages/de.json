@@ -346,6 +346,31 @@
       "noneInRadius": "Suche abgeschlossen: kein verträglicher Bestand im Einsatzradius.",
       "self": "Ihre Einrichtung",
       "units": "{count, plural, one {# verträgliche Einheit} other {# verträgliche Einheiten}}"
+    },
+    "matching": {
+      "heading": "Status der Spendersuche",
+      "description": "Laufende Spenderaufrufe Ihrer Einrichtung. Die Zahlen aktualisieren sich automatisch, sobald Spender antworten.",
+      "loading": "Kampagnen werden geladen…",
+      "empty": "Derzeit laufen keine Spenderaufrufe.",
+      "currentRadius": "Aktuelle Stufe: {radius}",
+      "startedAt": "Gestartet {time}",
+      "requestStatus": "Anfragestatus: {status}",
+      "noStages": "Noch keine Spender kontaktiert.",
+      "currentStage": "Aktuell",
+      "total": "Gesamt",
+      "column": {
+        "stage": "Stufe",
+        "contacted": "Kontaktiert",
+        "accepted": "Zugesagt",
+        "declined": "Abgelehnt"
+      },
+      "status": {
+        "open": "Offen",
+        "partially_fulfilled": "Teilweise erfüllt",
+        "fulfilled": "Erfüllt",
+        "cancelled": "Storniert",
+        "expired": "Abgelaufen"
+      }
     }
   },
   "map": {
