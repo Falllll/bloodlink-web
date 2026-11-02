@@ -9,7 +9,8 @@
     "facilitiesTitle": "Fasilitas — BloodLink",
     "donorsTitle": "Donor — BloodLink",
     "reportsTitle": "Laporan — BloodLink",
-    "mapTitle": "Peta fasilitas — BloodLink"
+    "mapTitle": "Peta fasilitas — BloodLink",
+    "staffTitle": "Staf — BloodLink"
   },
   "common": {
     "language": "Bahasa",
@@ -76,6 +77,7 @@
     "dashboardHeading": "Dashboard Petugas",
     "devHeading": "BloodLink — token & komponen dasar",
     "navReports": "Laporan",
+    "navStaff": "Staf",
     "dashboardNavLabel": "Dashboard petugas",
     "navDashboard": "Dashboard",
     "navMap": "Peta fasilitas"
@@ -190,7 +192,9 @@
     "ends_at": "Tanggal berakhir",
     "from": "Tanggal mulai",
     "to": "Tanggal akhir",
-    "granularity": "Granularitas"
+    "granularity": "Granularitas",
+    "facility_id": "Fasilitas",
+    "role": "Peran"
   },
   "selfCheck": {
     "heading": "Cek apakah kamu bisa donor",
@@ -277,7 +281,9 @@
     "date": "{field} harus berupa tanggal yang valid.",
     "after": "{field} harus berupa tanggal dan waktu yang lebih lambat.",
     "enum": "Nilai {field} tidak valid.",
-    "too_many_buckets": "{field} membuat rentang terlalu panjang: paling banyak {max} periode."
+    "too_many_buckets": "{field} membuat rentang terlalu panjang: paling banyak {max} periode.",
+    "exists": "{field} yang dipilih tidak tersedia.",
+    "uuid": "{field} harus berupa UUID yang valid."
   },
   "medical": {
     "eligibility": {
@@ -557,5 +563,54 @@
     "prev": "Sebelumnya",
     "next": "Berikutnya",
     "none": "—"
+  },
+  "staff": {
+    "heading": "Akun staf",
+    "description": "Undang petugas ke sebuah fasilitas, ubah perannya, dan nonaktifkan akun orang yang sudah keluar.",
+    "filters": {
+      "status": "Status",
+      "all": "Semua",
+      "reset": "Atur ulang filter"
+    },
+    "column": {
+      "name": "Nama",
+      "facility": "Fasilitas",
+      "role": "Peran",
+      "status": "Status",
+      "createdAt": "Dibuat",
+      "actions": "Aksi"
+    },
+    "status": {
+      "active": "Aktif",
+      "inactive": "Nonaktif"
+    },
+    "role": {
+      "hospital_staff": "Petugas rumah sakit",
+      "admin": "Administrator",
+      "unknown": "Bukan staf"
+    },
+    "none": "—",
+    "choose": "Pilih…",
+    "loading": "Memuat staf…",
+    "empty": "Tidak ada akun staf yang cocok dengan filter ini.",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya",
+    "deactivate": "Nonaktifkan",
+    "activate": "Aktifkan",
+    "invite": {
+      "open": "Undang staf",
+      "close": "Tutup formulir",
+      "hint": "Password tidak diatur di sini: petugas baru menerima undangan email untuk menetapkan passwordnya sendiri.",
+      "submit": "Kirim undangan",
+      "submitting": "Mengirim…",
+      "sent": "Undangan terkirim ke {email}."
+    },
+    "edit": {
+      "open": "Ubah peran",
+      "close": "Batal",
+      "warning": "Menyimpan akan mengeluarkan orang ini dari semua perangkatnya. Peran administrator memberi akses penuh ke fasilitas ini.",
+      "submit": "Simpan peran",
+      "submitting": "Menyimpan…"
+    }
   }
 }

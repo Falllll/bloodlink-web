@@ -9,7 +9,8 @@
     "facilitiesTitle": "施設 — BloodLink",
     "donorsTitle": "献血者 — BloodLink",
     "reportsTitle": "レポート — BloodLink",
-    "mapTitle": "施設マップ — BloodLink"
+    "mapTitle": "施設マップ — BloodLink",
+    "staffTitle": "スタッフ — BloodLink"
   },
   "common": {
     "language": "言語",
@@ -76,6 +77,7 @@
     "dashboardHeading": "スタッフダッシュボード",
     "devHeading": "BloodLink — 基本トークンとコンポーネント",
     "navReports": "レポート",
+    "navStaff": "スタッフ",
     "dashboardNavLabel": "スタッフダッシュボード",
     "navDashboard": "ダッシュボード",
     "navMap": "施設マップ"
@@ -190,7 +192,9 @@
     "ends_at": "終了日",
     "from": "開始日",
     "to": "終了日",
-    "granularity": "集計単位"
+    "granularity": "集計単位",
+    "facility_id": "施設",
+    "role": "役割"
   },
   "selfCheck": {
     "heading": "献血できるか確認する",
@@ -277,7 +281,9 @@
     "date": "{field}は有効な日付である必要があります。",
     "after": "{field}はより後の日時である必要があります。",
     "enum": "{field}の値が無効です。",
-    "too_many_buckets": "{field}の範囲が長すぎます。期間は最大{max}個までです。"
+    "too_many_buckets": "{field}の範囲が長すぎます。期間は最大{max}個までです。",
+    "exists": "選択された{field}は利用できません。",
+    "uuid": "{field}は有効なUUIDである必要があります。"
   },
   "dashboard": {
     "status": {
@@ -543,5 +549,54 @@
     "prev": "前へ",
     "next": "次へ",
     "none": "—"
+  },
+  "staff": {
+    "heading": "スタッフアカウント",
+    "description": "施設へのスタッフ招待、役割の変更、退職者のアカウント無効化を行います。",
+    "filters": {
+      "status": "状態",
+      "all": "すべて",
+      "reset": "フィルターをリセット"
+    },
+    "column": {
+      "name": "名前",
+      "facility": "施設",
+      "role": "役割",
+      "status": "状態",
+      "createdAt": "作成日",
+      "actions": "操作"
+    },
+    "status": {
+      "active": "有効",
+      "inactive": "無効"
+    },
+    "role": {
+      "hospital_staff": "病院スタッフ",
+      "admin": "管理者",
+      "unknown": "スタッフ以外"
+    },
+    "none": "—",
+    "choose": "選択…",
+    "loading": "スタッフを読み込み中…",
+    "empty": "このフィルターに一致するスタッフアカウントはありません。",
+    "prev": "前へ",
+    "next": "次へ",
+    "deactivate": "無効化",
+    "activate": "有効化",
+    "invite": {
+      "open": "スタッフを招待",
+      "close": "フォームを閉じる",
+      "hint": "ここではパスワードを設定しません。新しいスタッフは招待メールから自分で設定します。",
+      "submit": "招待を送信",
+      "submitting": "送信中…",
+      "sent": "{email} に招待を送信しました。"
+    },
+    "edit": {
+      "open": "役割を変更",
+      "close": "キャンセル",
+      "warning": "保存すると、この人はすべての端末からログアウトされます。管理者の役割はこの施設へのフルアクセスを付与します。",
+      "submit": "役割を保存",
+      "submitting": "保存中…"
+    }
   }
 }

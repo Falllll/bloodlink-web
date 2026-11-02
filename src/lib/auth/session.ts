@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers';
 import type { Role } from '@/lib/api/types';
-import { FACILITY_COOKIE, ROLE_COOKIE, TOKEN_COOKIE, isRole } from '@/lib/auth/cookie-names';
+import { FACILITY_COOKIE, ROLE_COOKIE, TOKEN_COOKIE, USER_COOKIE, isRole } from '@/lib/auth/cookie-names';
 
 export async function readToken(): Promise<string | null> {
   const store = await cookies();
@@ -31,6 +31,23 @@ export async function readRole(): Promise<Role | null> {
   const store = await cookies();
   const value = store.get(ROLE_COOKIE)?.value;
   return isRole(value) ? value : null;
+}
+
+export async function writeUserId(userId: string): Promise<void> {
+  const store = await cookies();
+  store.set(USER_COOKIE, userId, {
+    httpOnly: true,
+    sameSite: 'lax',
+    secure: process.env.NODE_ENV === 'production',
+    path: '/',
+  });
+}
+
+// public_id akun yang masuk. Petunjuk UI saja (kartu 555): menyembunyikan tombol
+// aksi di baris sendiri. Penjaga sebenarnya UserPolicy di backend.
+export async function readUserId(): Promise<string | null> {
+  const store = await cookies();
+  return store.get(USER_COOKIE)?.value ?? null;
 }
 
 // Operator global (facility_id null) disimpan sebagai penanda eksplisit, bukan
@@ -83,4 +100,5 @@ export async function clearToken(): Promise<void> {
   store.delete(TOKEN_COOKIE);
   store.delete(ROLE_COOKIE);
   store.delete(FACILITY_COOKIE);
+  store.delete(USER_COOKIE);
 }

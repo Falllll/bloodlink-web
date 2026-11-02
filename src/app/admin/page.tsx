@@ -38,6 +38,16 @@ export default async function AdminPage() {
               {t('navAuditLogs')}
             </Link>
           </li>
+          <li>
+            <Link href="/admin/reports" className={LINK}>
+              {t('navReports')}
+            </Link>
+          </li>
+          <li>
+            <Link href="/admin/staff" className={LINK}>
+              {t('navStaff')}
+            </Link>
+          </li>
         </ul>
       </GlassPanel>
     </main>

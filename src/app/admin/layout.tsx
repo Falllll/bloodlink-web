@@ -25,6 +25,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <Link href="/admin/reports" className={NAV_LINK}>
             {t('navReports')}
           </Link>
+          <Link href="/admin/staff" className={NAV_LINK}>
+            {t('navStaff')}
+          </Link>
         </nav>
         <div className="flex items-center gap-3">
           <LocaleSwitcher />
