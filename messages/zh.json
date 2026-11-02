@@ -9,7 +9,8 @@
     "facilitiesTitle": "机构 — BloodLink",
     "donorsTitle": "献血者 — BloodLink",
     "reportsTitle": "报表 — BloodLink",
-    "mapTitle": "机构地图 — BloodLink"
+    "mapTitle": "机构地图 — BloodLink",
+    "staffTitle": "员工 — BloodLink"
   },
   "common": {
     "language": "语言",
@@ -76,6 +77,7 @@
     "dashboardHeading": "员工仪表盘",
     "devHeading": "BloodLink — 基础令牌与组件",
     "navReports": "报表",
+    "navStaff": "员工",
     "dashboardNavLabel": "工作人员仪表板",
     "navDashboard": "仪表板",
     "navMap": "机构地图"
@@ -190,7 +192,9 @@
     "ends_at": "结束日期",
     "from": "开始日期",
     "to": "结束日期",
-    "granularity": "统计粒度"
+    "granularity": "统计粒度",
+    "facility_id": "机构",
+    "role": "角色"
   },
   "selfCheck": {
     "heading": "看看你能否献血",
@@ -277,7 +281,9 @@
     "date": "{field}必须是有效的日期。",
     "after": "{field}必须是更晚的日期和时间。",
     "enum": "{field}的值无效。",
-    "too_many_buckets": "{field}使范围过长：最多允许 {max} 个周期。"
+    "too_many_buckets": "{field}使范围过长：最多允许 {max} 个周期。",
+    "exists": "所选的{field}不可用。",
+    "uuid": "{field}必须是有效的 UUID。"
   },
   "dashboard": {
     "status": {
@@ -543,5 +549,54 @@
     "prev": "上一页",
     "next": "下一页",
     "none": "—"
+  },
+  "staff": {
+    "heading": "员工账户",
+    "description": "邀请员工加入机构、更改其角色，并停用已离职人员的账户。",
+    "filters": {
+      "status": "状态",
+      "all": "全部",
+      "reset": "重置筛选"
+    },
+    "column": {
+      "name": "姓名",
+      "facility": "机构",
+      "role": "角色",
+      "status": "状态",
+      "createdAt": "创建时间",
+      "actions": "操作"
+    },
+    "status": {
+      "active": "已启用",
+      "inactive": "已停用"
+    },
+    "role": {
+      "hospital_staff": "医院员工",
+      "admin": "管理员",
+      "unknown": "非员工"
+    },
+    "none": "—",
+    "choose": "请选择…",
+    "loading": "正在加载员工…",
+    "empty": "没有符合此筛选条件的员工账户。",
+    "prev": "上一页",
+    "next": "下一页",
+    "deactivate": "停用",
+    "activate": "启用",
+    "invite": {
+      "open": "邀请员工",
+      "close": "关闭表单",
+      "hint": "此处不设置密码：新员工会收到邮件邀请并自行设置密码。",
+      "submit": "发送邀请",
+      "submitting": "正在发送…",
+      "sent": "邀请已发送至 {email}。"
+    },
+    "edit": {
+      "open": "更改角色",
+      "close": "取消",
+      "warning": "保存后，此人将在其所有设备上退出登录。管理员角色可完全访问此机构。",
+      "submit": "保存角色",
+      "submitting": "正在保存…"
+    }
   }
 }

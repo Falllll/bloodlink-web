@@ -9,7 +9,8 @@
     "facilitiesTitle": "Einrichtungen — BloodLink",
     "donorsTitle": "Spender — BloodLink",
     "reportsTitle": "Berichte — BloodLink",
-    "mapTitle": "Einrichtungskarte — BloodLink"
+    "mapTitle": "Einrichtungskarte — BloodLink",
+    "staffTitle": "Personal — BloodLink"
   },
   "common": {
     "language": "Sprache",
@@ -76,6 +77,7 @@
     "dashboardHeading": "Mitarbeiter-Dashboard",
     "devHeading": "BloodLink — Basistoken & Komponenten",
     "navReports": "Berichte",
+    "navStaff": "Personal",
     "dashboardNavLabel": "Personal-Dashboard",
     "navDashboard": "Dashboard",
     "navMap": "Einrichtungskarte"
@@ -190,7 +192,9 @@
     "ends_at": "Enddatum",
     "from": "Startdatum",
     "to": "Enddatum",
-    "granularity": "Granularität"
+    "granularity": "Granularität",
+    "facility_id": "Einrichtung",
+    "role": "Rolle"
   },
   "selfCheck": {
     "heading": "Prüfen Sie, ob Sie spenden können",
@@ -277,7 +281,9 @@
     "date": "{field} muss ein gültiges Datum sein.",
     "after": "{field} muss ein späterer Zeitpunkt sein.",
     "enum": "{field} hat einen ungültigen Wert.",
-    "too_many_buckets": "{field} macht den Zeitraum zu lang: höchstens {max} Perioden sind erlaubt."
+    "too_many_buckets": "{field} macht den Zeitraum zu lang: höchstens {max} Perioden sind erlaubt.",
+    "exists": "{field}: Die Auswahl ist nicht verfügbar.",
+    "uuid": "{field} muss eine gültige UUID sein."
   },
   "dashboard": {
     "status": {
@@ -543,5 +549,54 @@
     "prev": "Zurück",
     "next": "Weiter",
     "none": "—"
+  },
+  "staff": {
+    "heading": "Personalkonten",
+    "description": "Laden Sie Personal in eine Einrichtung ein, ändern Sie Rollen und deaktivieren Sie Konten ausgeschiedener Personen.",
+    "filters": {
+      "status": "Status",
+      "all": "Alle",
+      "reset": "Filter zurücksetzen"
+    },
+    "column": {
+      "name": "Name",
+      "facility": "Einrichtung",
+      "role": "Rolle",
+      "status": "Status",
+      "createdAt": "Erstellt",
+      "actions": "Aktionen"
+    },
+    "status": {
+      "active": "Aktiv",
+      "inactive": "Inaktiv"
+    },
+    "role": {
+      "hospital_staff": "Krankenhauspersonal",
+      "admin": "Administrator",
+      "unknown": "Kein Personal"
+    },
+    "none": "—",
+    "choose": "Auswählen…",
+    "loading": "Personal wird geladen…",
+    "empty": "Keine Personalkonten entsprechen diesem Filter.",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "deactivate": "Deaktivieren",
+    "activate": "Aktivieren",
+    "invite": {
+      "open": "Personal einladen",
+      "close": "Formular schließen",
+      "hint": "Hier wird kein Passwort festgelegt: Die Person erhält eine E-Mail-Einladung und legt es selbst fest.",
+      "submit": "Einladung senden",
+      "submitting": "Wird gesendet…",
+      "sent": "Einladung an {email} gesendet."
+    },
+    "edit": {
+      "open": "Rolle ändern",
+      "close": "Abbrechen",
+      "warning": "Beim Speichern wird diese Person auf allen Geräten abgemeldet. Die Administratorrolle gewährt vollen Zugriff auf diese Einrichtung.",
+      "submit": "Rolle speichern",
+      "submitting": "Wird gespeichert…"
+    }
   }
 }

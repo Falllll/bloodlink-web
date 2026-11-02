@@ -9,7 +9,8 @@
     "facilitiesTitle": "Facilities — BloodLink",
     "donorsTitle": "Donors — BloodLink",
     "reportsTitle": "Reports — BloodLink",
-    "mapTitle": "Facility map — BloodLink"
+    "mapTitle": "Facility map — BloodLink",
+    "staffTitle": "Staff — BloodLink"
   },
   "common": {
     "language": "Language",
@@ -76,6 +77,7 @@
     "dashboardHeading": "Staff Dashboard",
     "devHeading": "BloodLink — base tokens & components",
     "navReports": "Reports",
+    "navStaff": "Staff",
     "dashboardNavLabel": "Staff dashboard",
     "navDashboard": "Dashboard",
     "navMap": "Facility map"
@@ -190,7 +192,9 @@
     "ends_at": "End date",
     "from": "Start date",
     "to": "End date",
-    "granularity": "Granularity"
+    "granularity": "Granularity",
+    "facility_id": "Facility",
+    "role": "Role"
   },
   "selfCheck": {
     "heading": "Check whether you can donate",
@@ -277,7 +281,9 @@
     "date": "{field} must be a valid date.",
     "after": "{field} must be a later date and time.",
     "enum": "{field} has an invalid value.",
-    "too_many_buckets": "{field} makes the range too long: at most {max} periods are allowed."
+    "too_many_buckets": "{field} makes the range too long: at most {max} periods are allowed.",
+    "exists": "The selected {field} is unavailable.",
+    "uuid": "{field} must be a valid UUID."
   },
   "medical": {
     "eligibility": {
@@ -557,5 +563,54 @@
     "prev": "Previous",
     "next": "Next",
     "none": "—"
+  },
+  "staff": {
+    "heading": "Staff accounts",
+    "description": "Invite staff to a facility, change their role, and deactivate accounts of people who have left.",
+    "filters": {
+      "status": "Status",
+      "all": "All",
+      "reset": "Reset filters"
+    },
+    "column": {
+      "name": "Name",
+      "facility": "Facility",
+      "role": "Role",
+      "status": "Status",
+      "createdAt": "Created",
+      "actions": "Actions"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "role": {
+      "hospital_staff": "Hospital staff",
+      "admin": "Administrator",
+      "unknown": "Not staff"
+    },
+    "none": "—",
+    "choose": "Choose…",
+    "loading": "Loading staff…",
+    "empty": "No staff accounts match this filter.",
+    "prev": "Previous",
+    "next": "Next",
+    "deactivate": "Deactivate",
+    "activate": "Activate",
+    "invite": {
+      "open": "Invite staff",
+      "close": "Close form",
+      "hint": "No password is set here: the new staff member gets an email invitation to set their own.",
+      "submit": "Send invitation",
+      "submitting": "Sending…",
+      "sent": "Invitation sent to {email}."
+    },
+    "edit": {
+      "open": "Change role",
+      "close": "Cancel",
+      "warning": "Saving signs this person out on all their devices. The administrator role grants full access to this facility.",
+      "submit": "Save role",
+      "submitting": "Saving…"
+    }
   }
 }

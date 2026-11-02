@@ -3,6 +3,7 @@ import type { Role } from '@/lib/api/types';
 export const TOKEN_COOKIE = 'bl_token';
 export const ROLE_COOKIE = 'bl_role';
 export const FACILITY_COOKIE = 'bl_facility';
+export const USER_COOKIE = 'bl_user';
 
 const ROLES: readonly Role[] = ['donor', 'hospital_staff', 'admin'];
 
