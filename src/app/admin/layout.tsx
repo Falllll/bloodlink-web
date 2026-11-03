@@ -2,12 +2,15 @@ import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { SignOutButton } from '@/components/auth/sign-out-button';
 import { LocaleSwitcher } from '@/components/i18n/locale-switcher';
+import { ConversationsNavLink } from '@/app/dashboard/conversations/conversation-inbox';
+import { readFacilityId } from '@/lib/auth/session';
 
 const NAV_LINK =
   'text-sm font-medium text-[color:var(--color-ink-strong)] underline underline-offset-4 hover:text-[color:var(--color-ink-soft)]';
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const t = await getTranslations('shell');
+  const facilityId = await readFacilityId();
 
   return (
     <div className="min-h-screen">
@@ -28,6 +31,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <Link href="/admin/staff" className={NAV_LINK}>
             {t('navStaff')}
           </Link>
+          <ConversationsNavLink facilityId={typeof facilityId === 'string' ? facilityId : null} className={NAV_LINK} />
         </nav>
         <div className="flex items-center gap-3">
           <LocaleSwitcher />

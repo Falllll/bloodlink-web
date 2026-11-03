@@ -95,6 +95,13 @@ export async function readCanManage(): Promise<boolean> {
   );
 }
 
+// Petunjuk UI saja: menampilkan menu Percakapan (kartu 545). Izin chat.view tetap
+// diputuskan backend dari token; yang dioper ke klien hanya boolean ini.
+export async function readCanViewChat(): Promise<boolean> {
+  const role = (await cookies()).get(ROLE_COOKIE)?.value;
+  return role === 'hospital_staff' || role === 'admin';
+}
+
 export async function clearToken(): Promise<void> {
   const store = await cookies();
   store.delete(TOKEN_COOKIE);

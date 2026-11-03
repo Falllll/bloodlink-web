@@ -10,7 +10,8 @@
     "donorsTitle": "Spender — BloodLink",
     "reportsTitle": "Berichte — BloodLink",
     "mapTitle": "Einrichtungskarte — BloodLink",
-    "staffTitle": "Personal — BloodLink"
+    "staffTitle": "Personal — BloodLink",
+    "conversationsTitle": "Unterhaltungen — BloodLink"
   },
   "common": {
     "language": "Sprache",
@@ -80,7 +81,8 @@
     "navStaff": "Personal",
     "dashboardNavLabel": "Personal-Dashboard",
     "navDashboard": "Dashboard",
-    "navMap": "Einrichtungskarte"
+    "navMap": "Einrichtungskarte",
+    "navConversations": "Unterhaltungen"
   },
   "audit": {
     "heading": "Audit-Protokoll",
@@ -597,6 +599,62 @@
       "warning": "Beim Speichern wird diese Person auf allen Geräten abgemeldet. Die Administratorrolle gewährt vollen Zugriff auf diese Einrichtung.",
       "submit": "Rolle speichern",
       "submitting": "Wird gespeichert…"
+    }
+  },
+  "conversations": {
+    "heading": "Unterhaltungen",
+    "description": "An das Personal Ihrer Einrichtung übergebene Unterhaltungen.",
+    "anonymousVisitor": "Anonyme Person",
+    "badgeMore": "{count}+",
+    "badgeLabel": "Unterhaltungen warten auf das Personal: {count}",
+    "filterStatus": "Status",
+    "filterAll": "Alle",
+    "refresh": "Aktualisieren",
+    "loading": "Unterhaltungen werden geladen…",
+    "empty": "Hier warten keine Unterhaltungen. Unterhaltungen, die ohne Personal enden, erscheinen nicht in dieser Liste.",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "status": {
+      "open": "Offen",
+      "escalated": "Übergeben",
+      "assigned": "In Bearbeitung",
+      "closed": "Geschlossen"
+    },
+    "reason": {
+      "personal_medical_question": "Persönliche medizinische Frage",
+      "lab_result_question": "Frage zum Laborergebnis",
+      "complaint": "Beschwerde",
+      "other": "Sonstiges"
+    },
+    "sender": {
+      "visitor": "Besuchende Person",
+      "ai": "KI-Assistent",
+      "staff": "Personal"
+    },
+    "realtime": {
+      "live": "Live-Updates sind aktiv.",
+      "connecting": "Verbindung zu Live-Updates wird hergestellt…",
+      "offline": "Die Live-Verbindung ist unterbrochen. Neue Nachrichten erscheinen nicht automatisch, die Liste lässt sich aber weiterhin aktualisieren.",
+      "globalScope": "Im globalen Bereich sind keine Live-Updates verfügbar. Die Liste wird aktualisiert, wenn Sie zu dieser Seite zurückkehren."
+    },
+    "panel": {
+      "nothingSelected": "Wählen Sie eine Unterhaltung aus, um sie zu lesen.",
+      "loading": "Nachrichten werden geladen…",
+      "forbidden": "Diese Unterhaltung gehört zu einer anderen Einrichtung und kann nicht geöffnet werden.",
+      "notFound": "Diese Unterhaltung wurde nicht gefunden.",
+      "back": "Zurück zur Liste",
+      "divider": "An das Personal übergeben",
+      "bodyPurged": "Diese Nachricht wurde nach Ablauf der Aufbewahrungsfrist entfernt.",
+      "rowUnavailable": "Diese Unterhaltung ist nicht auf der aktuellen Listenseite, daher werden Status und Aktionen nicht angezeigt.",
+      "truncated": "Diese Unterhaltung ist lang, daher werden nur die ersten Nachrichten angezeigt.",
+      "assign": "Übernehmen",
+      "close": "Unterhaltung schließen",
+      "assignFirst": "Übernehmen Sie diese Unterhaltung, um zu antworten.",
+      "heldByOther": "Diese Unterhaltung wird von einer anderen Person bearbeitet.",
+      "closed": "Diese Unterhaltung ist geschlossen und nimmt keine Nachrichten an.",
+      "replyLabel": "Ihre Antwort",
+      "send": "Antwort senden",
+      "sending": "Wird gesendet…"
     }
   }
 }

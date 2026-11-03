@@ -10,7 +10,8 @@
     "donorsTitle": "Donors — BloodLink",
     "reportsTitle": "Reports — BloodLink",
     "mapTitle": "Facility map — BloodLink",
-    "staffTitle": "Staff — BloodLink"
+    "staffTitle": "Staff — BloodLink",
+    "conversationsTitle": "Conversations — BloodLink"
   },
   "common": {
     "language": "Language",
@@ -80,7 +81,8 @@
     "navStaff": "Staff",
     "dashboardNavLabel": "Staff dashboard",
     "navDashboard": "Dashboard",
-    "navMap": "Facility map"
+    "navMap": "Facility map",
+    "navConversations": "Conversations"
   },
   "audit": {
     "heading": "Audit Trail",
@@ -611,6 +613,62 @@
       "warning": "Saving signs this person out on all their devices. The administrator role grants full access to this facility.",
       "submit": "Save role",
       "submitting": "Saving…"
+    }
+  },
+  "conversations": {
+    "heading": "Conversations",
+    "description": "Conversations handed over to staff at your facility.",
+    "anonymousVisitor": "Anonymous visitor",
+    "badgeMore": "{count}+",
+    "badgeLabel": "Conversations waiting for staff: {count}",
+    "filterStatus": "Status",
+    "filterAll": "All",
+    "refresh": "Refresh",
+    "loading": "Loading conversations…",
+    "empty": "No conversations are waiting here. Conversations that finish without needing staff never appear in this list.",
+    "prev": "Previous",
+    "next": "Next",
+    "status": {
+      "open": "Open",
+      "escalated": "Handed over",
+      "assigned": "Being handled",
+      "closed": "Closed"
+    },
+    "reason": {
+      "personal_medical_question": "Personal medical question",
+      "lab_result_question": "Lab result question",
+      "complaint": "Complaint",
+      "other": "Other"
+    },
+    "sender": {
+      "visitor": "Visitor",
+      "ai": "AI assistant",
+      "staff": "Staff"
+    },
+    "realtime": {
+      "live": "Live updates are on.",
+      "connecting": "Connecting to live updates…",
+      "offline": "The live connection is down. New messages won’t appear on their own, but you can still refresh this list.",
+      "globalScope": "Live updates aren’t available in global scope. This list refreshes when you return to this page."
+    },
+    "panel": {
+      "nothingSelected": "Select a conversation to read it.",
+      "loading": "Loading messages…",
+      "forbidden": "This conversation belongs to another facility, so you can’t open it.",
+      "notFound": "This conversation wasn’t found.",
+      "back": "Back to the list",
+      "divider": "Handed over to staff",
+      "bodyPurged": "This message was removed when its retention period ended.",
+      "rowUnavailable": "This conversation isn’t on the list page you’re viewing, so its status and actions aren’t shown.",
+      "truncated": "This conversation is long, so only its first messages are shown.",
+      "assign": "Take over",
+      "close": "Close conversation",
+      "assignFirst": "Take over this conversation to reply.",
+      "heldByOther": "Another staff member is handling this conversation.",
+      "closed": "This conversation is closed and can’t receive messages.",
+      "replyLabel": "Your reply",
+      "send": "Send reply",
+      "sending": "Sending…"
     }
   }
 }
