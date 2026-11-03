@@ -10,7 +10,8 @@
     "donorsTitle": "Donor — BloodLink",
     "reportsTitle": "Laporan — BloodLink",
     "mapTitle": "Peta fasilitas — BloodLink",
-    "staffTitle": "Staf — BloodLink"
+    "staffTitle": "Staf — BloodLink",
+    "conversationsTitle": "Percakapan — BloodLink"
   },
   "common": {
     "language": "Bahasa",
@@ -80,7 +81,8 @@
     "navStaff": "Staf",
     "dashboardNavLabel": "Dashboard petugas",
     "navDashboard": "Dashboard",
-    "navMap": "Peta fasilitas"
+    "navMap": "Peta fasilitas",
+    "navConversations": "Percakapan"
   },
   "audit": {
     "heading": "Jejak Audit",
@@ -611,6 +613,62 @@
       "warning": "Menyimpan akan mengeluarkan orang ini dari semua perangkatnya. Peran administrator memberi akses penuh ke fasilitas ini.",
       "submit": "Simpan peran",
       "submitting": "Menyimpan…"
+    }
+  },
+  "conversations": {
+    "heading": "Percakapan",
+    "description": "Percakapan yang dialihkan ke petugas di fasilitas Anda.",
+    "anonymousVisitor": "Pengunjung anonim",
+    "badgeMore": "{count}+",
+    "badgeLabel": "{count} percakapan menunggu petugas",
+    "filterStatus": "Status",
+    "filterAll": "Semua",
+    "refresh": "Segarkan",
+    "loading": "Memuat percakapan…",
+    "empty": "Tidak ada percakapan yang menunggu di sini. Percakapan yang selesai tanpa petugas memang tidak muncul di daftar ini.",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya",
+    "status": {
+      "open": "Terbuka",
+      "escalated": "Dialihkan",
+      "assigned": "Sedang ditangani",
+      "closed": "Ditutup"
+    },
+    "reason": {
+      "personal_medical_question": "Pertanyaan medis pribadi",
+      "lab_result_question": "Pertanyaan hasil lab",
+      "complaint": "Keluhan",
+      "other": "Lainnya"
+    },
+    "sender": {
+      "visitor": "Pengunjung",
+      "ai": "Asisten AI",
+      "staff": "Petugas"
+    },
+    "realtime": {
+      "live": "Pembaruan langsung aktif.",
+      "connecting": "Menyambungkan pembaruan langsung…",
+      "offline": "Koneksi langsung sedang terputus. Pesan baru tidak muncul sendiri, tetapi daftar ini tetap bisa disegarkan.",
+      "globalScope": "Pembaruan langsung tidak tersedia di lingkup global. Daftar ini diperbarui saat Anda kembali ke halaman ini."
+    },
+    "panel": {
+      "nothingSelected": "Pilih percakapan untuk membacanya.",
+      "loading": "Memuat pesan…",
+      "forbidden": "Percakapan ini milik fasilitas lain, jadi tidak bisa Anda buka.",
+      "notFound": "Percakapan ini tidak ditemukan.",
+      "back": "Kembali ke daftar",
+      "divider": "Dialihkan ke petugas",
+      "bodyPurged": "Pesan ini dihapus karena masa retensinya berakhir.",
+      "rowUnavailable": "Percakapan ini tidak ada di halaman daftar yang sedang dibuka, jadi status dan aksinya tidak ditampilkan.",
+      "truncated": "Percakapan ini panjang, jadi hanya pesan-pesan awalnya yang ditampilkan.",
+      "assign": "Ambil alih",
+      "close": "Tutup percakapan",
+      "assignFirst": "Ambil alih percakapan ini untuk membalas.",
+      "heldByOther": "Percakapan ini sedang ditangani petugas lain.",
+      "closed": "Percakapan ini sudah ditutup dan tidak menerima pesan.",
+      "replyLabel": "Balasan Anda",
+      "send": "Kirim balasan",
+      "sending": "Mengirim…"
     }
   }
 }

@@ -10,7 +10,8 @@
     "donorsTitle": "献血者 — BloodLink",
     "reportsTitle": "レポート — BloodLink",
     "mapTitle": "施設マップ — BloodLink",
-    "staffTitle": "スタッフ — BloodLink"
+    "staffTitle": "スタッフ — BloodLink",
+    "conversationsTitle": "会話 — BloodLink"
   },
   "common": {
     "language": "言語",
@@ -80,7 +81,8 @@
     "navStaff": "スタッフ",
     "dashboardNavLabel": "スタッフダッシュボード",
     "navDashboard": "ダッシュボード",
-    "navMap": "施設マップ"
+    "navMap": "施設マップ",
+    "navConversations": "会話"
   },
   "audit": {
     "heading": "監査ログ",
@@ -597,6 +599,62 @@
       "warning": "保存すると、この人はすべての端末からログアウトされます。管理者の役割はこの施設へのフルアクセスを付与します。",
       "submit": "役割を保存",
       "submitting": "保存中…"
+    }
+  },
+  "conversations": {
+    "heading": "会話",
+    "description": "貴施設のスタッフに引き継がれた会話です。",
+    "anonymousVisitor": "匿名の訪問者",
+    "badgeMore": "{count}+",
+    "badgeLabel": "スタッフ対応待ちの会話 {count} 件",
+    "filterStatus": "ステータス",
+    "filterAll": "すべて",
+    "refresh": "更新",
+    "loading": "会話を読み込み中…",
+    "empty": "対応待ちの会話はありません。スタッフ対応なしで終了した会話は、この一覧には表示されません。",
+    "prev": "前へ",
+    "next": "次へ",
+    "status": {
+      "open": "受付中",
+      "escalated": "引き継ぎ済み",
+      "assigned": "対応中",
+      "closed": "終了"
+    },
+    "reason": {
+      "personal_medical_question": "個人の医療に関する質問",
+      "lab_result_question": "検査結果に関する質問",
+      "complaint": "苦情",
+      "other": "その他"
+    },
+    "sender": {
+      "visitor": "訪問者",
+      "ai": "AI アシスタント",
+      "staff": "スタッフ"
+    },
+    "realtime": {
+      "live": "ライブ更新は有効です。",
+      "connecting": "ライブ更新に接続中…",
+      "offline": "ライブ接続が切断されています。新しいメッセージは自動で表示されませんが、一覧は手動で更新できます。",
+      "globalScope": "グローバル範囲ではライブ更新を利用できません。このページに戻ると一覧が更新されます。"
+    },
+    "panel": {
+      "nothingSelected": "読む会話を選択してください。",
+      "loading": "メッセージを読み込み中…",
+      "forbidden": "この会話は他の施設のものなので開けません。",
+      "notFound": "この会話は見つかりませんでした。",
+      "back": "一覧に戻る",
+      "divider": "スタッフに引き継ぎ",
+      "bodyPurged": "このメッセージは保存期間の終了により削除されました。",
+      "rowUnavailable": "この会話は表示中の一覧ページにないため、ステータスと操作は表示されません。",
+      "truncated": "この会話は長いため、最初のメッセージのみ表示しています。",
+      "assign": "引き継ぐ",
+      "close": "会話を終了",
+      "assignFirst": "返信するには、この会話を引き継いでください。",
+      "heldByOther": "この会話は別のスタッフが対応中です。",
+      "closed": "この会話は終了しており、メッセージを受け付けません。",
+      "replyLabel": "返信",
+      "send": "返信を送信",
+      "sending": "送信中…"
     }
   }
 }

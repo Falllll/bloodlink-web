@@ -10,7 +10,8 @@
     "donorsTitle": "献血者 — BloodLink",
     "reportsTitle": "报表 — BloodLink",
     "mapTitle": "机构地图 — BloodLink",
-    "staffTitle": "员工 — BloodLink"
+    "staffTitle": "员工 — BloodLink",
+    "conversationsTitle": "会话 — BloodLink"
   },
   "common": {
     "language": "语言",
@@ -80,7 +81,8 @@
     "navStaff": "员工",
     "dashboardNavLabel": "工作人员仪表板",
     "navDashboard": "仪表板",
-    "navMap": "机构地图"
+    "navMap": "机构地图",
+    "navConversations": "会话"
   },
   "audit": {
     "heading": "审计日志",
@@ -597,6 +599,62 @@
       "warning": "保存后，此人将在其所有设备上退出登录。管理员角色可完全访问此机构。",
       "submit": "保存角色",
       "submitting": "正在保存…"
+    }
+  },
+  "conversations": {
+    "heading": "会话",
+    "description": "已转交给贵机构工作人员的会话。",
+    "anonymousVisitor": "匿名访客",
+    "badgeMore": "{count}+",
+    "badgeLabel": "{count} 个会话等待工作人员处理",
+    "filterStatus": "状态",
+    "filterAll": "全部",
+    "refresh": "刷新",
+    "loading": "正在加载会话…",
+    "empty": "这里没有等待处理的会话。无需工作人员即结束的会话不会出现在此列表中。",
+    "prev": "上一页",
+    "next": "下一页",
+    "status": {
+      "open": "进行中",
+      "escalated": "已转交",
+      "assigned": "处理中",
+      "closed": "已关闭"
+    },
+    "reason": {
+      "personal_medical_question": "个人医疗问题",
+      "lab_result_question": "化验结果问题",
+      "complaint": "投诉",
+      "other": "其他"
+    },
+    "sender": {
+      "visitor": "访客",
+      "ai": "AI 助手",
+      "staff": "工作人员"
+    },
+    "realtime": {
+      "live": "实时更新已开启。",
+      "connecting": "正在连接实时更新…",
+      "offline": "实时连接已断开。新消息不会自动显示,但您仍可手动刷新此列表。",
+      "globalScope": "全局范围不提供实时更新。返回此页面时列表会刷新。"
+    },
+    "panel": {
+      "nothingSelected": "请选择要查看的会话。",
+      "loading": "正在加载消息…",
+      "forbidden": "此会话属于其他机构,您无法打开。",
+      "notFound": "未找到此会话。",
+      "back": "返回列表",
+      "divider": "已转交给工作人员",
+      "bodyPurged": "此消息已在保留期结束后删除。",
+      "rowUnavailable": "此会话不在当前列表页中,因此不显示其状态和操作。",
+      "truncated": "此会话较长,仅显示最早的消息。",
+      "assign": "接手",
+      "close": "关闭会话",
+      "assignFirst": "请先接手此会话再回复。",
+      "heldByOther": "此会话正由其他工作人员处理。",
+      "closed": "此会话已关闭,不再接收消息。",
+      "replyLabel": "您的回复",
+      "send": "发送回复",
+      "sending": "正在发送…"
     }
   }
 }

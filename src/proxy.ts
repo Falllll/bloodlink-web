@@ -20,7 +20,7 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
 
-  if (role !== needed) {
+  if (!needed.includes(role)) {
     return NextResponse.redirect(new URL(roleHome(role), request.url));
   }
 
