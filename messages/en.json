@@ -260,7 +260,8 @@
     "IDEMPOTENCY_KEY_REUSED": "This request has already been processed.",
     "REQUEST_IN_PROGRESS": "The previous request is still being processed. Please wait.",
     "DONOR_FLAG_REJECTED": "This administrative flag change was rejected because of the donor's current flag state.",
-    "unknown": "An unexpected error occurred."
+    "unknown": "An unexpected error occurred.",
+    "CONVERSATION_REJECTED": "This chat session has ended. Please start a new conversation."
   },
   "validation": {
     "required": "{field} is required.",
@@ -299,6 +300,9 @@
     },
     "lab": {
       "notCleared": "The sample hasn't passed lab testing yet."
+    },
+    "chat": {
+      "disclaimer": "This chat isn’t medical advice and can’t replace a doctor. In an emergency, contact the nearest health facility right away."
     }
   },
   "dashboard": {
@@ -668,7 +672,46 @@
       "closed": "This conversation is closed and can’t receive messages.",
       "replyLabel": "Your reply",
       "send": "Send reply",
-      "sending": "Sending…"
+      "sending": "Sending…",
+      "stale": "This conversation just changed, possibly because another staff member acted on it. The latest status is being loaded."
+    }
+  },
+  "chat": {
+    "open": "Ask staff",
+    "title": "Ask facility staff",
+    "close": "Close chat",
+    "acknowledge": "I understand",
+    "refreshNotice": "This chat isn’t saved. If you refresh or leave this page, the conversation is lost.",
+    "audienceQuestion": "What brings you here?",
+    "audience": {
+      "donor": "I want to donate blood",
+      "requester": "I need blood"
+    },
+    "opening": {
+      "donor": "Tell us what you’d like to know about donating.",
+      "requester": "Tell us what blood you need and where. Staff will explain the next steps."
+    },
+    "placeholder": "Type your message…",
+    "send": "Send",
+    "sending": "Sending…",
+    "forwarded": "Your question has been forwarded to staff. Replies aren’t instant; they’ll appear here once staff respond.",
+    "forwardFailed": "Your message was saved but hasn’t reached staff yet.",
+    "retryForward": "Forward to staff again",
+    "checkReplies": "Check for replies",
+    "checking": "Checking…",
+    "checkFailed": "Couldn’t check for replies. We’ll try again shortly.",
+    "timeout": "The server took too long to respond. Your message may not have been sent.",
+    "network": "Can’t reach the server right now. Your message wasn’t sent.",
+    "unavailable": "Chat with staff isn’t available right now. You can still check your donor eligibility yourself.",
+    "openSelfCheck": "Open the self-check form",
+    "expired": "This chat session has ended. Start a new conversation to continue.",
+    "closed": "Staff have closed this conversation.",
+    "startOver": "Start a new conversation",
+    "bodyPurged": "This message was removed when its retention period ended.",
+    "sender": {
+      "visitor": "You",
+      "ai": "AI assistant",
+      "staff": "Staff"
     }
   }
 }

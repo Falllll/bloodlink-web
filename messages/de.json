@@ -260,7 +260,8 @@
     "IDEMPOTENCY_KEY_REUSED": "Diese Anfrage wurde bereits verarbeitet.",
     "REQUEST_IN_PROGRESS": "Die vorherige Anfrage wird noch verarbeitet. Bitte warten.",
     "DONOR_FLAG_REJECTED": "Diese Änderung des administrativen Vermerks wurde aufgrund des aktuellen Vermerkstatus des Spenders abgelehnt.",
-    "unknown": "Ein unerwarteter Fehler ist aufgetreten."
+    "unknown": "Ein unerwarteter Fehler ist aufgetreten.",
+    "CONVERSATION_REJECTED": "Diese Chat-Sitzung ist beendet. Bitte beginnen Sie eine neue Unterhaltung."
   },
   "validation": {
     "required": "{field} ist erforderlich.",
@@ -654,7 +655,46 @@
       "closed": "Diese Unterhaltung ist geschlossen und nimmt keine Nachrichten an.",
       "replyLabel": "Ihre Antwort",
       "send": "Antwort senden",
-      "sending": "Wird gesendet…"
+      "sending": "Wird gesendet…",
+      "stale": "Diese Unterhaltung wurde gerade geändert, möglicherweise von einer anderen Person. Der aktuelle Status wird geladen."
+    }
+  },
+  "chat": {
+    "open": "Personal fragen",
+    "title": "Personal der Einrichtung fragen",
+    "close": "Chat schließen",
+    "acknowledge": "Verstanden",
+    "refreshNotice": "Dieser Chat wird nicht gespeichert. Wenn Sie die Seite neu laden oder verlassen, geht die Unterhaltung verloren.",
+    "audienceQuestion": "Worum geht es Ihnen?",
+    "audience": {
+      "donor": "Ich möchte Blut spenden",
+      "requester": "Ich benötige Blut"
+    },
+    "opening": {
+      "donor": "Schreiben Sie uns, was Sie zur Blutspende wissen möchten.",
+      "requester": "Schreiben Sie uns, welches Blut wo benötigt wird. Das Personal erklärt die nächsten Schritte."
+    },
+    "placeholder": "Nachricht eingeben…",
+    "send": "Senden",
+    "sending": "Wird gesendet…",
+    "forwarded": "Ihre Frage wurde an das Personal weitergeleitet. Antworten kommen nicht sofort; sie erscheinen hier, sobald das Personal antwortet.",
+    "forwardFailed": "Ihre Nachricht wurde gespeichert, hat das Personal aber noch nicht erreicht.",
+    "retryForward": "Erneut an das Personal weiterleiten",
+    "checkReplies": "Auf Antworten prüfen",
+    "checking": "Wird geprüft…",
+    "checkFailed": "Antworten konnten nicht geprüft werden. Wir versuchen es gleich noch einmal.",
+    "timeout": "Der Server hat zu lange nicht geantwortet. Ihre Nachricht wurde möglicherweise nicht gesendet.",
+    "network": "Der Server ist derzeit nicht erreichbar. Ihre Nachricht wurde nicht gesendet.",
+    "unavailable": "Der Chat mit dem Personal ist derzeit nicht verfügbar. Sie können Ihre Spendefähigkeit aber selbst prüfen.",
+    "openSelfCheck": "Selbstprüfung öffnen",
+    "expired": "Diese Chat-Sitzung ist beendet. Beginnen Sie eine neue Unterhaltung, um fortzufahren.",
+    "closed": "Das Personal hat diese Unterhaltung geschlossen.",
+    "startOver": "Neue Unterhaltung beginnen",
+    "bodyPurged": "Diese Nachricht wurde nach Ablauf der Aufbewahrungsfrist entfernt.",
+    "sender": {
+      "visitor": "Sie",
+      "ai": "KI-Assistent",
+      "staff": "Personal"
     }
   }
 }

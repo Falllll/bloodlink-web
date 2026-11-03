@@ -260,7 +260,8 @@
     "IDEMPOTENCY_KEY_REUSED": "此请求已被处理过。",
     "REQUEST_IN_PROGRESS": "上一个请求仍在处理中，请稍候。",
     "DONOR_FLAG_REJECTED": "由于献血者当前的标记状态,此次管理标记变更被拒绝。",
-    "unknown": "发生了意外错误。"
+    "unknown": "发生了意外错误。",
+    "CONVERSATION_REJECTED": "此聊天会话已结束,请开始新的会话。"
   },
   "validation": {
     "required": "{field}为必填项。",
@@ -654,7 +655,46 @@
       "closed": "此会话已关闭,不再接收消息。",
       "replyLabel": "您的回复",
       "send": "发送回复",
-      "sending": "正在发送…"
+      "sending": "正在发送…",
+      "stale": "此会话刚刚发生变化,可能已由其他工作人员处理。正在加载最新状态。"
+    }
+  },
+  "chat": {
+    "open": "咨询工作人员",
+    "title": "咨询机构工作人员",
+    "close": "关闭聊天",
+    "acknowledge": "我已了解",
+    "refreshNotice": "此聊天不会保存。刷新或离开此页面后,会话将丢失。",
+    "audienceQuestion": "您需要什么帮助?",
+    "audience": {
+      "donor": "我想献血",
+      "requester": "我需要用血"
+    },
+    "opening": {
+      "donor": "请告诉我们您想了解的献血问题。",
+      "requester": "请告诉我们需要什么血液以及地点。工作人员会说明后续步骤。"
+    },
+    "placeholder": "输入消息…",
+    "send": "发送",
+    "sending": "正在发送…",
+    "forwarded": "您的问题已转交给工作人员。回复不会立即送达,工作人员回复后将显示在这里。",
+    "forwardFailed": "您的消息已保存,但尚未送达工作人员。",
+    "retryForward": "再次转交给工作人员",
+    "checkReplies": "查看回复",
+    "checking": "正在查看…",
+    "checkFailed": "无法查看回复,稍后会重试。",
+    "timeout": "服务器响应时间过长,您的消息可能未发送。",
+    "network": "目前无法连接服务器,您的消息未发送。",
+    "unavailable": "目前无法与工作人员聊天。您仍可自行检查献血资格。",
+    "openSelfCheck": "打开自查表单",
+    "expired": "此聊天会话已结束。请开始新的会话以继续。",
+    "closed": "工作人员已关闭此会话。",
+    "startOver": "开始新的会话",
+    "bodyPurged": "此消息已在保留期结束后删除。",
+    "sender": {
+      "visitor": "您",
+      "ai": "AI 助手",
+      "staff": "工作人员"
     }
   }
 }

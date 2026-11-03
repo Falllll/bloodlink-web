@@ -260,7 +260,8 @@
     "IDEMPOTENCY_KEY_REUSED": "Permintaan ini sudah pernah diproses.",
     "REQUEST_IN_PROGRESS": "Permintaan sebelumnya masih diproses. Tunggu sebentar.",
     "DONOR_FLAG_REJECTED": "Perubahan flag administratif ini ditolak karena keadaan flag donor saat ini.",
-    "unknown": "Terjadi kesalahan yang tidak terduga."
+    "unknown": "Terjadi kesalahan yang tidak terduga.",
+    "CONVERSATION_REJECTED": "Sesi percakapan ini sudah berakhir. Silakan mulai percakapan baru."
   },
   "validation": {
     "required": "{field} wajib diisi.",
@@ -299,6 +300,9 @@
     },
     "lab": {
       "notCleared": "Sampel belum lolos uji laboratorium."
+    },
+    "chat": {
+      "disclaimer": "Percakapan ini bukan nasihat medis dan tidak menggantikan dokter. Dalam keadaan darurat, segera hubungi fasilitas kesehatan terdekat."
     }
   },
   "dashboard": {
@@ -668,7 +672,46 @@
       "closed": "Percakapan ini sudah ditutup dan tidak menerima pesan.",
       "replyLabel": "Balasan Anda",
       "send": "Kirim balasan",
-      "sending": "Mengirim…"
+      "sending": "Mengirim…",
+      "stale": "Percakapan ini baru saja berubah, mungkin karena petugas lain sudah menanganinya. Status terbaru sedang dimuat."
+    }
+  },
+  "chat": {
+    "open": "Tanya petugas",
+    "title": "Tanya petugas fasilitas",
+    "close": "Tutup chat",
+    "acknowledge": "Saya mengerti",
+    "refreshNotice": "Percakapan ini tidak disimpan. Kalau halaman ini di-refresh atau ditinggalkan, percakapannya hilang.",
+    "audienceQuestion": "Apa keperluan Anda?",
+    "audience": {
+      "donor": "Saya ingin donor darah",
+      "requester": "Saya butuh darah"
+    },
+    "opening": {
+      "donor": "Ceritakan apa yang ingin Anda ketahui tentang donor darah.",
+      "requester": "Sampaikan darah apa yang dibutuhkan dan di mana. Petugas akan menjelaskan langkah berikutnya."
+    },
+    "placeholder": "Tulis pesan Anda…",
+    "send": "Kirim",
+    "sending": "Mengirim…",
+    "forwarded": "Pertanyaan Anda sudah diteruskan ke petugas. Balasan tidak datang seketika; balasan akan muncul di sini setelah petugas menjawab.",
+    "forwardFailed": "Pesan Anda tersimpan, tetapi belum sampai ke petugas.",
+    "retryForward": "Teruskan lagi ke petugas",
+    "checkReplies": "Periksa balasan",
+    "checking": "Memeriksa…",
+    "checkFailed": "Balasan tidak bisa diperiksa. Kami akan mencoba lagi sebentar lagi.",
+    "timeout": "Server terlalu lama merespons. Pesan Anda mungkin belum terkirim.",
+    "network": "Server tidak bisa dihubungi saat ini. Pesan Anda belum terkirim.",
+    "unavailable": "Chat dengan petugas sedang tidak tersedia. Anda tetap bisa memeriksa kelayakan donor sendiri.",
+    "openSelfCheck": "Buka form cek mandiri",
+    "expired": "Sesi percakapan ini sudah berakhir. Mulai percakapan baru untuk melanjutkan.",
+    "closed": "Petugas sudah menutup percakapan ini.",
+    "startOver": "Mulai percakapan baru",
+    "bodyPurged": "Pesan ini dihapus karena masa retensinya berakhir.",
+    "sender": {
+      "visitor": "Anda",
+      "ai": "Asisten AI",
+      "staff": "Petugas"
     }
   }
 }
