@@ -6,6 +6,7 @@ import { HowItWorks } from '@/components/landing/how-it-works';
 import { SelfCheckSection } from '@/components/landing/self-check-section';
 import { AudienceSection } from '@/components/landing/audience-section';
 import { SiteFooter } from '@/components/landing/site-footer';
+import { ChatWidget } from '@/components/landing/chat/chat-widget';
 
 const POINT_KEYS = ['p1', 'p2', 'p3'] as const;
 
@@ -20,6 +21,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Home() {
   const t = await getTranslations('landing');
+  // Gagal tertutup: tanpa fasilitas tujuan eskalasi pasti ditolak, jadi peluncurnya tidak
+  // dirender dan form self-check tetap jadi jalurnya. Sengaja bukan NEXT_PUBLIC_*.
+  const chatFacilityId = process.env.CHAT_FACILITY_ID?.trim();
 
   return (
     <>
@@ -42,6 +46,7 @@ export default async function Home() {
         />
       </main>
       <SiteFooter />
+      {chatFacilityId ? <ChatWidget facilityId={chatFacilityId} /> : null}
     </>
   );
 }

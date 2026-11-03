@@ -2,7 +2,7 @@ export type ErrorCode =
   | 'VALIDATION_FAILED' | 'UNAUTHENTICATED' | 'FORBIDDEN' | 'NOT_FOUND'
   | 'INTERNAL_ERROR' | 'METHOD_NOT_ALLOWED' | 'TOO_MANY_REQUESTS' | 'HTTP_ERROR'
   | 'IDEMPOTENCY_KEY_REQUIRED' | 'IDEMPOTENCY_KEY_REUSED' | 'REQUEST_IN_PROGRESS'
-  | 'DONOR_FLAG_REJECTED';
+  | 'DONOR_FLAG_REJECTED' | 'CONVERSATION_REJECTED';
 
 export type ValidationFailure = { rule: string; params: Record<string, string | string[]> | string[] };
 

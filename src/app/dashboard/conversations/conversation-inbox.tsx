@@ -81,7 +81,7 @@ export function ConversationsNavLink({ facilityId, className }: { facilityId: st
     previous.current = status;
   }, [status, queryClient]);
 
-  const waiting = data?.data.filter((row) => row.status === 'escalated' && row.assigned_user_id === null).length ?? 0;
+  const waiting = data?.data.filter((row) => row.assigned_user_id === null).length ?? 0;
   // Paginasi kursor tidak mengirim total: lebih dari satu halaman ditulis "N+".
   const count = data?.meta.has_more ? t('conversations.badgeMore', { count: waiting }) : String(waiting);
 
@@ -172,6 +172,13 @@ function MessageBubble({ message, now, locale, t }: { message: ChatMessage; now:
   );
 }
 
+// 409 berarti keadaan percakapan sudah berubah di tempat lain (misalnya petugas lain
+// lebih dulu mengambil alih). Kodenya CONVERSATION_REJECTED yang juga dipakai untuk
+// token pengunjung, jadi kalimat errors.* tidak cocok untuk petugas.
+function isStale(error: unknown): boolean {
+  return error instanceof ApiFailure && error.status === 409;
+}
+
 function ReplyForm({ conversationId, onDone }: { conversationId: string; onDone: () => void }) {
   const t = useTranslations();
   const id = useId();
@@ -201,7 +208,12 @@ function ReplyForm({ conversationId, onDone }: { conversationId: string; onDone:
       attempt.current = { payload, request: postStaffMessageInit(conversationId, body) };
     }
 
-    m.mutate(attempt.current.request, { onSettled: () => { inFlight.current = false; } });
+    m.mutate(attempt.current.request, {
+      onError: (error) => {
+        if (isStale(error)) onDone();
+      },
+      onSettled: () => { inFlight.current = false; },
+    });
   }
 
   const err = m.error instanceof ApiFailure ? translateApiError(m.error.body, t) : null;
@@ -220,7 +232,7 @@ function ReplyForm({ conversationId, onDone }: { conversationId: string; onDone:
       />
       {err !== null && (
         <p role="alert" className="text-sm text-destructive">
-          {err.fields.body?.[0] ?? err.summary}
+          {isStale(m.error) ? t('conversations.panel.stale') : (err.fields.body?.[0] ?? err.summary)}
         </p>
       )}
       <div className="flex justify-end">
@@ -237,11 +249,13 @@ function ConversationAction({
   init,
   variant,
   onDone,
+  onStale,
 }: {
   label: string;
   init: () => Request;
   variant: 'default' | 'outline';
   onDone: (row: ConversationRow) => void;
+  onStale: () => void;
 }) {
   const t = useTranslations();
   const inFlight = useRef(false);
@@ -262,7 +276,12 @@ function ConversationAction({
     if (inFlight.current) return;
     inFlight.current = true;
     attempt.current ??= init();
-    m.mutate(attempt.current, { onSettled: () => { inFlight.current = false; } });
+    m.mutate(attempt.current, {
+      onError: (error) => {
+        if (isStale(error)) onStale();
+      },
+      onSettled: () => { inFlight.current = false; },
+    });
   }
 
   return (
@@ -272,7 +291,7 @@ function ConversationAction({
       </Button>
       {m.error instanceof ApiFailure && (
         <span role="alert" className="text-xs text-destructive">
-          {translateApiError(m.error.body, t).summary}
+          {isStale(m.error) ? t('conversations.panel.stale') : translateApiError(m.error.body, t).summary}
         </span>
       )}
     </span>
@@ -362,6 +381,7 @@ function ConversationPanel({
                 variant="default"
                 init={() => assignConversationInit(row.id)}
                 onDone={(next) => { onChanged(next); refresh(); }}
+                onStale={refresh}
               />
             )}
             {(row.status === 'escalated' || row.status === 'assigned') && (
@@ -370,6 +390,7 @@ function ConversationPanel({
                 variant="outline"
                 init={() => closeConversationInit(row.id)}
                 onDone={(next) => { onChanged(next); refresh(); }}
+                onStale={refresh}
               />
             )}
           </div>

@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server';
 import { readToken, clearToken } from '@/lib/auth/session';
 
-const FORWARD_HEADERS = ['content-type', 'idempotency-key', 'x-request-id', 'accept-language', 'accept'];
+const FORWARD_HEADERS = ['content-type', 'idempotency-key', 'x-request-id', 'accept-language', 'accept', 'x-visitor-token'];
 
 async function forward(req: NextRequest, path: string[]): Promise<Response> {
   const url = `${process.env.API_BASE_URL}/${path.join('/')}${req.nextUrl.search}`;
