@@ -26,6 +26,7 @@ import {
   type StockTransferPage,
 } from '@/lib/api/stock-transfers';
 import type { LatLng, TransferLine } from './stock-map';
+import { withFallbackCoords } from './fallback-coords';
 
 const StockMap = dynamic(() => import('@/components/map/stock-map'), {
   ssr: false,
@@ -90,7 +91,8 @@ export function StockMapIsland({ selfFacilityId }: { selfFacilityId: string | nu
     );
   }
 
-  const rows = facilities.data.items;
+  // Koordinat null diisi perkiraan pusat kota (hardcode sementara, lihat fallback-coords.ts).
+  const rows = withFallbackCoords(facilities.data.items);
   const byId = new Map(rows.map((row) => [row.id, row]));
   // selfFacilityId hanya presentasi: warna marker dan pemusatan.
   const pins: FacilityPin[] = rows.map((row) => ({
